@@ -12,7 +12,7 @@ SIOT_URL = 'http://151.97.13.227:8080/SIOT-war/SIoT/Server/'
 
 brokenVehicle = None
 parcelData = None
-
+routeCache = []
 
 class GraphProcessor:
     def __init__(self, path='modules/demo/data/9node.json'):
@@ -91,8 +91,8 @@ class VrpProcessor:
         converted_routes = []
 
         for i, vehicle_load in enumerate(loads):
-            route = []
             start_node = start_nodes[i]
+            route = [start_node]
             current_node = start_node
             vehicle_load[nodes.index(current_node)] -= vehicle_load[nodes.index(current_node)]
             cost_astar = 0
@@ -142,6 +142,9 @@ class VrpProcessor:
     def route_to_sumo_format(self, route, loads, nodes):
         converted_route = []
 
+        if len(route) == 1 and loads[nodes.index(route[0])] == 0:
+            return []
+
         for idx, node in enumerate(route):
             node_idx = nodes.index(node)
 
@@ -186,6 +189,10 @@ class Event(Resource):
             "message": "Processing event for vehicle {}".format(vehicle['UUID'])
         })
 
+class Routes(Resource):
+    def get(self):
+        global routeCache
+        return jsonify(routeCache)
 
 class RecReq(Resource):
 
@@ -194,20 +201,20 @@ class RecReq(Resource):
 
     def post(self):
         data = request.get_json(force=True)
-        global brokenVehicle
+        global brokenVehicle, routeCache
         print(data)
 
         vehicle_metadata = data['CLOS']
         routes = []
         if "event" in data:
-            if "broken" in data["event"]["type"]:
+            if "broken" in data["event"]["type"].lower():
                 brokenVehicle = vehicle_metadata[0]["UUID"]
                 print("Processing VRP data.")
                 routes = generalVrpProcessor.process(vehicle_metadata)
-            elif "parcel" in data["event"]["type"]:
+            elif "parcel" in data["event"]["type"].lower():
                 print("Processing VRP data.")
                 routes = generalVrpProcessor.process(vehicle_metadata)
-            elif "xborder" in data["event"]["type"]:
+            elif "xborder" in data["event"]["type"].lower():
                 xvehiclesA3 = []
                 xvehiclesA6 = []
                 for v in vehicle_metadata:
@@ -223,6 +230,7 @@ class RecReq(Resource):
         if len(vehicle_metadata) < 1:
             return jsonify({"msg": "No vehicles"})
 
+        routeCache = routes
         return jsonify({"CLOS": routes})
 
 
@@ -236,6 +244,7 @@ class CognitiveAdvisorAPI:
     def _add_endpoints(self):
         self._register_endpoint('/api/adhoc/recommendationRequest', RecReq)
         self._register_endpoint('/api/adhoc/newEvent', Event)
+        self._register_endpoint('/api/adhoc/getRoutes', Routes)
 
     def _register_endpoint(self, endpoint_name, class_ref):
         self._api.add_resource(class_ref, endpoint_name)
