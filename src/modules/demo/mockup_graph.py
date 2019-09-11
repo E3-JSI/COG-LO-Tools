@@ -24,12 +24,13 @@ class Path:
         self.path = path
         self.cost = cost
 
-
 class MockupGraph:
 
     def __init__(self, path='modules/demo/data/posts.json'):
         self.nodes, self.edges, self.edge_map = self._load_graph(path)
         self.paths = self._calculate_shortest_paths()
+        print("Got {} edges, {} nodes".format(len(self.edges), len(self.nodes)))
+
         self.incident_matrix = []
         self.make_matrix()
 
@@ -148,14 +149,15 @@ class MockupGraph:
         return None
 
     def make_matrix(self):
-        incident_matrix = []
+        self.incident_matrix = []
 
         for ni, n in enumerate(self.nodes):
             tmp_arr = [0] * len(self.edges)
             for ne, e in enumerate(self.edges):
-                if e.start == n.id:
+                if e.start == n.id or e.end == n.id:
                     tmp_arr[ne] = 1
             self.incident_matrix.append(tmp_arr)
+        return 0
 
 
     def map_vehicles(self, vehicles):

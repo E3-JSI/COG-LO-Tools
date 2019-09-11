@@ -12,6 +12,8 @@ SIOT_URL = 'http://151.97.13.227:8080/SIOT-war/SIoT/Server/'
 
 brokenVehicle = None
 parcelData = None
+
+
 class GraphProcessor:
     def __init__(self, path='modules/demo/data/9node.json'):
         self.g = MockupGraph(path)
@@ -40,6 +42,8 @@ class VrpProcessor:
 
     def process(self, metadata):
         global brokenVehicle
+        if len(metadata) == 0:
+            return []
         nodes, edges, graph = self.graphProcessor.get_graph()
 
         post_mapping = self.graphProcessor.map_vehicles(metadata)
@@ -152,7 +156,7 @@ class VrpProcessor:
         return converted_route
 
 
-generalVrpProcessor = VrpProcessor(graphProcessor=GraphProcessor)
+generalVrpProcessor = VrpProcessor(graphProcessor=GraphProcessor())
 xborderVrpA3 = VrpProcessor(graphProcessor=GraphProcessor('modules/demo/data/9node_A3.json'))
 xborderVrpA6 = VrpProcessor(graphProcessor=GraphProcessor('modules/demo/data/9node_A6.json'))
 
