@@ -11,6 +11,7 @@ from ...create_graph.config.config_parser import ConfigParser
 config_parser = ConfigParser()
 import numpy as np
 
+
 class VrpProcessor:
     """Processes a request for routing
         Many operations on lists in this code can be replaced with dicts or similar, to remove list iteration with
@@ -124,10 +125,9 @@ class VrpProcessor:
             # Cost matrix per kilometer
             cost_matrix = []
             for vehicle in plan.vehicles:
-                vector = []
                 for edge in partition.edges:
                     cost_matrix.append(edge.cost/1000) # to kms
-            new_cost_matrix = cost_matrix + cost_matrix
+            new_cost_matrix = cost_matrix #+ cost_matrix
 
             """Build incidence matrix for LS VRP instance"""
             incident_matrix = []
@@ -141,7 +141,7 @@ class VrpProcessor:
                     elif e.end == n.id:
                         tmp_arr[ne] = 1
                 tmp_arr_neg = np.negative(tmp_arr).tolist()
-                incident_matrix.append(tmp_arr + tmp_arr_neg)
+                incident_matrix.append(tmp_arr)
 
             req_json = {}
             req_json['startV'] = start_loc_stopar
@@ -149,8 +149,8 @@ class VrpProcessor:
             req_json['vehicleCapacityV'] = capacity
             req_json['nodeDistributionV'] = dropoff
 
-            edge_vector = [edge.cost/(60*1000)  for edge in partition.edges]
-            req_json['edgeTimeV'] = edge_vector + edge_vector
+            edge_vector = [edge.cost/(60*1000) for edge in partition.edges]
+            req_json['edgeTimeV'] = edge_vector# + edge_vector
             req_json['nodeOpenV']= [0 for _ in partition.nodes] # from 0
             req_json['nodeCloseV']= [16 for _ in partition.nodes] # to 16
             req_json['costMat'] = new_cost_matrix
