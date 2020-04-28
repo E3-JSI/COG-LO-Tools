@@ -1,7 +1,7 @@
 import time
 from math import inf
 
-from ..vrp import VRP
+from ...vrp.vrp import VRP
 from ...utils.structures.parcel import Parcel
 from ...utils.structures.deliveries import Deliveries
 from ...utils.structures.plan import Plan
@@ -9,6 +9,7 @@ from ...utils.structures.vehicle import Vehicle
 from ...create_graph.config.config_parser import ConfigParser
 
 config_parser = ConfigParser()
+
 
 class VrpProcessor:
     """Processes a request for routing
@@ -108,8 +109,55 @@ class VrpProcessor:
             start_loc = self.map_start_nodes(partition, plan.vehicles)
             costs = [e.cost for e in partition.edges]
 
-            computed_routes, dispatch, objc = self.vrp.vrp(partition.incident_matrix, dropoff, capacity, start_loc,
-                                                           costs)
+            # ============================================================================================
+            # MODIFICATION FOR STOPAR'S VRP
+            # ============================================================================================
+
+            # Only one vehicle per plan
+            indexes = []
+            for v in plan.vehicles:
+                for i in range(len(partition.nodes)):
+                    if partition.nodes[i].id == v.start_node:
+                        indexes.append(i)
+            start_loc_stopar = indexes
+
+            # Cena per kilometer
+            cost_matrix = []
+            for vehicle in plan.vehicles:
+                vector = []
+                for edge in partition.edges:
+                    vector.append(edge.cost/1000) # to kms
+                cost_matrix.append(vector)
+
+            req_json = {}
+            req_json['startV'] = start_loc_stopar # za vsako vozilo pove v katerem node-u zacne
+            req_json['endV'] = start_loc_stopar # za vsako vozilo pove v katerem node-u konca
+            req_json['vehicleCapacityV'] = capacity # kapaciteta vsakega vozila, seznam
+            req_json['nodeDistributionV'] = dropoff # pove koliko parcelov odloziti v vsakem node-u
+
+            # Vsaka pot pokuri X ur, 60km/h povprecna hitrost.
+            req_json['edgeTimeV'] = [edge.cost/(60*1000)  for edge in partition.edges] # vektor dolzine m, ki pove koliko casa rabis, da prevozis vsako povezavo.
+
+            # Vektor odpiralnih in vektor zapiralnih casov: Za vsak node pove, katero uro se
+            # odpre/zapre (vozila vedno startajo ob casu 0).
+            req_json['nodeOpenV']= [8 for _ in partition.nodes] # Od 8
+            req_json['nodeCloseV']= [16 for _ in partition.nodes] # Do 4 popoldne
+
+            req_json['costMat'] = cost_matrix  # k x m matrika, vsaka vrstica predstavlja vozilo, stolpec predtsavlja povezavo,
+            # (i,j)-ti element pove koliko stane j-ta pot, ce jo prevozi vozilo k
+            req_json["incidenceMat"] = partition.incident_matrix # incidencna matrika
+
+            print("request json", req_json)
+
+            computed_routes, costs = self.vrp.vrp(req_json)
+            dispatch = dropoff
+
+            # ====================================================================================
+            # END
+            # ====================================================================================
+
+            # TODO: uncomment to use MIHA's VRP
+            # computed_routes, dispatch, objc = self.vrp.vrp(partition.incident_matrix, dropoff, capacity, start_loc, costs)
 
             # compute routes based on dispatch vectors from VRP. Since VRP output is incomplete/not best,
             # we add A* routing on top
