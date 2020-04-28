@@ -9,6 +9,7 @@ from ...utils.structures.vehicle import Vehicle
 from ...create_graph.config.config_parser import ConfigParser
 
 config_parser = ConfigParser()
+import numpy as np
 
 
 class VrpProcessor:
@@ -121,33 +122,39 @@ class VrpProcessor:
                         indexes.append(i)
             start_loc_stopar = indexes
 
-            # Cena per kilometer
+            # Cost matrix per kilometer
             cost_matrix = []
             for vehicle in plan.vehicles:
-                vector = []
                 for edge in partition.edges:
-                    vector.append(edge.cost/1000) # to kms
-                cost_matrix.append(vector)
+                    cost_matrix.append(edge.cost/1000) # to kms
+            new_cost_matrix = cost_matrix #+ cost_matrix
+
+            """Build incidence matrix for LS VRP instance"""
+            incident_matrix = []
+            graph = plan.partition
+
+            for ni, n in enumerate(graph.nodes):
+                tmp_arr = [0] * len(graph.edges)
+                for ne, e in enumerate(graph.edges):
+                    if e.start == n.id:
+                        tmp_arr[ne] = -1
+                    elif e.end == n.id:
+                        tmp_arr[ne] = 1
+                tmp_arr_neg = np.negative(tmp_arr).tolist()
+                incident_matrix.append(tmp_arr)
 
             req_json = {}
-            req_json['startV'] = start_loc_stopar # za vsako vozilo pove v katerem node-u zacne
-            req_json['endV'] = start_loc_stopar # za vsako vozilo pove v katerem node-u konca
-            req_json['vehicleCapacityV'] = capacity # kapaciteta vsakega vozila, seznam
-            req_json['nodeDistributionV'] = dropoff # pove koliko parcelov odloziti v vsakem node-u
+            req_json['startV'] = start_loc_stopar
+            req_json['endV'] = start_loc_stopar
+            req_json['vehicleCapacityV'] = capacity
+            req_json['nodeDistributionV'] = dropoff
 
-            # Vsaka pot pokuri X ur, 60km/h povprecna hitrost.
-            req_json['edgeTimeV'] = [edge.cost/(60*1000)  for edge in partition.edges] # vektor dolzine m, ki pove koliko casa rabis, da prevozis vsako povezavo.
-
-            # Vektor odpiralnih in vektor zapiralnih casov: Za vsak node pove, katero uro se
-            # odpre/zapre (vozila vedno startajo ob casu 0).
-            req_json['nodeOpenV']= [8 for _ in partition.nodes] # Od 8
-            req_json['nodeCloseV']= [16 for _ in partition.nodes] # Do 4 popoldne
-
-            req_json['costMat'] = cost_matrix  # k x m matrika, vsaka vrstica predstavlja vozilo, stolpec predtsavlja povezavo,
-            # (i,j)-ti element pove koliko stane j-ta pot, ce jo prevozi vozilo k
-            req_json["incidenceMat"] = partition.incident_matrix # incidencna matrika
-
-            print("request json", req_json)
+            edge_vector = [edge.cost/(60*1000) for edge in partition.edges]
+            req_json['edgeTimeV'] = edge_vector# + edge_vector
+            req_json['nodeOpenV']= [0 for _ in partition.nodes] # from 0
+            req_json['nodeCloseV']= [16 for _ in partition.nodes] # to 16
+            req_json['costMat'] = new_cost_matrix
+            req_json["incidenceMat"] = incident_matrix
 
             computed_routes, costs = self.vrp.vrp(req_json)
             dispatch = dropoff

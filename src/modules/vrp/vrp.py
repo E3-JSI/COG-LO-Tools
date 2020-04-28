@@ -18,8 +18,6 @@ class VRP:
         self.engine.addpath('./utils')
 
     def vrp(self, req_json):
-        print("received VRP request with content: ", req_json)
-
         incidence_mat = req_json['incidenceMat']
         cost_mat = req_json['costMat']
         edge_time_vec = req_json['edgeTimeV']
