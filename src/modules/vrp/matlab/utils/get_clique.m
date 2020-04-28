@@ -3,9 +3,7 @@ function [E_result, C_result, T_result, T_clique_orig] = get_clique(E, C, edge_t
     n_vehicles = size(C, 1);
     n_nodes = size(E, 1);
     n_edges = size(E, 2);
-    
     ones_e = ones(n_edges, 1);
-    
     A_cost = zeros(n_nodes, n_nodes, n_vehicles);
     A_time = zeros(n_nodes, n_nodes, n_vehicles);
     
