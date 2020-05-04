@@ -82,7 +82,7 @@ class RecReq(Resource):
         return vrp_processor_ref.process(vehicles, deliveries)
 
 
-@app.route("/api/adhoc/recommendationRequest", methods=['POST'])
+@app.route("/api/adhoc/getRecommendation", methods=['POST'])
 def handle_recommendation_request():
     global vrpProcessorReferenceSloCro
     global vrpProcessorReferenceElta
