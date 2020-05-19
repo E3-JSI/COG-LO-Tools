@@ -15,5 +15,6 @@
   "cro_border_nodes": ["H1", "H3", "H5"],
   "slo_border_nodes_cross_border": ["S1", "S3"],
   "cro_border_nodes_cross_border": ["H1", "H3"],
-  "graph_partitions": 1
+  "graph_partitions_slo_cro": 4,
+  "graph_partitions_elta": 1
 }

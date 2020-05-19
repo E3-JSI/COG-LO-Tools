@@ -69,6 +69,8 @@ class ConfigParser():
         else:
             print("Error - use not not defined.")
 
-    def get_graph_partitions(self):
-        # Get the number of partitions used for graph split by partitioner
-        return self.json_config["graph_partitions"]
+    def get_graph_partitions(self, use_case):
+        if use_case == "SLO-CRO":
+            return self.json_config["graph_partitions_slo_cro"]
+        else:
+            return self.json_config["graph_partitions_elta"]

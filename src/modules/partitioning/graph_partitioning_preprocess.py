@@ -24,7 +24,7 @@ class GraphPreprocessing:
         """
         graph_path = config_parser.get_graph_path(use_case)
         pickle_path = config_parser.get_pickle_path(use_case)
-        partitioner = GraphPreprocessing.init_partitioner(graph_path, pickle_path)
+        partitioner = GraphPreprocessing.init_partitioner(graph_path, pickle_path, use_case)
 
         return partitioner.graphProcessors
 
@@ -37,7 +37,7 @@ class GraphPreprocessing:
         graph_file.close()
 
     @staticmethod
-    def init_partitioner(graph_path, pickle_path):
+    def init_partitioner(graph_path, pickle_path, use_case):
         """
         Method used for loading Partitioner instance from pickle file or initializing
         new partitioner and returning it's instance.
@@ -54,7 +54,7 @@ class GraphPreprocessing:
             # then store partitioner instance in a pickle file and return it
             print('No data found, runing init GraphPartitioner and partition procedure')
             partitioner = GraphPartitioner(graph_path)
-            partitioner.partition(config_parser.get_graph_partitions())
+            partitioner.partition(config_parser.get_graph_partitions(use_case))
             with open(pickle_path, 'wb') as dumpfile:
                 pickle.dump(partitioner, dumpfile)
                 print('Stored pickled dump for future use')
