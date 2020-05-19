@@ -1,7 +1,8 @@
 {
   "eps": 4,
+  "eps_elta": 1,
   "map_basic_SLO-CRO": "./modules/create_graph/data/SLO-CRO2.osm",
-  "map_basic_ELTA": "./modules/create_graph/data/SLO-CRO2.osm",
+  "map_basic_ELTA": "./modules/create_graph/data/elta.osm",
   "post_loc_slo_cro":"./modules/create_graph/data/slo_cro_postal_offices.csv",
   "post_loc_elta":"./modules/create_graph/data/elta_postal_offices.csv",
   "post_loc_type_slo_cro": "si",

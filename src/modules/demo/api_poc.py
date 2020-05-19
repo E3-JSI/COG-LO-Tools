@@ -105,6 +105,7 @@ def handle_recommendation_request():
 
     ##Use Case SLO-CRO
     if use_case == "SLO-CRO":
+        print("processing SLO-CRO usease")
         if vrpProcessorReferenceSloCro is None:     #initialize VRP
             vrpProcessorReferenceSloCro = RecReq.init_vrp(use_case)
         vrp_processor_ref = vrpProcessorReferenceSloCro
@@ -141,8 +142,11 @@ def handle_recommendation_request():
 
         ##Use Case ELTA
     elif use_case == "ELTA":
+        print("processing ELTA usecase")
         ### VRP INICIALIZATION AND MESSAGE PREPROCESSING
+        transform_map_dict = methods.get_orders_coordinates(data)
         if evt_type is None:
+
             data_request, data_CLOs = methods.proccess_elta_event(evt_type, data)
             res = process_new_CLOs_request(data_CLOs)  # make graph build
         else:
@@ -159,9 +163,9 @@ def handle_recommendation_request():
             clos = data_request["CLOS"]
             requests = data_request["orders"]
             recommendations = RecReq.process_pickup_requests(evt_type, clos, requests, vrp_processor_ref, use_case)
-            return jsonify(recommendations)
+            return jsonify(methods.map_coordinates_to_response(recommendations, transform_map_dict))
         elif evt_type == "brokenVehicle":
-            if "CLOS" not in data_request or "BrokenVehicle" not in data_request:
+            if "CLOS" not in data_request or "brokenVehicle" not in data_request:
                 return {"message": "Parameter 'CLOS' or 'BrokenVehicle' is missing"}
             clos = data_request["CLOS"]
             broken_clo = data_request["BrokenVehicle"]

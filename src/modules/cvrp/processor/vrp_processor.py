@@ -182,13 +182,16 @@ class VrpProcessor:
                        'lat': route[0].lat,
                        'lon': route[0].lon,
                        'cluster': cluster}))
-        for route_point in response_json['solution']['routes'][0]['activities'][1:-1]:
-            reordered_list.append(Node({'uuid': route_point['id'],
-                           'address': route_point['address']['location_id'],
-                           'lat': route_point['address']['lat'],
-                           'lon': route_point['address']['lon'],
-                           'cluster': cluster}))
-        return reordered_list
+        if len(response_json['solution']['routes'][0]['activities']) > 2:
+            for route_point in response_json['solution']['routes'][0]['activities'][1:-1]:
+                reordered_list.append(Node({'uuid': route_point['id'],
+                               'address': route_point['address']['location_id'],
+                               'lat': route_point['address']['lat'],
+                               'lon': route_point['address']['lon'],
+                               'cluster': cluster}))
+            return reordered_list
+        else:
+            return route
 
     def make_route(self, graph_routes, loads, graph, vehicles, deliveries, deliveries_req):
         nodes = graph.nodes
@@ -204,9 +207,10 @@ class VrpProcessor:
         # update list of vehicle parcels: add new parcels to vehicle.parcels list
         for x, vehicle in enumerate(vehicles):
             load = loads[x]
+            load = [int(x) for x in load]
             loads_origin = self.map_dropoff(graph, vehicle.parcels)
 
-            for i in range(len(nodes)):
+            for i in range(len(nodes)):     ##add new parcels to the vehicle from the orders
                 vehicle_load_diff = load[i] - loads_origin[i]
                 while vehicle_load_diff > 0:
                     for j in range(len(deliveries_req)):
@@ -240,12 +244,11 @@ class VrpProcessor:
                 route.append(target)
 
             route_ordered = self.make_route_sequence(route)
-            graph.print_path(route)
+            graph.print_path(route_ordered)
             routes.append(route)
+
             converted_routes.append(
                 {"UUID": vehicles[i].name, "route": self.map_parcels_to_route(route_ordered, dispatch, graph, vehicles[i])})
-
-        # converted_routes_reordered = make_route_sequence(converted_routes)
 
         return converted_routes
 
@@ -275,7 +278,7 @@ class VrpProcessor:
                     "dropoffWeightKg": int(loads[node_idx]*(-1)),
                     "pickupWeightKg": 0,
                     # "dropoffVolumeM3": int(loads[node_idx] / 10),
-                    "pickup parcels": "",
+                    "pickup parcels": [],
                     "delivery parcels": parcels,
                     "info": "This parcels must be delivered to location " + str(node.id),
                     "position": "{},{}".format(node.lon, node.lat)
@@ -300,7 +303,7 @@ class VrpProcessor:
                         "dropoffWeightKg": 0,
                         "pickupWeightKg": sum([o.volume for o in parcels]),
                         "pickup parcels": [o.uuid for o in parcels],
-                        "delivery parcels": "",
+                        "delivery parcels": [],
                         "info": "This parcels must be delivered to location " + str(node.id),
                         "position": "{},{}".format(node.lon, node.lat)
                         })
