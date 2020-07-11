@@ -11,3 +11,5 @@ venv
 *.csv
 .ipynb_checkpoints/
 .vscode/
+# IntelliJ files
+*.iml
