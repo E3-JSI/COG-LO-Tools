@@ -1,6 +1,20 @@
 {
-  "eps": "3",
-  "map_basic": "./data/domaciraji.osm_01.osm",
-  "post_loc":"./data/List of Postal Offices (geographical location)_full.csv",
-  "post_loc_type": "si"
+  "eps": 4,
+  "map_basic": "./modules/create_graph/data/PoC_1.osm",
+  "post_loc_slo_cro":"./modules/create_graph/data/slo_cro_postal_offices.csv",
+  "post_loc_elta":"./modules/create_graph/data/elta_postal_offices.csv",
+  "post_loc_type_slo_cro": "si",
+  "post_loc_type_elta": "elta",
+  "msb_fwd": "http://116.203.13.198/api/postRecommendation",
+  "elta_json_graph_data_path": "./modules/demo/data/elta_graph_final.json",
+  "slo_cro_json_graph_data_path": "./modules/demo/data/slo_cro_graph_final.json",
+  "elta_pickle_path": "./modules/demo/data/elta_graphs.pickle",
+  "slo_cro_pickle_path": "./modules/demo/data/slo_cro_graph.pickle",
+  "slo_graph_json_path": "./modules/demo/data/slo_graph_json.json",
+  "cro_graph_json_path": "./modules/demo/data/cro_graph_json.json",
+  "slo_graph_pickle_path": "./modules/demo/data/slo_graph.pickle",
+  "cro_graph_pickle_path": "./modules/demo/data/cro_graph.pickle",
+  "slo_border_nodes": ["S1", "S3", "S5"],
+  "cro_border_nodes": ["H5", "H3", "H1"],
+  "graph_partitions": 1
 }

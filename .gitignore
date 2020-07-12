@@ -1,5 +1,8 @@
 # Python files
-venv/
+
+include/
+lib/
+bin/
 *.pyc
 .idea
 venv
@@ -13,3 +16,5 @@ venv
 .vscode/
 # IntelliJ files
 *.iml
+# Demo data
+./src/modules/demo/data/

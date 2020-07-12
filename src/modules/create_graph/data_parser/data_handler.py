@@ -1,11 +1,11 @@
 import sys
 
 import xml.sax
-import networkx as nx
-from utils import utils
-from data_parser.parse_osm import OsmParsers
-from data_parser.parse_posts import PostHandler
-from pojo.search_node import SearchNode
+from .parse_osm import OsmParsers
+from .parse_posts import PostHandler
+from ..pojo.search_node import SearchNode
+from ..utils import utils
+
 
 class DataHandler():
 
@@ -30,21 +30,16 @@ class DataHandler():
 
             tmpNode = nodesL[nodeKey]
             if utils.calcDistance(post.latitude, post.longitude, tmpNode.lat, tmpNode.lon) < 0.5:
-                #print(nodeKey)
-                #print(post.address)
-                #print(utils.calcDistance(post.latitude, post.longitude, tmpNode.lat, tmpNode.lon))
+
                 postsNodes.append(nodeKey)
                 tmpNode.add_post(post.address, post)
                 nodesL[nodeKey] = tmpNode
         return (nodesL, postsNodes)
 
 
-
-
     def retrive_posts(self, post_path):
         post_handler = PostHandler()
         self.posts = post_handler.read_postal_offices(post_path)
-
 
 
     def retrieve_road_topology(self, osm_path, post_path):
@@ -94,11 +89,12 @@ class DataHandler():
         #alignement
         (roadNodesAnotated, postsNodes) =  self.align_nodes_and_posts(nodes_filtered)
 
-        #generate ides for post offices (generic)
+        #generate ids for post offices (generic)
         i = 1
         for key, node in roadNodesAnotated.items():
             if node.post:
-                nodesDict[node.id] = SearchNode(node.id, 'A' + str(i), node.post, node.lat, node.lon, node.address,node.post)
+                nodesDict[node.id] = SearchNode(node.id, node.post.uuid, node.post, node.lat, node.lon,
+                                                node.address,node.post)
                 i = i + 1
             else:
                 nodesDict[node.id] = SearchNode(node.id, None, None, node.lat, node.lon, node.address)

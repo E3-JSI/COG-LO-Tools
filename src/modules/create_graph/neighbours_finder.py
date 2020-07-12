@@ -4,9 +4,7 @@ import time
 
 import matplotlib.pyplot as plt
 import networkx as nx
-from pojo.front_data import FrontData
-#from read_osm_paths import graph_viz
-#from read_osm_paths import drawGraph
+from .pojo.front_data import FrontData
 
 class NeighboursFinder():
 
@@ -270,7 +268,7 @@ class NeighboursFinder():
                 del front[prev_node_id]
 
             #  check if the algorithm is finished
-            print('total paths: ' + str(len(front)) + ', exhausted paths: ' + str(exhausted_paths_count))
+            #print('total paths: ' + str(len(front)) + ', exhausted paths: ' + str(exhausted_paths_count))
             # print('added: ' + str(counter_added) + ' Deleted:  ' + str(counter_deleted) +
             #      ' Modified : ' + str(counter_modified) + ' Snapped : ' + str(counter_snapped))
             #      print("results:" + str(results))
@@ -281,7 +279,7 @@ class NeighboursFinder():
 
             # when there is more than one post office on in all direction, the search can be terminated
             if exhausted_paths_count == len(front):
-                print("All paths exhausted! Terminating the algorithm!")
+                #print("All paths exhausted! Terminating the algorithm!")
                 break
 
         print("Runtime second step: {}".format(time.time() - start_time))
@@ -315,7 +313,7 @@ class NeighboursFinder():
         #for id, value in node_id_node_map.items():
         #    node_id_node_map[id].tag = node_id_node_map[id].tag_filter()
 
-        print("Runtime first step: {}".format(time.time() - start_time))
+        #print("Runtime first step: {}".format(time.time() - start_time))
 
 
     def search_near_posts(self, node_id_node_map, node_id_edge_map, ways, origin_node_id,map_posts_to_nodes, eps_km):

@@ -8,6 +8,7 @@ import json
 
 from db import Database
 from formalization import validate_config
+from ontology import OntologyInspector
 
 # create Flask instance for an app
 
@@ -122,6 +123,44 @@ def generate_new_initial_concepts():
 
     return {'success': True}
 
+@app.route('/getConceptMappings', methods=['POST'])
+def get_concept_mappings():
+    """
+    Request should look like: {"concepts": ["Station", "ExchangeHub"]}
+    :return:
+    """
+    received_request = request.json
+    if received_request == 'null' or received_request is None:
+        return 'Error parsing request. It should be in JSON format'
+
+    if 'concepts' not in received_request:
+        return 'JSON object in request must contain key "concepts".'
+
+    # extract payload from concepts
+    payload = received_request['concepts']
+
+    # value of key 'concepts' must be an array
+    if not isinstance(payload, list) or not payload:
+        return 'Value of key concepts should be non empty array'
+
+    # result example:
+    # {
+    #     "results": [
+    #         {
+    #             "concept": "TransportationMeans",
+    #             "query_concept": "Truck",
+    #             "relationship": "type"
+    #         }
+    #     ]
+    # }
+    results = ontology_inspector.get_concept_mappings(payload)
+    return {'results': results}
+
+
+@app.route('/getOntology', methods=['POST'])
+def get_ontology():
+    return ontology_inspector.get_ontology_json()
+
 
 if __name__ == '__main__':
     # read config, validate it and extract database config
@@ -132,6 +171,11 @@ if __name__ == '__main__':
     # get instance of database connection
     db_name = "concepts_db"
     database = Database(db_name, cfg)
+    resources = config["resources"]
+
+    # create instance of Ontology inspector
+    ontology_path = resources["ontology_path"]
+    ontology_inspector = OntologyInspector(ontology_path)
 
     # start API
     serve(app, host='localhost', port=5000)
