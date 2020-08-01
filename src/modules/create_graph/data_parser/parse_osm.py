@@ -1,7 +1,7 @@
 import xml.sax
-from utils import utils
-from data_parser.pojo.way import Way
-from data_parser.pojo.node import Node
+from ..utils import utils
+from .pojo.way import Way
+from .pojo.node import Node
 
 class OsmParsers(xml.sax.ContentHandler):
     '''
