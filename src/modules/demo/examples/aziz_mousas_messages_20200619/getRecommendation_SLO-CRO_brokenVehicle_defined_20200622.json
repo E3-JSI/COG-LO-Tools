@@ -1,0 +1,90 @@
+{
+  "request": "BROKEN-VEHICLE-411fded9-97c6-4503-8e6e-5e513b65a351",
+  "organization": "SLO-CRO",
+  "event": {
+    "event_type": "brokenVehicle"
+  },
+  "clos": [
+    {
+      "id": "PSvehicle10",
+      "info": {
+        "organization": "PS",
+        "physical_id": "10",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "name": "PS truck 001",
+        "location": {
+          "country": "SLO",
+          "latitude": 45.93107932,
+          "longitude": 15.67793203
+        },
+        "capacity": 400,
+        "capacity_unit": "kg"
+      },
+      "state": {
+        "status": 1
+      }
+    }
+  ],
+  "brokenVehicle": {
+    "id": "PSvehicle11",
+    "info": {
+      "organization": "PS",
+      "physical_id": "11",
+      "type": "transportation means",
+      "subtype": "vehicle",
+      "description": "truck",
+      "name": "PS truck 002",
+      "location": {
+        "latitude": 45.93108,
+        "longitude": 15.677932,
+        "station": "PSpostofficeS1",
+        "country": "SLO"
+      },
+      "capacity": 200,
+      "capacity_unit": "kg"
+    },
+    "parcels": [
+      {
+        "id": "PSparcelCE233248325HR",
+        "destination": {
+        "latitude": 45.884613,
+        "longitude": 15.523105,
+        "station": "PSpostofficeS5",
+          "country": "CRO"
+        },
+        "payweight": 7,
+        "issued": "2020-06-18 01:51:08.826847",
+        "deadline": "2020-06-18 01:51:08.826847",
+        "state": "unserved"
+      },
+      {
+        "id": "PSparcelCE233248348HR",
+        "destination": {
+        "latitude": 45.93108,
+        "longitude": 15.677932,
+        "station": "PSpostofficeS1",
+          "country": "CRO"
+        },
+        "payweight": 6,
+        "issued": "2020-06-18 01:51:08.826847",
+        "deadline": "2020-06-18 01:51:08.826847",
+        "state": "unserved"
+      },
+      {
+        "id": "PSparcelCE233286434HR",
+        "destination": {
+          "latitude": 45.93108,
+          "longitude": 15.677932,
+          "station": "PSpostofficeS1",
+          "country": "CRO"
+        },
+        "payweight": 14,
+        "issued": "2020-06-18 01:51:08.826847",
+        "deadline": "2020-06-18 01:51:08.826847",
+        "state": "unserved"
+      }
+    ]
+  }
+}

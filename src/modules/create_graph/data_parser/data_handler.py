@@ -29,7 +29,7 @@ class DataHandler():
                     nodeKey = key
 
             tmpNode = nodesL[nodeKey]
-            if utils.calcDistance(post.latitude, post.longitude, tmpNode.lat, tmpNode.lon) < 0.5:
+            if utils.calcDistance(post.latitude, post.longitude, tmpNode.lat, tmpNode.lon) < 2:
 
                 postsNodes.append(nodeKey)
                 tmpNode.add_post(post.address, post)

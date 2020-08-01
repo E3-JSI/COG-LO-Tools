@@ -121,7 +121,7 @@ class JsonGraphCreator():
         import time
         start_time = time.time()
         osmHandler = DataHandler(
-            config_parser.get_basic_map(),
+            config_parser.get_basic_map(use_case),
             {config_parser.get_post_loc_type(use_case): config_parser.get_csv_path(use_case)}
         )
         print("Pre-step  {}".format(time.time() - start_time))
@@ -146,7 +146,7 @@ class JsonGraphCreator():
 
         for postId, nodeId in map_posts_to_nodes.items():
 
-            res = finder.search_near_posts(roadNodes, roadWays, ways, nodeId, map_posts_to_nodes, config_parser.get_eps())
+            res = finder.search_near_posts(roadNodes, roadWays, ways, nodeId, map_posts_to_nodes, config_parser.get_eps(use_case))
             print('PostID ' + str(postId) + ' Node: ' + str(nodeId) + ' r: ' + str(res))
 
             tmpRes.append((postId, nodeId, res))

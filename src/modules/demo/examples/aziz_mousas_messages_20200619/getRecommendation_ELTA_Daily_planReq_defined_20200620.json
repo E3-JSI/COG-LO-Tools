@@ -1,0 +1,1843 @@
+{
+  "request": "DAILY-b31e4207-3fc5-43d6-bbdc-f9d19387be92",
+  "organization": "ELTA",
+  "event": null,
+  "clos": [
+    {
+      "id": "ELTAvehicle7",
+      "info": {
+        "organization": "ELTA",
+        "physical_id": "7",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "name": "ELTA truck 001",
+        "location": {
+          "country": "Greece",
+          "latitude": 38.005177,
+          "longitude": 23.810454
+        },
+        "capacity": 200,
+        "capacity_unit": "kg",
+        "state": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "id": "ELTAvehicle8",
+      "info": {
+        "organization": "ELTA",
+        "physical_id": "8",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "name": "ELTA truck 002",
+        "location": {
+          "country": "Greece",
+          "latitude": 38.005177,
+          "longitude": 23.810454
+        },
+        "capacity": 200,
+        "capacity_unit": "kg",
+        "state": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "id": "ELTAvehicle9",
+      "info": {
+        "organization": "ELTA",
+        "physical_id": "9",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "name": "ELTA truck 003",
+        "location": {
+          "country": "Greece",
+          "latitude": 38.0035439,
+          "longitude": 23.8150354
+        },
+        "capacity": 200,
+        "capacity_unit": "kg",
+        "state": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "parcels": [
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNI061812144GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.001194,
+        "longitude": 23.802845,
+        "address": "Serifou 14, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD292237765GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00006,
+        "longitude": 23.804981,
+        "address": "Zakinthou 2, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNI061801671GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.99953,
+        "longitude": 23.798176,
+        "address": "Perikleous Leof. 2, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD288046138GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00104,
+        "longitude": 23.792751,
+        "address": "Voutsina Panagioti 77-79, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWY320001309GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.006065,
+        "longitude": 23.798658,
+        "address": "Mesogion Leof. 264, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD287890921GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00179,
+        "longitude": 23.797705,
+        "address": "Agiou Ioannou Theologou 68, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD285010253GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.999123,
+        "longitude": 23.796635,
+        "address": "Klious 37, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPS154117107GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.006207,
+        "longitude": 23.798155,
+        "address": "Mesogion Leof. 262 � ��������� 15, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWE180013343GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.007515,
+        "longitude": 23.802647,
+        "address": "Mesogion Leof. 284 (���. ����. ���, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD286232194GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.007687,
+        "longitude": 23.802408,
+        "address": "Mesogion Leof. 284, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWB450035374GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00322,
+        "longitude": 23.801289,
+        "address": "Sokratous 47, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZW738690750GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.999012,
+        "longitude": 23.798834,
+        "address": "Perikleous Leof. 47, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNF660203320GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.9988,
+        "longitude": 23.79918,
+        "address": "Perikleous Leof. 55, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWO400061116GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.996223,
+        "longitude": 23.79693,
+        "address": "Sarantaporou 84, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZN341005629GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.99469,
+        "longitude": 23.804537,
+        "address": "Kountouriotou 23, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD263796215GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.999607,
+        "longitude": 23.800468,
+        "address": "Ouranias 6, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZA170030143GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.002445,
+        "longitude": 23.804209,
+        "address": "17is Noemvriou 1973 128, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNB461286532GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.01437,
+        "longitude": 23.849537,
+        "address": "Agiou Ioannou Theologou 41, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD277216644GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.999077,
+        "longitude": 23.788843,
+        "address": "Anastaseos 23, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNV590736894GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00487,
+        "longitude": 23.796354,
+        "address": "Agamemnonos 13, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWE180013649GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.007515,
+        "longitude": 23.802647,
+        "address": "Mesogion Leof. 284 (���. ����. ���, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD280867526GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.995426,
+        "longitude": 23.806936,
+        "address": "Giannitson 12, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD280867472GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.995426,
+        "longitude": 23.806936,
+        "address": "Giannitson 12, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD288332990GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.007313,
+        "longitude": 23.802153,
+        "address": "Mesogion Leof. 280, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD258660532GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.998993,
+        "longitude": 23.78514,
+        "address": "Mesogion Leof. 156, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWT200017465GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.007313,
+        "longitude": 23.802153,
+        "address": "Mesogion Leof. 280, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZG350218701GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.007465,
+        "longitude": 23.801523,
+        "address": "Mesogion Leof. � 284 (���. ����. ���, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZD570723790GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.001945,
+        "longitude": 23.800217,
+        "address": "Miltiadou 23, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWD450042619GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.002426,
+        "longitude": 23.793211,
+        "address": "Aetideon 10-12, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD289016398GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.998184,
+        "longitude": 23.79617,
+        "address": "Imittou 54, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD280867565GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.995426,
+        "longitude": 23.806936,
+        "address": "Giannitson 12, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZK650002725GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.993702,
+        "longitude": 23.799942,
+        "address": "25is Martiou 10, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZW738653584GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.998314,
+        "longitude": 23.799368,
+        "address": "Perikleous Leof. 56, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWQ460078604GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00761,
+        "longitude": 23.80325,
+        "address": "Mesogion Leof. 288, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNH600166179GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.002113,
+        "longitude": 23.79376,
+        "address": "Aetideon 13 & Voutsina, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNP090409975GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00808,
+        "longitude": 23.803488,
+        "address": "Mesogion Leof. 292, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWQ451628192GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.996384,
+        "longitude": 23.79343,
+        "address": "Klious 3, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNX700241629GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.000763,
+        "longitude": 23.802502,
+        "address": "Serifou 10, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZS560615623GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.013474,
+        "longitude": 23.84964,
+        "address": "Agiou Ioannou Theologou 36, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWQ451628250GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00017,
+        "longitude": 23.801903,
+        "address": "Serifou 4, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZR690351389GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.001328,
+        "longitude": 23.803318,
+        "address": "Serifou 16, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZX830068051GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.998722,
+        "longitude": 23.804745,
+        "address": "Tinou 29 (1st floor), 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWX320002539GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00032,
+        "longitude": 23.793997,
+        "address": "Imittou 17, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWU810065011GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.995907,
+        "longitude": 23.793518,
+        "address": "Anastaseos 75, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelEB713992272CN",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.000767,
+        "longitude": 23.795317,
+        "address": "AETIDEON 25, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWQ451699790GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.002895,
+        "longitude": 23.80686,
+        "address": "Aristotelous 78, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWQ451649453GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.99556,
+        "longitude": 23.79803,
+        "address": "Sarantaporou 77, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZK720087875GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.99252,
+        "longitude": 23.804636,
+        "address": "Konstantinoupoleos 45, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWX640012683GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.994373,
+        "longitude": 23.796394,
+        "address": "Polimnias 9, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZW738597922GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.99308,
+        "longitude": 23.797829,
+        "address": "Anastaseos 121&���������, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNE967924979GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.996826,
+        "longitude": 23.80682,
+        "address": "Konstantinoupoleos 6, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZH561189175GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.995377,
+        "longitude": 23.798782,
+        "address": "Melpomenis 34, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZN340992801GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00081,
+        "longitude": 23.791674,
+        "address": "Sarantaporou 9, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZK630697445GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00064,
+        "longitude": 23.794712,
+        "address": "66, Eleftheriou Venizelou, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPS254559561GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.993523,
+        "longitude": 23.799004,
+        "address": "Xanthippou 109-111, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWB670009780GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.995213,
+        "longitude": 23.800402,
+        "address": "25is Martiou 28, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelPD291964775GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.99697,
+        "longitude": 23.796762,
+        "address": "Thalias 31, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNB260416624GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.99351,
+        "longitude": 23.806644,
+        "address": "Grevenon 38, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWR980014561GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00808,
+        "longitude": 23.803488,
+        "address": "Mesogion Leof. 292, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelNI470117744GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.004047,
+        "longitude": 23.796425,
+        "address": "Faneromenis 8, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWN620204110GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.002445,
+        "longitude": 23.804209,
+        "address": "17is Noemvriou 1973 57�, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZA170027949GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00104,
+        "longitude": 23.792751,
+        "address": "Voutsina Panagioti 68, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZA170028652GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00578,
+        "longitude": 23.796179,
+        "address": "Mesogion Leof. 248, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZA170028992GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.01876,
+        "longitude": 23.797768,
+        "address": "Perikleous Leof. 13, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWT420016270GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.001293,
+        "longitude": 23.80237,
+        "address": "Themistokleous 12, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelZA170029692GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.005184,
+        "longitude": 23.798937,
+        "address": "Chiou 4, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWQ451628201GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.99666,
+        "longitude": 23.800179,
+        "address": "Melpomenis 43, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWQ451628246GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00536,
+        "longitude": 23.804115,
+        "address": "Tsaldari Panagi 20, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWQ451628229GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.001938,
+        "longitude": 23.799557,
+        "address": "Faneromenis 23, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWQ451628189GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.004303,
+        "longitude": 23.79542,
+        "address": "Agamemnonos 7, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWE230090504GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.99934,
+        "longitude": 23.795698,
+        "address": "Katsimpiri Evangelias 6, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWE230091487GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 38.00179,
+        "longitude": 23.797705,
+        "address": "Venizelou Eleftheriou 13, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWE230090985GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.993122,
+        "longitude": 23.804337,
+        "address": "Velissariou 2, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWE230089599GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.997757,
+        "longitude": 23.796947,
+        "address": "Imittou 62, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWT420017045GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.998722,
+        "longitude": 23.804745,
+        "address": "Pithagorou 15, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWT420016575GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.992634,
+        "longitude": 23.803333,
+        "address": "Kanari Konstantinou 1, 15562, Cholargos",
+        "postal_code": "15562",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    },
+    {
+      "organization": "ELTA",
+      "id": "ELTAparcelWB980299665GR",
+      "source": {
+        "latitude": 45.567,
+        "longitude": 56.5566,
+        "station": "ELTApostoffice1",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "destination": {
+        "latitude": 37.998917,
+        "longitude": 23.787361,
+        "address": "Anastaseos 2 & Chigante, 15561, Cholargos",
+        "postal_code": "15561",
+        "city": "Athens",
+        "country": "GR"
+      },
+      "payweight": 1,
+      "issued": "2020-06-18 01:51:08.826847",
+      "deadline": "2020-06-18 01:51:08.826847",
+      "state": "unserved"
+    }
+  ]
+}

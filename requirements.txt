@@ -13,3 +13,6 @@ flask
 flask-jsonpify
 flask-restful
 waitress
+networkx
+sklearn
+pandas

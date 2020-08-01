@@ -1,0 +1,605 @@
+{
+  "topic": "recommendations",
+  "sender": "COGLOmoduleCA",
+  "message": {
+    "request": "DAILY-b31e4207-3fc5-43d6-bbdc-f9d19387be92",
+    "recommendation": {
+      "organization": "ELTA",
+      "id": "DAILY-b31e4207-3fc5-43d6-bbdc-f9d19387be92",
+      "cloplans": [
+        {
+          "clo": "ELTAvehicle001",
+          "plan": {
+            "id": "DAILY-b31e4207-3fc5-43d6-bbdc-f9d19387be92",
+            "organization": "ELTA",
+            "execution_date": "2020-06-19 11:14:09",
+            "recommendation": "ELTArecommendation1",
+            "steps": [
+              {
+                "id": 0,
+                "rank": 0,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 38.0022522,
+                  "longitude": 23.8043316,
+                  "location_id": "2",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 1,
+                "rank": 1,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [
+                  {
+                    "id": "ELTAparcelWY320001309GR",
+                    "latitude": 38.006065,
+                    "longitude": 23.798658
+                  },
+                  {
+                    "id": "ELTAparcelPS154117107GR",
+                    "latitude": 38.006207,
+                    "longitude": 23.798155
+                  },
+                  {
+                    "id": "ELTAparcelWE180013343GR",
+                    "latitude": 38.007515,
+                    "longitude": 23.802647
+                  },
+                  {
+                    "id": "ELTAparcelPD286232194GR",
+                    "latitude": 38.007687,
+                    "longitude": 23.802408
+                  },
+                  {
+                    "id": "ELTAparcelNV590736894GR",
+                    "latitude": 38.00487,
+                    "longitude": 23.796354
+                  },
+                  {
+                    "id": "ELTAparcelWE180013649GR",
+                    "latitude": 38.007515,
+                    "longitude": 23.802647
+                  },
+                  {
+                    "id": "ELTAparcelPD288332990GR",
+                    "latitude": 38.007313,
+                    "longitude": 23.802153
+                  },
+                  {
+                    "id": "ELTAparcelWT200017465GR",
+                    "latitude": 38.007313,
+                    "longitude": 23.802153
+                  },
+                  {
+                    "id": "ELTAparcelZG350218701GR",
+                    "latitude": 38.007465,
+                    "longitude": 23.801523
+                  },
+                  {
+                    "id": "ELTAparcelWQ460078604GR",
+                    "latitude": 38.00761,
+                    "longitude": 23.80325
+                  },
+                  {
+                    "id": "ELTAparcelNP090409975GR",
+                    "latitude": 38.00808,
+                    "longitude": 23.803488
+                  },
+                  {
+                    "id": "ELTAparcelWR980014561GR",
+                    "latitude": 38.00808,
+                    "longitude": 23.803488
+                  },
+                  {
+                    "id": "ELTAparcelNI470117744GR",
+                    "latitude": 38.004047,
+                    "longitude": 23.796425
+                  },
+                  {
+                    "id": "ELTAparcelZA170028652GR",
+                    "latitude": 38.00578,
+                    "longitude": 23.796179
+                  },
+                  {
+                    "id": "ELTAparcelZA170028992GR",
+                    "latitude": 38.01876,
+                    "longitude": 23.797768
+                  },
+                  {
+                    "id": "ELTAparcelZA170029692GR",
+                    "latitude": 38.005184,
+                    "longitude": 23.798937
+                  },
+                  {
+                    "id": "ELTAparcelWQ451628189GR",
+                    "latitude": 38.004303,
+                    "longitude": 23.79542
+                  }
+                ],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 38.007062,
+                  "longitude": 23.7998501,
+                  "location_id": "5",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 2,
+                "rank": 2,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [
+                  {
+                    "id": "ELTAparcelNI061801671GR",
+                    "latitude": 37.99953,
+                    "longitude": 23.798176
+                  },
+                  {
+                    "id": "ELTAparcelPD287890921GR",
+                    "latitude": 38.00179,
+                    "longitude": 23.797705
+                  },
+                  {
+                    "id": "ELTAparcelPD285010253GR",
+                    "latitude": 37.999123,
+                    "longitude": 23.796635
+                  },
+                  {
+                    "id": "ELTAparcelZW738690750GR",
+                    "latitude": 37.999012,
+                    "longitude": 23.798834
+                  },
+                  {
+                    "id": "ELTAparcelNF660203320GR",
+                    "latitude": 37.9988,
+                    "longitude": 23.79918
+                  },
+                  {
+                    "id": "ELTAparcelWO400061116GR",
+                    "latitude": 37.996223,
+                    "longitude": 23.79693
+                  },
+                  {
+                    "id": "ELTAparcelPD263796215GR",
+                    "latitude": 37.999607,
+                    "longitude": 23.800468
+                  },
+                  {
+                    "id": "ELTAparcelPD289016398GR",
+                    "latitude": 37.998184,
+                    "longitude": 23.79617
+                  },
+                  {
+                    "id": "ELTAparcelZK650002725GR",
+                    "latitude": 37.993702,
+                    "longitude": 23.799942
+                  },
+                  {
+                    "id": "ELTAparcelZW738653584GR",
+                    "latitude": 37.998314,
+                    "longitude": 23.799368
+                  },
+                  {
+                    "id": "ELTAparcelWQ451649453GR",
+                    "latitude": 37.99556,
+                    "longitude": 23.79803
+                  },
+                  {
+                    "id": "ELTAparcelWX640012683GR",
+                    "latitude": 37.994373,
+                    "longitude": 23.796394
+                  },
+                  {
+                    "id": "ELTAparcelZW738597922GR",
+                    "latitude": 37.99308,
+                    "longitude": 23.797829
+                  },
+                  {
+                    "id": "ELTAparcelZH561189175GR",
+                    "latitude": 37.995377,
+                    "longitude": 23.798782
+                  },
+                  {
+                    "id": "ELTAparcelPS254559561GR",
+                    "latitude": 37.993523,
+                    "longitude": 23.799004
+                  },
+                  {
+                    "id": "ELTAparcelWB670009780GR",
+                    "latitude": 37.995213,
+                    "longitude": 23.800402
+                  },
+                  {
+                    "id": "ELTAparcelPD291964775GR",
+                    "latitude": 37.99697,
+                    "longitude": 23.796762
+                  },
+                  {
+                    "id": "ELTAparcelWQ451628201GR",
+                    "latitude": 37.99666,
+                    "longitude": 23.800179
+                  },
+                  {
+                    "id": "ELTAparcelWQ451628229GR",
+                    "latitude": 38.001938,
+                    "longitude": 23.799557
+                  },
+                  {
+                    "id": "ELTAparcelWE230090504GR",
+                    "latitude": 37.99934,
+                    "longitude": 23.795698
+                  },
+                  {
+                    "id": "ELTAparcelWE230091487GR",
+                    "latitude": 38.00179,
+                    "longitude": 23.797705
+                  },
+                  {
+                    "id": "ELTAparcelWE230089599GR",
+                    "latitude": 37.997757,
+                    "longitude": 23.796947
+                  }
+                ],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 37.9976883,
+                  "longitude": 23.7987758,
+                  "location_id": "3",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "clo": "ELTAvehicle002",
+          "plan": {
+            "id": "DAILY-b31e4207-3fc5-43d6-bbdc-f9d19387be92",
+            "organization": "ELTA",
+            "execution_date": "2020-06-19 11:14:09",
+            "recommendation": "ELTArecommendation2",
+            "steps": [
+              {
+                "id": 0,
+                "rank": 0,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 38.0022522,
+                  "longitude": 23.8043316,
+                  "location_id": "2",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 1,
+                "rank": 1,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [
+                  {
+                    "id": "ELTAparcelZN341005629GR",
+                    "latitude": 37.99469,
+                    "longitude": 23.804537
+                  },
+                  {
+                    "id": "ELTAparcelPD280867526GR",
+                    "latitude": 37.995426,
+                    "longitude": 23.806936
+                  },
+                  {
+                    "id": "ELTAparcelPD280867472GR",
+                    "latitude": 37.995426,
+                    "longitude": 23.806936
+                  },
+                  {
+                    "id": "ELTAparcelPD280867565GR",
+                    "latitude": 37.995426,
+                    "longitude": 23.806936
+                  },
+                  {
+                    "id": "ELTAparcelZX830068051GR",
+                    "latitude": 37.998722,
+                    "longitude": 23.804745
+                  },
+                  {
+                    "id": "ELTAparcelZK720087875GR",
+                    "latitude": 37.99252,
+                    "longitude": 23.804636
+                  },
+                  {
+                    "id": "ELTAparcelNE967924979GR",
+                    "latitude": 37.996826,
+                    "longitude": 23.80682
+                  },
+                  {
+                    "id": "ELTAparcelNB260416624GR",
+                    "latitude": 37.99351,
+                    "longitude": 23.806644
+                  },
+                  {
+                    "id": "ELTAparcelWE230090985GR",
+                    "latitude": 37.993122,
+                    "longitude": 23.804337
+                  },
+                  {
+                    "id": "ELTAparcelWT420017045GR",
+                    "latitude": 37.998722,
+                    "longitude": 23.804745
+                  },
+                  {
+                    "id": "ELTAparcelWT420016575GR",
+                    "latitude": 37.992634,
+                    "longitude": 23.803333
+                  }
+                ],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 37.9952036,
+                  "longitude": 23.8053538,
+                  "location_id": "4",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "clo": "ELTAvehicle005",
+          "plan": {
+            "id": "DAILY-b31e4207-3fc5-43d6-bbdc-f9d19387be92",
+            "organization": "ELTA",
+            "execution_date": "2020-06-19 11:14:09",
+            "recommendation": "ELTArecommendation3",
+            "steps": [
+              {
+                "id": 0,
+                "rank": 0,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [
+                  {
+                    "id": "ELTAparcelNI061812144GR",
+                    "latitude": 38.001194,
+                    "longitude": 23.802845
+                  },
+                  {
+                    "id": "ELTAparcelPD292237765GR",
+                    "latitude": 38.00006,
+                    "longitude": 23.804981
+                  },
+                  {
+                    "id": "ELTAparcelWB450035374GR",
+                    "latitude": 38.00322,
+                    "longitude": 23.801289
+                  },
+                  {
+                    "id": "ELTAparcelZA170030143GR",
+                    "latitude": 38.002445,
+                    "longitude": 23.804209
+                  },
+                  {
+                    "id": "ELTAparcelZD570723790GR",
+                    "latitude": 38.001945,
+                    "longitude": 23.800217
+                  },
+                  {
+                    "id": "ELTAparcelNX700241629GR",
+                    "latitude": 38.000763,
+                    "longitude": 23.802502
+                  },
+                  {
+                    "id": "ELTAparcelWQ451628250GR",
+                    "latitude": 38.00017,
+                    "longitude": 23.801903
+                  },
+                  {
+                    "id": "ELTAparcelZR690351389GR",
+                    "latitude": 38.001328,
+                    "longitude": 23.803318
+                  },
+                  {
+                    "id": "ELTAparcelWQ451699790GR",
+                    "latitude": 38.002895,
+                    "longitude": 23.80686
+                  },
+                  {
+                    "id": "ELTAparcelWN620204110GR",
+                    "latitude": 38.002445,
+                    "longitude": 23.804209
+                  },
+                  {
+                    "id": "ELTAparcelWT420016270GR",
+                    "latitude": 38.001293,
+                    "longitude": 23.80237
+                  },
+                  {
+                    "id": "ELTAparcelWQ451628246GR",
+                    "latitude": 38.00536,
+                    "longitude": 23.804115
+                  }
+                ],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 38.0022522,
+                  "longitude": 23.8043316,
+                  "location_id": "2",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 1,
+                "rank": 1,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [
+                  {
+                    "id": "ELTAparcelPD288046138GR",
+                    "latitude": 38.00104,
+                    "longitude": 23.792751
+                  },
+                  {
+                    "id": "ELTAparcelPD277216644GR",
+                    "latitude": 37.999077,
+                    "longitude": 23.788843
+                  },
+                  {
+                    "id": "ELTAparcelPD258660532GR",
+                    "latitude": 37.998993,
+                    "longitude": 23.78514
+                  },
+                  {
+                    "id": "ELTAparcelWD450042619GR",
+                    "latitude": 38.002426,
+                    "longitude": 23.793211
+                  },
+                  {
+                    "id": "ELTAparcelNH600166179GR",
+                    "latitude": 38.002113,
+                    "longitude": 23.79376
+                  },
+                  {
+                    "id": "ELTAparcelWQ451628192GR",
+                    "latitude": 37.996384,
+                    "longitude": 23.79343
+                  },
+                  {
+                    "id": "ELTAparcelWX320002539GR",
+                    "latitude": 38.00032,
+                    "longitude": 23.793997
+                  },
+                  {
+                    "id": "ELTAparcelWU810065011GR",
+                    "latitude": 37.995907,
+                    "longitude": 23.793518
+                  },
+                  {
+                    "id": "ELTAparcelEB713992272CN",
+                    "latitude": 38.000767,
+                    "longitude": 23.795317
+                  },
+                  {
+                    "id": "ELTAparcelZN340992801GR",
+                    "latitude": 38.00081,
+                    "longitude": 23.791674
+                  },
+                  {
+                    "id": "ELTAparcelZK630697445GR",
+                    "latitude": 38.00064,
+                    "longitude": 23.794712
+                  },
+                  {
+                    "id": "ELTAparcelZA170027949GR",
+                    "latitude": 38.00104,
+                    "longitude": 23.792751
+                  },
+                  {
+                    "id": "ELTAparcelWB980299665GR",
+                    "latitude": 37.998917,
+                    "longitude": 23.787361
+                  }
+                ],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 37.9999991,
+                  "longitude": 23.7925348,
+                  "location_id": "0",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 2,
+                "rank": 2,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [
+                  {
+                    "id": "ELTAparcelNB461286532GR",
+                    "latitude": 38.01437,
+                    "longitude": 23.849537
+                  },
+                  {
+                    "id": "ELTAparcelZS560615623GR",
+                    "latitude": 38.013474,
+                    "longitude": 23.84964
+                  }
+                ],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 38.0137354,
+                  "longitude": 23.8495674,
+                  "location_id": "1",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

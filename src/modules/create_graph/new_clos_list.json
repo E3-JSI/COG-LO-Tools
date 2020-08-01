@@ -1,5 +1,5 @@
 {
-  "CLOS": [
+  "clos": [
     {
         "address": "hrvaska1",
         "uuid": "H1",
@@ -104,7 +104,7 @@
 {
 "eventType": "brokenVehicle",
 "useCase":"SLO-CRO",
-"CLOS": [{
+"clos": [{
 "UUID": "UUID-1",
 "currentLocation": "S1",
 "capacity": 400,
@@ -157,7 +157,7 @@
 }
 
 ],
-"BrokenVehicle": {
+"brokenVehicle": {
 "UUID": "UUID-3",
 "currentLocation": "H7",
 "capacity": 200,

@@ -1,7 +1,10 @@
 {
-  "eps": 4,
-  "map_basic": "./modules/create_graph/data/PoC_1.osm",
+  "eps_slo_cro": 4,
+  "eps_elta": 1,
+  "map_basic_SLO-CRO": "./modules/create_graph/data/SLO-CRO2.osm",
+  "map_basic_ELTA": "./modules/create_graph/data/elta.osm",
   "post_loc_slo_cro":"./modules/create_graph/data/slo_cro_postal_offices.csv",
+  "elta_static_locations": "./modules/create_graph/data/elta_static_locations.csv",
   "post_loc_elta":"./modules/create_graph/data/elta_postal_offices.csv",
   "post_loc_type_slo_cro": "si",
   "post_loc_type_elta": "elta",
@@ -10,11 +13,9 @@
   "slo_cro_json_graph_data_path": "./modules/demo/data/slo_cro_graph_final.json",
   "elta_pickle_path": "./modules/demo/data/elta_graphs.pickle",
   "slo_cro_pickle_path": "./modules/demo/data/slo_cro_graph.pickle",
-  "slo_graph_json_path": "./modules/demo/data/slo_graph_json.json",
-  "cro_graph_json_path": "./modules/demo/data/cro_graph_json.json",
-  "slo_graph_pickle_path": "./modules/demo/data/slo_graph.pickle",
-  "cro_graph_pickle_path": "./modules/demo/data/cro_graph.pickle",
-  "slo_border_nodes": ["S1", "S3", "S5"],
-  "cro_border_nodes": ["H5", "H3", "H1"],
+  "slo_border_nodes": ["PSpostofficeS1", "PSpostofficeS3", "PSpostofficeS5"],
+  "cro_border_nodes": ["HPpostofficeH1", "HPpostofficeH3", "HPpostofficeH5"],
+  "slo_border_nodes_cross_border": ["PSpostofficeS1", "PSpostofficeS5"],
+  "cro_border_nodes_cross_border": ["HPpostofficeH1", "HPpostofficeH5"],
   "graph_partitions": 1
 }

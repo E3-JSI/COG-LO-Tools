@@ -56,4 +56,4 @@ if __name__ == '__main__':
     print(['Vehicle {} at {}'.format(x.name, x.start_node) for x in available_vehicles])
     print(['Delivery of {} to {}'.format(x.volume, x.target) for x in requested_deliveries])
 
-    vrpProcessor.process(available_vehicles, requested_deliveries)
+    vrpProcessor.process(available_vehicles, requested_deliveries, "SLO-CRO")
