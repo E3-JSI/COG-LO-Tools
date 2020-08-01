@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd ..
+export PYTHONPATH="$PWD/src:$PYTHONPATH"
+cd scripts
+python3 partition-timings.py $@

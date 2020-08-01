@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# return non-zero status on the first error
+set -e
+
+# run the test
+cd ../src
+python -m modules.partitioning.test_dijkstra

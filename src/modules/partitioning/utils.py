@@ -3,6 +3,8 @@ import scipy
 from scipy.sparse import csr_matrix
 import numpy as np
 
+import modules.partitioning.dijkstra as dijkstra
+
 def laplace_mat(A_spmat):
     '''
     Returns the Laplace matrix of the given adjacency matrix A.
@@ -26,20 +28,37 @@ def laplace_mat(A_spmat):
 
     return laplace_spmat
 
-def cut_size(A_spmat, partitions):
-    nvert = A_spmat.get_shape()[0]
 
-    cut = 0.0
-    for part1 in partitions:
-        p1 = np.zeros(nvert)
-        for vert_id in part1:
-            p1[vert_id] = 1
-        not_p1 = np.ones(nvert) - p1
+def cut_size(Q, part_vec, k):
+    n = Q.shape[0]
 
-        Ay = csr_matrix.dot(A_spmat, not_p1)
-        cut += np.dot(p1, Ay)
+    P = np.empty((n, k))
+    ones_k = np.ones(k)
 
-    return cut
+    # compute the cut intensity
+    for partN in range(k):
+        P[:, partN] = part_vec == partN
+
+    Pt_Q = Q.__rmul__(P.T)
+    Q_p = np.dot(Pt_Q, P)
+    # cut_sum = cut_intensity_sparse(Q, part, k)
+    # k is small, so optimization here is not as critical
+    cut_intensity = np.dot(np.dot(ones_k, Q_p), ones_k) - np.trace(Q_p)
+
+    return cut_intensity
 
 def cut_size_undirected(A_spmat, partitions):
     return 0.5*cut_size(A_spmat, partitions)
+
+
+def compute_pairwise_dist(Q):
+    n_nodes = Q.shape[0]
+
+    Q_dense = np.empty((n_nodes, n_nodes))
+
+    for start_nodeN in range(n_nodes):
+        node_dist_vec = dijkstra.run_dijkstra(Q, start_nodeN)
+        Q_dense[start_nodeN, :] = node_dist_vec
+
+    return Q_dense
+
