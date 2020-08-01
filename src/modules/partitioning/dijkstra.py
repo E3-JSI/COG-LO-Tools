@@ -37,6 +37,10 @@ def run_dijkstra(D, startN):
                 active_dist = curr_dist
                 activeN = candidateN
 
+        if activeN == -1:
+            # we were not able to find a node to expand to
+            continue
+
         # remove the current node from the active set 
         active_node_set.remove(activeN)
 
