@@ -51,14 +51,14 @@ def cut_size_undirected(A_spmat, partitions):
     return 0.5*cut_size(A_spmat, partitions)
 
 
-def compute_pairwise_dist(Q):
-    n_nodes = Q.shape[0]
+def compute_pairwise_dist(D):
+    n_nodes = D.shape[0]
 
-    Q_dense = np.empty((n_nodes, n_nodes))
+    D_dense = np.empty((n_nodes, n_nodes))
 
     for start_nodeN in range(n_nodes):
-        node_dist_vec = dijkstra.run_dijkstra(Q, start_nodeN)
-        Q_dense[start_nodeN, :] = node_dist_vec
+        node_dist_vec = dijkstra.run_dijkstra(D, start_nodeN)
+        D_dense[start_nodeN, :] = node_dist_vec
 
-    return Q_dense
+    return D_dense
 
