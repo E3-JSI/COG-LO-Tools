@@ -9,7 +9,6 @@ from ..config.config_parser import ConfigParser
 config_parser = ConfigParser()
 url = "https://graphhopper.com/api/1/vrp?key=e8a55308-9419-4814-81f1-6250efe25b5c"
 
-
 # map parcels to exisitng virtual nodes
 
 def map_coordinates_to_response(recommendations, transform_map_dict):
@@ -118,7 +117,6 @@ def find_min_pickup(coords, posts_nparray):
 
     return label
 
-
 def elta_clustering(orig_data):
     data = copy.deepcopy(orig_data)
     l = []
@@ -182,7 +180,6 @@ def elta_clustering(orig_data):
 
     clos["clos"] = clos_list
     return data, clos
-
 
 def find_min(lat_cord, lon_cord):
     elta = config_parser.get_csv_path("ELTA")

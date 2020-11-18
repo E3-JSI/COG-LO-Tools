@@ -1,0 +1,172 @@
+{
+  "status": 1,
+  "msg": "Event process flow - CA:getRecommendation example input built",
+    "organization": "ELTA",
+    "clos": [
+      {
+        "id": "ELTAvehicle6",
+        "info": {
+          "name": "ELTA truck 001",
+          "type": "transportation means",
+          "subtype": "vehicle",
+          "capacity": 200,
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": null,
+            "longitude": null,
+            "postal_code": null
+          },
+          "description": "truck",
+          "physical_id": "XYZ 0006",
+          "organization": "ELTA",
+          "capacity_unit": "kg",
+          "working_hours": null
+        },
+        "state": {
+          "plan": null,
+          "driver": null,
+          "status": null,
+          "parcels": [],
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 37.9894900012,
+            "longitude": 23.7942801234,
+            "postal_code": null
+          },
+          "load_volume": null,
+          "capacity_unit": null,
+          "delay_minutes": null,
+          "available_space": null,
+          "availability_prediction": {
+            "time": null,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            }
+          }
+        }
+      },
+      {
+        "id": "ELTAvehicle7",
+        "info": {
+          "name": "ELTA truck 002",
+          "type": "transportation means",
+          "subtype": "vehicle",
+          "capacity": 200,
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": null,
+            "longitude": null,
+            "postal_code": null
+          },
+          "description": "truck",
+          "physical_id": "XYZ 0007",
+          "organization": "ELTA",
+          "capacity_unit": "kg",
+          "working_hours": null
+        },
+        "state": {
+          "plan": null,
+          "driver": null,
+          "status": null,
+          "parcels": [],
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 37.9794900012,
+            "longitude": 23.7642801234,
+            "postal_code": null
+          },
+          "load_volume": null,
+          "capacity_unit": null,
+          "delay_minutes": null,
+          "available_space": null,
+          "availability_prediction": {
+            "time": null,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            }
+          }
+        }
+      }
+    ],
+    "parcels": [],
+    "event": {
+      "id": "03873d14-1830-422f-8d2f-47c414cc6ea9",
+      "info": {
+        "clo": {
+          "id": "ELTAvehicle6",
+          "info": {
+            "name": "ELTA truck 001",
+            "type": "transportation means",
+            "subtype": "vehicle",
+            "capacity": 200,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            },
+            "description": "truck",
+            "physical_id": "XYZ 0006",
+            "organization": "ELTA",
+            "capacity_unit": "kg",
+            "working_hours": null
+          },
+          "state": {
+            "plan": null,
+            "driver": null,
+            "status": null,
+            "parcels": [],
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": 37.9894900012,
+              "longitude": 23.7942801234,
+              "postal_code": null
+            },
+            "load_volume": null,
+            "capacity_unit": null,
+            "delay_minutes": null,
+            "available_space": null,
+            "availability_prediction": {
+              "time": null,
+              "location": {
+                "city": null,
+                "country": null,
+                "station": null,
+                "latitude": null,
+                "longitude": null,
+                "postal_code": null
+              }
+            }
+          }
+        },
+        "comment": null
+      },
+      "time": "2020-06-25T12:20:28Z",
+      "event": "breakdown",
+      "initiator": "ELTAvehicle6",
+      "event_type": "vehicle"
+    },
+    "request": "COGLOrequestXXXXXXX"
+  }

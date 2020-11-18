@@ -4,7 +4,6 @@ import json
 # URL to our TSP service which runs on the same machine as COGLO services, but a different port.
 TSP_URL = "http://localhost:1234/api/tsp/"
 
-
 # Travelling Salesman Problem algorithm which receives a list of 'routes' and returns
 # ordered list of visits as a solution to TSP.
 class Tsp:

@@ -13,9 +13,9 @@
   "slo_cro_json_graph_data_path": "./modules/demo/data/slo_cro_graph_final.json",
   "elta_pickle_path": "./modules/demo/data/elta_graphs.pickle",
   "slo_cro_pickle_path": "./modules/demo/data/slo_cro_graph.pickle",
-  "slo_border_nodes": ["PSpostofficeS1", "PSpostofficeS3", "PSpostofficeS5"],
-  "cro_border_nodes": ["HPpostofficeH1", "HPpostofficeH3", "HPpostofficeH5"],
-  "slo_border_nodes_cross_border": ["PSpostofficeS1", "PSpostofficeS5"],
-  "cro_border_nodes_cross_border": ["HPpostofficeH1", "HPpostofficeH5"],
+  "slo_border_nodes": ["PSpostofficeS1", "PSpostofficeS3", "PSpostofficeS8"],
+  "cro_border_nodes": ["HPpostofficeH1", "HPpostofficeH4", "HPpostofficeH6"],
+  "slo_border_nodes_cross_border": ["PSpostofficeS3", "PSpostofficeS8"],
+  "cro_border_nodes_cross_border": ["HPpostofficeH1", "HPpostofficeH6"],
   "graph_partitions": 1
 }

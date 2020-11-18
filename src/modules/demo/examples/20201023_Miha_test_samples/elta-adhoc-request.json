@@ -1,0 +1,4003 @@
+{
+  "event": {
+    "time": "2020-10-29T09:06:34Z",
+    "event_type": "order",
+    "event": "system",
+    "initiator": "COGLOmoduleWebIF",
+    "info": {
+      "item": {
+        "organization": "ELTA",
+        "id": "ELTAparcelTEST1",
+        "source": {
+          "country": "GR",
+          "station": "ELTApostalbox4",
+          "latitude": 37.99876,
+          "longitude": 23.78431
+        },
+        "destination": {
+          "country": "GR",
+          "station": "ELTApostalbox5",
+          "latitude": 38.00613,
+          "longitude": 23.79713
+        },
+        "service_type": "normal",
+        "payweight": 1,
+        "issued": "2020-10-29T09:06:34Z",
+        "state": "unserved"
+      },
+      "location": {
+        "country": "GR",
+        "station": "ELTApostalbox4",
+        "latitude": 37.99876,
+        "longitude": 23.78431
+      }
+    }
+  },
+  "clos": [
+    {
+      "id": "ELTApostalbox5",
+      "info": {
+        "organization": "ELTA",
+        "physical_id": "5",
+        "type": "station",
+        "subtype": "postal box",
+        "location": {
+          "address": "Mesogeion Aven. 260",
+          "city": "Cholargos",
+          "country": "GR",
+          "latitude": 38.00613,
+          "longitude": 23.79713
+        },
+        "capacity": 0
+      },
+      "state": {
+        "status": 1,
+        "load_volume": 0,
+        "available_space": 0,
+        "load_size": 0,
+        "delay_minutes": 0
+      }
+    },
+    {
+      "id": "ELTApostoffice2",
+      "info": {
+        "organization": "ELTA",
+        "physical_id": "2",
+        "type": "station",
+        "subtype": "post office",
+        "location": {
+          "address": "Leukosias 25",
+          "city": "Papagou",
+          "country": "GR",
+          "latitude": 37.98949,
+          "longitude": 23.79428
+        },
+        "capacity": 0
+      },
+      "state": {
+        "status": 1,
+        "load_volume": 0,
+        "available_space": 0,
+        "load_size": 0,
+        "delay_minutes": 0
+      }
+    },
+    {
+      "id": "ELTApostoffice3",
+      "info": {
+        "organization": "ELTA",
+        "physical_id": "3",
+        "type": "station",
+        "subtype": "post office",
+        "location": {
+          "address": "Aspasias 70",
+          "city": "Cholargos",
+          "country": "GR",
+          "latitude": 38.00034,
+          "longitude": 23.79328
+        },
+        "capacity": 0
+      },
+      "state": {
+        "status": 1,
+        "load_volume": 0,
+        "available_space": 0,
+        "load_size": 0,
+        "delay_minutes": 0
+      }
+    },
+    {
+      "id": "ELTAvehicle7",
+      "info": {
+        "organization": "ELTA",
+        "physical_id": "7",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "capacity": 200,
+        "capacity_unit": "kg"
+      },
+      "state": {
+        "location": {
+          "latitude": 37.97949,
+          "longitude": 23.76428
+        },
+        "status": 0,
+        "availability_prediction": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0
+          },
+          "time": 0
+        },
+        "load_volume": 0,
+        "available_space": 0,
+        "plan": "ELTAplan51fdf7f1-0776-4b4f-9640-0f0634c7aaf7",
+        "completed_plan": {},
+        "remaining_plan": {
+          "id": "ELTAplan51fdf7f1-0776-4b4f-9640-0f0634c7aaf7",
+          "recommendation": "DAILY-4b74ca63-d0b0-4beb-a170-88df9529882a",
+          "organization": "ELTA",
+          "execution_date": "2020-07-08 16:38:26",
+          "steps": [
+            {
+              "id": 1,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel76"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 2,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel83"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 3,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel87"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 4,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel94"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 5,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel96"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 6,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel97"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 7,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel106"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 8,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel109"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 9,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel122"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 10,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel134"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 11,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel73"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 12,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel74"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 13,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel78"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 14,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel93"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 15,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel103"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 16,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel124"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 17,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel136"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 18,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel139"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 19,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel75"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 20,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel81"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 21,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel84"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 22,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel100"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 23,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel104"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 24,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel108"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 25,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel120"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 26,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel121"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 27,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel125"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 28,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel126"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 29,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel127"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 30,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel133"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 31,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel138"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 32,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel28"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 33,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel33"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 34,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel77"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 35,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel79"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 36,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel137"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 37,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel5"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 38,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel11"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 39,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel13"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 40,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel21"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 41,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel29"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 42,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel30"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 43,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel32"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 44,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel34"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 45,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel37"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 46,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel39"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 47,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel43"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 48,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel49"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 49,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel50"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 50,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel60"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 51,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel61"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 52,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel63"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 53,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel16"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 54,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel24"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 55,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel31"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 56,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel47"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 57,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel14"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 58,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel52"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 59,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel141"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 60,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel85"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 61,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel101"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 62,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel114"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 63,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel129"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 64,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel130"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 65,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel131"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 66,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel86"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 67,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel89"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 68,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel90"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 69,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel98"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 70,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel99"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 71,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel102"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 72,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel107"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 73,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel111"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 74,
+              "rank": 1,
+              "location": {
+                "latitude": 38.012287,
+                "longitude": 23.813837
+              },
+              "load": [
+                "ELTAparcel132"
+              ],
+              "unload": [],
+              "complete": 0
+            },
+            {
+              "id": 75,
+              "rank": 6,
+              "location": {
+                "latitude": 38.004303,
+                "longitude": 23.796867
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel85"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 76,
+              "rank": 6,
+              "location": {
+                "latitude": 38.00576,
+                "longitude": 23.796133
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel101"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 77,
+              "rank": 6,
+              "location": {
+                "latitude": 38.006065,
+                "longitude": 23.798658
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel114"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 78,
+              "rank": 6,
+              "location": {
+                "latitude": 38.005863,
+                "longitude": 23.798702
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel129"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 79,
+              "rank": 6,
+              "location": {
+                "latitude": 38.005196,
+                "longitude": 23.797874
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel130"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 80,
+              "rank": 6,
+              "location": {
+                "latitude": 38.00674,
+                "longitude": 23.800104
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel131"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 81,
+              "rank": 3,
+              "location": {
+                "latitude": 38.007687,
+                "longitude": 23.802408
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel86"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 82,
+              "rank": 3,
+              "location": {
+                "latitude": 38.007313,
+                "longitude": 23.802153
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel89"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 83,
+              "rank": 3,
+              "location": {
+                "latitude": 38.00611,
+                "longitude": 23.801043
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel90"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 84,
+              "rank": 3,
+              "location": {
+                "latitude": 38.007687,
+                "longitude": 23.802408
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel98"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 85,
+              "rank": 3,
+              "location": {
+                "latitude": 38.00761,
+                "longitude": 23.80325
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel99"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 86,
+              "rank": 3,
+              "location": {
+                "latitude": 38.008373,
+                "longitude": 23.804796
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel102"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 87,
+              "rank": 3,
+              "location": {
+                "latitude": 38.007687,
+                "longitude": 23.802408
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel107"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 88,
+              "rank": 3,
+              "location": {
+                "latitude": 38.007313,
+                "longitude": 23.802153
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel111"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 89,
+              "rank": 3,
+              "location": {
+                "latitude": 38.00512,
+                "longitude": 23.80119
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel132"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 90,
+              "rank": 2,
+              "location": {
+                "latitude": 38.01312,
+                "longitude": 23.823915
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel14"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 91,
+              "rank": 2,
+              "location": {
+                "latitude": 38.012905,
+                "longitude": 23.823496
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel52"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 92,
+              "rank": 2,
+              "location": {
+                "latitude": 38.014008,
+                "longitude": 23.824265
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel141"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 93,
+              "rank": 7,
+              "location": {
+                "latitude": 38.011684,
+                "longitude": 23.834694
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel16"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 94,
+              "rank": 7,
+              "location": {
+                "latitude": 38.01112,
+                "longitude": 23.832167
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel24"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 95,
+              "rank": 7,
+              "location": {
+                "latitude": 38.01151,
+                "longitude": 23.834946
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel31"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 96,
+              "rank": 7,
+              "location": {
+                "latitude": 38.011536,
+                "longitude": 23.833214
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel47"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 97,
+              "rank": 4,
+              "location": {
+                "latitude": 38.00611,
+                "longitude": 23.828236
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel5"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 98,
+              "rank": 4,
+              "location": {
+                "latitude": 38.005795,
+                "longitude": 23.829659
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel11"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 99,
+              "rank": 4,
+              "location": {
+                "latitude": 38.007317,
+                "longitude": 23.82781
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel13"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 100,
+              "rank": 4,
+              "location": {
+                "latitude": 38.002758,
+                "longitude": 23.828629
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel21"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 101,
+              "rank": 4,
+              "location": {
+                "latitude": 38.006573,
+                "longitude": 23.832579
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel29"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 102,
+              "rank": 4,
+              "location": {
+                "latitude": 38.005745,
+                "longitude": 23.828245
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel30"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 103,
+              "rank": 4,
+              "location": {
+                "latitude": 38.005478,
+                "longitude": 23.828484
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel32"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 104,
+              "rank": 4,
+              "location": {
+                "latitude": 38.00442,
+                "longitude": 23.829594
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel34"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 105,
+              "rank": 4,
+              "location": {
+                "latitude": 38.003796,
+                "longitude": 23.829948
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel37"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 106,
+              "rank": 4,
+              "location": {
+                "latitude": 38.00776,
+                "longitude": 23.82897
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel39"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 107,
+              "rank": 4,
+              "location": {
+                "latitude": 38.003048,
+                "longitude": 23.83014
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel43"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 108,
+              "rank": 4,
+              "location": {
+                "latitude": 38.002514,
+                "longitude": 23.82641
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel49"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 109,
+              "rank": 4,
+              "location": {
+                "latitude": 38.00611,
+                "longitude": 23.828236
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel50"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 110,
+              "rank": 4,
+              "location": {
+                "latitude": 38.00627,
+                "longitude": 23.82996
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel60"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 111,
+              "rank": 4,
+              "location": {
+                "latitude": 38.00627,
+                "longitude": 23.82996
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel61"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 112,
+              "rank": 4,
+              "location": {
+                "latitude": 38.00694,
+                "longitude": 23.827276
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel63"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 113,
+              "rank": 5,
+              "location": {
+                "latitude": 38.00096,
+                "longitude": 23.810513
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel28"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 114,
+              "rank": 5,
+              "location": {
+                "latitude": 38.00023,
+                "longitude": 23.812052
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel33"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 115,
+              "rank": 5,
+              "location": {
+                "latitude": 37.99546,
+                "longitude": 23.808159
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel77"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 116,
+              "rank": 5,
+              "location": {
+                "latitude": 37.996708,
+                "longitude": 23.8109
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel79"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 117,
+              "rank": 5,
+              "location": {
+                "latitude": 37.997772,
+                "longitude": 23.80742
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel137"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 118,
+              "rank": 8,
+              "location": {
+                "latitude": 37.998413,
+                "longitude": 23.800983
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel75"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 119,
+              "rank": 8,
+              "location": {
+                "latitude": 37.997395,
+                "longitude": 23.805342
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel81"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 120,
+              "rank": 8,
+              "location": {
+                "latitude": 38.000053,
+                "longitude": 23.801817
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel84"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 121,
+              "rank": 8,
+              "location": {
+                "latitude": 37.99786,
+                "longitude": 23.806547
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel100"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 122,
+              "rank": 8,
+              "location": {
+                "latitude": 37.998722,
+                "longitude": 23.804745
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel104"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 123,
+              "rank": 8,
+              "location": {
+                "latitude": 37.998722,
+                "longitude": 23.804745
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel108"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 124,
+              "rank": 8,
+              "location": {
+                "latitude": 37.997562,
+                "longitude": 23.802721
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel120"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 125,
+              "rank": 8,
+              "location": {
+                "latitude": 37.998722,
+                "longitude": 23.804745
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel121"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 126,
+              "rank": 8,
+              "location": {
+                "latitude": 37.997562,
+                "longitude": 23.802721
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel125"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 127,
+              "rank": 8,
+              "location": {
+                "latitude": 37.996704,
+                "longitude": 23.806032
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel126"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 128,
+              "rank": 8,
+              "location": {
+                "latitude": 37.998722,
+                "longitude": 23.804745
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel127"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 129,
+              "rank": 8,
+              "location": {
+                "latitude": 37.998127,
+                "longitude": 23.802597
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel133"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 130,
+              "rank": 8,
+              "location": {
+                "latitude": 37.998722,
+                "longitude": 23.804745
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel138"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 131,
+              "rank": 9,
+              "location": {
+                "latitude": 37.992847,
+                "longitude": 23.799177
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel73"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 132,
+              "rank": 9,
+              "location": {
+                "latitude": 37.996685,
+                "longitude": 23.799011
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel74"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 133,
+              "rank": 9,
+              "location": {
+                "latitude": 37.994972,
+                "longitude": 23.801025
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel78"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 134,
+              "rank": 9,
+              "location": {
+                "latitude": 37.994083,
+                "longitude": 23.799372
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel93"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 135,
+              "rank": 9,
+              "location": {
+                "latitude": 37.992725,
+                "longitude": 23.79862
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel103"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 136,
+              "rank": 9,
+              "location": {
+                "latitude": 37.996296,
+                "longitude": 23.794466
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel124"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 137,
+              "rank": 9,
+              "location": {
+                "latitude": 37.996857,
+                "longitude": 23.799276
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel136"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 138,
+              "rank": 9,
+              "location": {
+                "latitude": 37.994297,
+                "longitude": 23.800955
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel139"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 139,
+              "rank": 10,
+              "location": {
+                "latitude": 37.999077,
+                "longitude": 23.788843
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel76"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 140,
+              "rank": 10,
+              "location": {
+                "latitude": 38.00094,
+                "longitude": 23.787676
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel83"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 141,
+              "rank": 10,
+              "location": {
+                "latitude": 38.001205,
+                "longitude": 23.787916
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel87"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 142,
+              "rank": 10,
+              "location": {
+                "latitude": 38.002754,
+                "longitude": 23.791924
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel94"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 143,
+              "rank": 10,
+              "location": {
+                "latitude": 38.000195,
+                "longitude": 23.792976
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel96"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 144,
+              "rank": 10,
+              "location": {
+                "latitude": 38.00104,
+                "longitude": 23.792751
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel97"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 145,
+              "rank": 10,
+              "location": {
+                "latitude": 37.999893,
+                "longitude": 23.789906
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel106"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 146,
+              "rank": 10,
+              "location": {
+                "latitude": 38.0023,
+                "longitude": 23.791063
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel109"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 147,
+              "rank": 10,
+              "location": {
+                "latitude": 38.001396,
+                "longitude": 23.790653
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel122"
+              ],
+              "complete": 0
+            },
+            {
+              "id": 148,
+              "rank": 10,
+              "location": {
+                "latitude": 38.00104,
+                "longitude": 23.792751
+              },
+              "load": [],
+              "unload": [
+                "ELTAparcel134"
+              ],
+              "complete": 0
+            }
+          ]
+        },
+        "load_size": 0,
+        "parcels": [],
+        "delay_minutes": 0
+      }
+    }
+  ],
+  "parcels": [
+    {
+      "id": "ELTAparcel76",
+      "state": "unserved",
+      "issued": "2020-06-24T02:16:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T07:16:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.999077,
+        "longitude": 23.788843,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel83",
+      "state": "unserved",
+      "issued": "2020-06-24T06:47:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T11:47:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00094,
+        "longitude": 23.787676,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel87",
+      "state": "unserved",
+      "issued": "2020-06-24T11:33:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T16:33:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.001205,
+        "longitude": 23.787916,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel94",
+      "state": "unserved",
+      "issued": "2020-06-24T16:07:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T21:07:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.002754,
+        "longitude": 23.791924,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel96",
+      "state": "unserved",
+      "issued": "2020-06-24T08:35:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T13:35:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.000195,
+        "longitude": 23.792976,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel97",
+      "state": "unserved",
+      "issued": "2020-06-24T13:13:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T18:13:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00104,
+        "longitude": 23.792751,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel106",
+      "state": "unserved",
+      "issued": "2020-06-24T19:12:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-26T00:12:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.999893,
+        "longitude": 23.789906,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel109",
+      "state": "unserved",
+      "issued": "2020-06-24T08:03:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T13:03:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.0023,
+        "longitude": 23.791063,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel122",
+      "state": "unserved",
+      "issued": "2020-06-24T06:01:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T11:01:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.001396,
+        "longitude": 23.790653,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel134",
+      "state": "unserved",
+      "issued": "2020-06-24T12:37:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T17:37:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00104,
+        "longitude": 23.792751,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel73",
+      "state": "unserved",
+      "issued": "2020-06-24T06:49:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T11:49:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.992847,
+        "longitude": 23.799177,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel74",
+      "state": "unserved",
+      "issued": "2020-06-24T14:40:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T19:40:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.996685,
+        "longitude": 23.799011,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel78",
+      "state": "unserved",
+      "issued": "2020-06-24T09:03:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T14:03:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.994972,
+        "longitude": 23.801025,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel93",
+      "state": "unserved",
+      "issued": "2020-06-24T17:10:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T22:10:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.994083,
+        "longitude": 23.799372,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel103",
+      "state": "unserved",
+      "issued": "2020-06-24T05:52:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T10:52:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.992725,
+        "longitude": 23.79862,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel124",
+      "state": "unserved",
+      "issued": "2020-06-24T19:54:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-26T00:54:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.996296,
+        "longitude": 23.794466,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel136",
+      "state": "unserved",
+      "issued": "2020-06-24T17:34:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T22:34:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.996857,
+        "longitude": 23.799276,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel139",
+      "state": "unserved",
+      "issued": "2020-06-24T01:13:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T06:13:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.994297,
+        "longitude": 23.800955,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel75",
+      "state": "unserved",
+      "issued": "2020-06-24T17:29:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T22:29:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.998413,
+        "longitude": 23.800983,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel81",
+      "state": "unserved",
+      "issued": "2020-06-24T19:09:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-26T00:09:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.997395,
+        "longitude": 23.805342,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel84",
+      "state": "unserved",
+      "issued": "2020-06-24T02:06:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T07:06:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.000053,
+        "longitude": 23.801817,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel100",
+      "state": "unserved",
+      "issued": "2020-06-24T01:16:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T06:16:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.99786,
+        "longitude": 23.806547,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel104",
+      "state": "unserved",
+      "issued": "2020-06-24T00:09:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T05:09:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.998722,
+        "longitude": 23.804745,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel108",
+      "state": "unserved",
+      "issued": "2020-06-24T09:16:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T14:16:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.998722,
+        "longitude": 23.804745,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel120",
+      "state": "unserved",
+      "issued": "2020-06-24T08:03:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T13:03:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.997562,
+        "longitude": 23.802721,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel121",
+      "state": "unserved",
+      "issued": "2020-06-24T06:15:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T11:15:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.998722,
+        "longitude": 23.804745,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel125",
+      "state": "unserved",
+      "issued": "2020-06-24T11:10:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T16:10:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.997562,
+        "longitude": 23.802721,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel126",
+      "state": "unserved",
+      "issued": "2020-06-24T19:22:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-26T00:22:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.996704,
+        "longitude": 23.806032,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel127",
+      "state": "unserved",
+      "issued": "2020-06-24T18:09:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T23:09:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.998722,
+        "longitude": 23.804745,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel133",
+      "state": "unserved",
+      "issued": "2020-06-24T08:04:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T13:04:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.998127,
+        "longitude": 23.802597,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel138",
+      "state": "unserved",
+      "issued": "2020-06-24T07:01:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T12:01:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.998722,
+        "longitude": 23.804745,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel28",
+      "state": "unserved",
+      "issued": "2020-06-24T10:17:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T15:17:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00096,
+        "longitude": 23.810513,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel33",
+      "state": "unserved",
+      "issued": "2020-06-24T11:29:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T16:29:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00023,
+        "longitude": 23.812052,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel77",
+      "state": "unserved",
+      "issued": "2020-06-24T07:19:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T12:19:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.99546,
+        "longitude": 23.808159,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel79",
+      "state": "unserved",
+      "issued": "2020-06-24T04:19:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T09:19:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.996708,
+        "longitude": 23.8109,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel137",
+      "state": "unserved",
+      "issued": "2020-06-24T17:17:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T22:17:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 37.997772,
+        "longitude": 23.80742,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel5",
+      "state": "unserved",
+      "issued": "2020-06-24T10:12:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T15:12:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00611,
+        "longitude": 23.828236,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel11",
+      "state": "unserved",
+      "issued": "2020-06-24T14:11:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T19:11:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.005795,
+        "longitude": 23.829659,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel13",
+      "state": "unserved",
+      "issued": "2020-06-24T01:39:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T06:39:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.007317,
+        "longitude": 23.82781,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel21",
+      "state": "unserved",
+      "issued": "2020-06-24T13:32:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T18:32:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.002758,
+        "longitude": 23.828629,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel29",
+      "state": "unserved",
+      "issued": "2020-06-24T09:02:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T14:02:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.006573,
+        "longitude": 23.832579,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel30",
+      "state": "unserved",
+      "issued": "2020-06-24T13:34:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T18:34:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.005745,
+        "longitude": 23.828245,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel32",
+      "state": "unserved",
+      "issued": "2020-06-24T12:28:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T17:28:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.005478,
+        "longitude": 23.828484,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel34",
+      "state": "unserved",
+      "issued": "2020-06-24T09:03:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T14:03:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00442,
+        "longitude": 23.829594,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel37",
+      "state": "unserved",
+      "issued": "2020-06-24T10:32:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T15:32:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.003796,
+        "longitude": 23.829948,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel39",
+      "state": "unserved",
+      "issued": "2020-06-24T01:47:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T06:47:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00776,
+        "longitude": 23.82897,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel43",
+      "state": "unserved",
+      "issued": "2020-06-24T05:45:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T10:45:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.003048,
+        "longitude": 23.83014,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel49",
+      "state": "unserved",
+      "issued": "2020-06-24T16:24:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T21:24:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.002514,
+        "longitude": 23.82641,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel50",
+      "state": "unserved",
+      "issued": "2020-06-24T01:23:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T06:23:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00611,
+        "longitude": 23.828236,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel60",
+      "state": "unserved",
+      "issued": "2020-06-24T01:58:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T06:58:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00627,
+        "longitude": 23.82996,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel61",
+      "state": "unserved",
+      "issued": "2020-06-24T06:18:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T11:18:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00627,
+        "longitude": 23.82996,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel63",
+      "state": "unserved",
+      "issued": "2020-06-24T18:52:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T23:52:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00694,
+        "longitude": 23.827276,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel16",
+      "state": "unserved",
+      "issued": "2020-06-24T12:58:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T17:58:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.011684,
+        "longitude": 23.834694,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel24",
+      "state": "unserved",
+      "issued": "2020-06-24T02:01:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T07:01:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.01112,
+        "longitude": 23.832167,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel31",
+      "state": "unserved",
+      "issued": "2020-06-24T08:28:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T13:28:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.01151,
+        "longitude": 23.834946,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel47",
+      "state": "unserved",
+      "issued": "2020-06-24T12:06:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T17:06:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.011536,
+        "longitude": 23.833214,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel14",
+      "state": "unserved",
+      "issued": "2020-06-24T12:35:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T17:35:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.01312,
+        "longitude": 23.823915,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel52",
+      "state": "unserved",
+      "issued": "2020-06-24T08:59:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T13:59:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.012905,
+        "longitude": 23.823496,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel141",
+      "state": "unserved",
+      "issued": "2020-06-24T18:38:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T23:38:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.014008,
+        "longitude": 23.824265,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel85",
+      "state": "unserved",
+      "issued": "2020-06-24T06:34:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T11:34:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.004303,
+        "longitude": 23.796867,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel101",
+      "state": "unserved",
+      "issued": "2020-06-24T06:18:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T11:18:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00576,
+        "longitude": 23.796133,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel114",
+      "state": "unserved",
+      "issued": "2020-06-24T12:32:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T17:32:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.006065,
+        "longitude": 23.798658,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel129",
+      "state": "unserved",
+      "issued": "2020-06-24T13:15:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T18:15:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.005863,
+        "longitude": 23.798702,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel130",
+      "state": "unserved",
+      "issued": "2020-06-24T16:29:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T21:29:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.005196,
+        "longitude": 23.797874,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel131",
+      "state": "unserved",
+      "issued": "2020-06-24T08:00:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T13:00:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00674,
+        "longitude": 23.800104,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel86",
+      "state": "unserved",
+      "issued": "2020-06-24T15:38:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T20:38:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.007687,
+        "longitude": 23.802408,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel89",
+      "state": "unserved",
+      "issued": "2020-06-24T18:28:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T23:28:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.007313,
+        "longitude": 23.802153,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel90",
+      "state": "unserved",
+      "issued": "2020-06-24T07:14:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T12:14:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00611,
+        "longitude": 23.801043,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel98",
+      "state": "unserved",
+      "issued": "2020-06-24T01:43:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T06:43:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.007687,
+        "longitude": 23.802408,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel99",
+      "state": "unserved",
+      "issued": "2020-06-24T11:04:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T16:04:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00761,
+        "longitude": 23.80325,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel102",
+      "state": "unserved",
+      "issued": "2020-06-24T08:29:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T13:29:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.008373,
+        "longitude": 23.804796,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel107",
+      "state": "unserved",
+      "issued": "2020-06-24T09:18:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T14:18:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.007687,
+        "longitude": 23.802408,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel111",
+      "state": "unserved",
+      "issued": "2020-06-24T12:49:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-25T17:49:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.007313,
+        "longitude": 23.802153,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "ELTAparcel132",
+      "state": "unserved",
+      "issued": "2020-06-24T19:14:26Z",
+      "source": {
+        "city": "Agia Paraskevi",
+        "country": "GR",
+        "station": "ELTApostoffice1",
+        "latitude": 38.012287,
+        "longitude": 23.813837,
+        "postal_code": null
+      },
+      "deadline": "2020-06-26T00:14:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": "Athens",
+        "country": "GR",
+        "station": null,
+        "latitude": 38.00512,
+        "longitude": 23.80119,
+        "postal_code": null
+      },
+      "organization": "ELTA",
+      "service_type": null,
+      "customs_checkpoint": null
+    }
+  ],
+  "request": "32834b7e-d829-4dc1-9eb9-6ba83b32ae63",
+  "organization": "ELTA"
+}

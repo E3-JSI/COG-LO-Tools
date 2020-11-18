@@ -1,0 +1,366 @@
+{
+  "event": {
+    "time": "2020-10-27T05:54:57Z",
+    "event_type": "order",
+    "event": "system",
+    "initiator": "COGLOmoduleWebIF",
+    "info": {
+      "item": [
+        {
+        "organization": "PS",
+        "id": "parcelAdhoc1",
+        "source": {
+          "country": "SLO",
+          "station": "HPpostofficeH1",
+          "latitude": 45.840296,
+          "longitude": 15.686514
+        },
+        "destination": {
+          "country": "SLO",
+          "station": "PSpostofficeS1",
+          "latitude": 45.93107932,
+          "longitude": 15.67793203
+        },
+        "service_type": "normal",
+        "payweight": 1,
+        "issued": "2020-10-27T05:54:57Z",
+        "state": "unserved"
+      },
+        {
+        "organization": "PS",
+        "id": "parcelAdhoc2",
+        "source": {
+          "country": "SLO",
+          "station": "PSpostofficeS7",
+          "latitude": 45.90488128,
+          "longitude": 15.59338439
+        },
+        "destination": {
+          "country": "SLO",
+          "latitude": 45.88461153,
+          "longitude": 15.5231045,
+          "station": "PSpostofficeS4"
+        },
+        "service_type": "normal",
+        "payweight": 1,
+        "issued": "2020-10-27T05:54:57Z",
+        "state": "unserved"
+      },
+        {
+      "id": "parcelAdhoc3",
+      "state": "unserved",
+      "issued": "2020-10-06T10:10:30Z",
+      "source": {
+        "country": "SLO",
+        "station": "PSpostofficeS4",
+        "latitude": 45.88461153,
+        "longitude": 15.5231045
+      },
+      "payweight": 1,
+      "destination": {
+        "country": "SLO",
+        "station": "PSpostofficeS7",
+        "latitude": 45.90488128,
+        "longitude": 15.59338439
+      },
+      "organization": "PS"
+    }
+      ],
+      "location": {
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514
+      }
+    }
+
+  },
+  "clos": [
+    {
+      "id": "vehicle1",
+      "info": {
+        "organization": "PS",
+        "physical_id": "8",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "capacity": 1000,
+        "capacity_unit": "kg"
+      },
+      "state": {
+        "location": {
+          "country": "SLO",
+          "latitude": 45.893208,
+          "longitude": 15.6213,
+          "station": "PSpostofficeS3"
+        },
+        "status": 0,
+        "availability_prediction": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0
+          },
+          "time": 0
+        },
+        "load_volume": 0,
+        "available_space": 0,
+        "plan": "HPplan20041408489340040",
+        "completed_plan": {},
+        "remaining_plan": {
+          "id": "HPplan20041408489340040",
+          "recommendation": "DAILY-730bd753-0ec4-4972-8cbb-9234eedd1e8c",
+          "organization": "PS",
+          "execution_date": "2020-10-06 10:49:46",
+          "steps": [
+            {
+              "id": 1,
+              "rank": 1,
+              "location": {
+                "address": null,
+                "latitude": 45.893208,
+                "longitude": 15.6213,
+                "station": "PSpostofficeS3"
+              },
+              "load": ["P_01", "P_02"],
+              "unload": [],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 2,
+              "rank": 2,
+              "location": {
+                "address": null,
+                "latitude": 45.88461153,
+                "longitude": 15.5231045,
+                "station": "PSpostofficeS4"
+              },
+              "load": [],
+              "unload": [
+                "P_01"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 3,
+              "rank": 3,
+              "location": {
+                "address": null,
+                "latitude": 45.90488128,
+                "longitude": 15.59338439,
+                "station": "PSpostofficeS7"
+              },
+              "load": [],
+              "unload": ["P_02"],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            }
+          ]
+        },
+        "load_size": 0,
+        "parcels": ["P_01","P_02"],
+        "delay_minutes": 0
+      }
+    },
+    {
+      "id": "vehicle2",
+      "info": {
+        "organization": "PS",
+        "physical_id": "1",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "capacity": 1000,
+        "capacity_unit": "kg"
+      },
+      "state": {
+        "location": {
+          "country": "SLO",
+          "latitude": 45.893208,
+          "longitude": 15.6213,
+          "station": "PSpostofficeS3"
+        },
+        "status": 0,
+        "availability_prediction": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0
+          },
+          "time": 0
+        },
+        "load_volume": 0,
+        "available_space": 0,
+        "plan": "HPplan20041408489340040",
+        "completed_plan": {},
+        "remaining_plan": {
+          "id": "HPplan20041408489340040",
+          "recommendation": "DAILY-730bd753-0ec4-4972-8cbb-9234eedd1e8c",
+          "organization": "HP",
+          "execution_date": "2020-10-06 10:49:46",
+          "steps": [
+            {
+              "id": 1,
+              "rank": 1,
+              "location": {
+                "address": null,
+                "latitude": 45.93107932,
+                "longitude": 15.67793203,
+                "station": "PSpostofficeS1"
+              },
+              "load": ["P_03"],
+              "unload": [],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 2,
+              "rank": 2,
+              "location": {
+                "address": null,
+                "latitude": 45.95503619,
+                "longitude": 15.63656969,
+                "station": "PSpostofficeS2"
+              },
+              "load": [],
+              "unload": [
+                "P_03"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            }
+          ],
+          "delay_minutes": 0
+        },
+        "parcels": [ "P_03"]
+      }
+    }
+  ],
+  "parcels": [
+    {
+      "id": "P_01",
+      "state": "unserved",
+      "issued": "2020-10-04T09:17:51Z",
+      "source": {
+        "country": "SLO",
+        "station": "PSpostofficeS3",
+        "latitude": 45.89320611,
+        "longitude": 15.6212996
+      },
+      "deadline": "2020-10-05T14:17:51Z",
+      "payweight": 1,
+      "destination": {
+        "country": "SLO",
+        "station": "PSpostofficeS4",
+        "latitude": 45.88461153,
+        "longitude": 15.5231045
+      },
+      "organization": "PS"
+    },
+    {
+      "id": "P_02",
+      "state": "unserved",
+      "issued": "2020-10-04T12:41:46Z",
+      "source": {
+        "country": "SLO",
+        "station": "PSpostofficeS3",
+        "latitude": 45.89320611,
+        "longitude": 15.6212996
+      },
+      "deadline": "2020-10-05T17:41:46Z",
+      "payweight": 1,
+      "destination": {
+        "country": "SLO",
+        "station": "PSpostofficeS7",
+        "latitude": 45.90488128,
+        "longitude": 15.59338439
+      },
+      "organization": "PS"
+    },
+    {
+      "id": "P_03",
+      "state": "unserved",
+      "issued": "2020-10-06T10:10:30Z",
+      "source": {
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203
+      },
+      "payweight": 1,
+      "destination": {
+        "country": "SLO",
+        "station": "PSpostofficeS2",
+        "latitude": 45.887335,
+        "longitude": 15.697116
+      },
+      "organization": "PS"
+    },
+    {
+      "organization": "PS",
+      "id": "parcelAdhoc1",
+      "source": {
+        "country": "SLO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514
+      },
+      "destination": {
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203
+      }
+    },
+    {
+      "id": "parcelAdhoc2",
+      "state": "unserved",
+      "issued": "2020-10-06T10:10:30Z",
+      "source": {
+        "country": "SLO",
+        "station": "PSpostofficeS7",
+        "latitude": 45.90488128,
+        "longitude": 15.59338439
+      },
+      "payweight": 1,
+      "destination": {
+        "country": "SLO",
+        "station": "PSpostofficeS4",
+        "latitude": 45.88461153,
+        "longitude": 15.5231045
+      },
+      "organization": "PS"
+    },
+    {
+      "id": "parcelAdhoc3",
+      "state": "unserved",
+      "issued": "2020-10-06T10:10:30Z",
+      "source": {
+        "country": "SLO",
+        "station": "PSpostofficeS4",
+        "latitude": 45.88461153,
+        "longitude": 15.5231045
+      },
+      "payweight": 1,
+      "destination": {
+        "country": "SLO",
+        "station": "PSpostofficeS7",
+        "latitude": 45.90488128,
+        "longitude": 15.59338439
+      },
+      "organization": "PS"
+    }
+  ],
+  "request": "859eb9cd-65d1-4836-bd82-ddc3cad9a914",
+  "organization": "PS"
+}

@@ -1,0 +1,728 @@
+{
+  "event": {
+    "time": "2020-06-25T12:20:28Z",
+    "event_type": "vehicle",
+    "event": "breakdown",
+    "initiator": "PSvehicle10",
+    "info": {
+      "location": {
+        "latitude": 45.90467,
+        "longitude": 15.603438
+      },
+      "comment": "Vehicle has broken down.",
+      "clo": {
+        "id": "PSvehicle10",
+        "info": {
+          "name": "PS truck 001",
+          "type": "transportation means",
+          "subtype": "vehicle",
+          "capacity": 1000,
+          "description": "truck",
+          "physical_id": "10",
+          "organization": "PS",
+          "capacity_unit": "kg",
+          "working_hours": null
+        },
+        "state": {
+          "plan": "PSplanc70e479e-d302-4d0e-a6bc-4cfaa6f7a4fd",
+          "driver": null,
+          "status": null,
+          "parcels": [
+            "PSparcelCE233350194HR",
+            "PSparcelCE233350203HR",
+            "PSparcelCE233248325HR",
+            "PSparcelCE233286434HR",
+            "PSparcelCE233350282HR",
+            "PSparcelCE233389836HR"
+          ],
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 45.90467,
+            "longitude": 15.603438,
+            "postal_code": null
+          },
+          "load_volume": null,
+          "capacity_unit": null,
+          "delay_minutes": null,
+          "remaining_plan": {
+            "steps": [
+              {
+                "id": 2,
+                "rank": 2,
+                "unload": [
+                  "PSparcelCE233248325HR"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 45.91716,
+                  "longitude": 15.728002,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 3,
+                "rank": 3,
+                "unload": [
+                  "PSparcelCE233286434HR"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 45.887268,
+                  "longitude": 15.696898,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 4,
+                "rank": 4,
+                "unload": [
+                  "PSparcelCE233350203HR"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 45.89337,
+                  "longitude": 15.621456,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 5,
+                "rank": 5,
+                "unload": [
+                  "PSparcelCE233350194HR"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 45.859505,
+                  "longitude": 15.6897955,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 6,
+                "rank": 6,
+                "unload": [
+                  "PSparcelCE233389836HR"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 45.891357,
+                  "longitude": 15.570595,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 7,
+                "rank": 7,
+                "unload": [
+                  "PSparcelCE233350282HR"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 45.94199,
+                  "longitude": 15.478111,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          },
+          "available_space": null,
+          "availability_prediction": {
+            "time": null,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "clos": [
+    {
+      "id": "PSvehicle11",
+      "info": {
+        "organization": "PS",
+        "physical_id": "11",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "capacity": 200,
+        "capacity_unit": "kg"
+      },
+      "state": {
+        "location": {
+          "country": "SLO",
+          "latitude": 45.93108,
+          "longitude": 15.677932
+        },
+        "status": 1,
+        "load_volume": 0,
+        "available_space": 0,
+        "parcels": [
+          "PSparcelCE232810549HR",
+          "PSparcelCE233248348HR",
+          "PSparcelCE233286522HR",
+          "PSparcelCE233286540HR",
+          "PSparcelCE233335515HR",
+          "PSparcelCE233350163HR",
+          "PSparcelCE233350217HR",
+          "PSparcelCE233389840HR"
+        ],
+        "remaining_plan": {
+          "id": "PSplane3ce3b9a-86f0-4744-80b9-f5ea62c94f41",
+          "recommendation": "DAILY-6ec88b9b-0a42-4c48-817b-96ca6fd33ead",
+          "organization": "PS",
+          "execution_date": "2020-09-24 00:23:27",
+          "steps": [
+            {
+              "id": 1,
+              "rank": 1,
+              "location": {
+                "address": "Kapele",
+                "latitude": 45.93105,
+                "longitude": 15.678094,
+                "station": "PSpostofficeS1"
+              },
+              "load": [
+                "PSparcelCE232746718HR"
+              ],
+              "unload": [],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 2,
+              "rank": 2,
+              "location": {
+                "address": "Globoko",
+                "latitude": 45.954884,
+                "longitude": 15.636593,
+                "station": "PSpostofficeS2"
+              },
+              "load": [],
+              "unload": [
+                "PSparcelCE233350163HR"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 3,
+              "rank": 3,
+              "location": {
+                "address": "Ulica stare pravde",
+                "latitude": 45.90467,
+                "longitude": 15.593438,
+                "station": "PSpostofficeS8"
+              },
+              "load": [],
+              "unload": [
+                "PSparcelCE233389840HR"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 5,
+              "rank": 5,
+              "location": {
+                "address": "Cerklje ob Krki",
+                "latitude": 45.884495,
+                "longitude": 15.523173,
+                "station": "PSpostofficeS5"
+              },
+              "load": [],
+              "unload": [
+                "PSparcelCE233350217HR"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 4,
+              "rank": 4,
+              "location": {
+                "address": "Ul. ?ure Basari?eka 9",
+                "latitude": 45.839664,
+                "longitude": 15.686382,
+                "station": "HPpostofficeH1"
+              },
+              "load": [],
+              "unload": [
+                "PSparcelCE232746718HR",
+                "PSparcelCE232810549HR",
+                "PSparcelCE233248348HR",
+                "PSparcelCE233286522HR",
+                "PSparcelCE233286540HR",
+                "PSparcelCE233335515HR"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            }
+          ]
+        },
+        "load_size": 0,
+        "delay_minutes": 0
+      }
+    }
+  ],
+  "parcels": [
+    {
+      "id": "PSparcelCE233350194HR",
+      "state": "unserved",
+      "issued": "2020-09-22T18:10:20Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T23:10:20Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS3",
+        "latitude": 45.89320611,
+        "longitude": 15.6212996,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233248325HR",
+      "state": "unserved",
+      "issued": "2020-09-22T13:07:43Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T18:07:43Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH3",
+        "latitude": 45.803142,
+        "longitude": 15.710135,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233286434HR",
+      "state": "unserved",
+      "issued": "2020-09-22T15:27:26Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T20:27:26Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH5",
+        "latitude": 45.808406,
+        "longitude": 15.816847,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233350203HR",
+      "state": "unserved",
+      "issued": "2020-09-22T14:50:02Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T19:50:02Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS4",
+        "latitude": 45.88461153,
+        "longitude": 15.5231045,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233389836HR",
+      "state": "unserved",
+      "issued": "2020-09-22T10:41:34Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T15:41:34Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS7",
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233350282HR",
+      "state": "unserved",
+      "issued": "2020-09-22T17:42:13Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T22:42:13Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS6",
+        "latitude": 45.89123853,
+        "longitude": 15.57086927,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE232810549HR",
+      "state": "unserved",
+      "issued": "2020-09-22T10:55:38Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T15:55:38Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH2",
+        "latitude": 45.839828,
+        "longitude": 15.68643,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233286522HR",
+      "state": "unserved",
+      "issued": "2020-09-22T15:34:24Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T20:34:24Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH6",
+        "latitude": 45.887335,
+        "longitude": 15.697116,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233350163HR",
+      "state": "unserved",
+      "issued": "2020-09-22T10:51:53Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T15:51:53Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS2",
+        "latitude": 45.95503619,
+        "longitude": 15.63656969,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233389840HR",
+      "state": "unserved",
+      "issued": "2020-09-22T16:21:23Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T21:21:23Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS8",
+        "latitude": 45.89504865,
+        "longitude": 15.66006978,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233350217HR",
+      "state": "unserved",
+      "issued": "2020-09-22T17:47:04Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T22:47:04Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS5",
+        "latitude": 45.942039,
+        "longitude": 15.478103,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE232746718HR",
+      "state": "unserved",
+      "issued": "2020-09-22T09:17:51Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T14:17:51Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233248348HR",
+      "state": "unserved",
+      "issued": "2020-09-22T15:39:34Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T20:39:34Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH4",
+        "latitude": 45.917165,
+        "longitude": 15.730056,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233286540HR",
+      "state": "unserved",
+      "issued": "2020-09-22T12:41:46Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T17:41:46Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH7",
+        "latitude": 45.859075,
+        "longitude": 15.80341,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233335515HR",
+      "state": "unserved",
+      "issued": "2020-09-22T17:44:43Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T22:44:43Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH8",
+        "latitude": 45.878072,
+        "longitude": 15.739208,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    }
+  ],
+  "request": "bbe7d9ca-9623-4004-aeb4-9bfaea762d24",
+  "organization": "SLO-CRO"
+}

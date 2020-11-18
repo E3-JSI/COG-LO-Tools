@@ -1,0 +1,520 @@
+{
+  "event": {
+      "id": "BorderEvent1",
+      "info": {
+        "location": {
+          "station": "Border1",
+          "latitude": 45.846066,
+          "longitude": 15.693642
+        }
+      },
+      "time": "2020-10-29T09:06:34Z",
+      "event": "closure",
+      "initiator": "system",
+      "event_type": "border"
+    },
+  "clos": [
+    {
+      "id": "HPvehicle1",
+      "info": {
+        "organization": "HP",
+        "physical_id": "9",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "capacity": 1000,
+        "capacity_unit": "kg"
+      },
+      "state": {
+        "location": {
+          "country": "CRO",
+          "latitude": 45.803142,
+          "longitude": 15.710135,
+          "station": "HPpostofficeH3"
+        },
+        "status": 0,
+        "availability_prediction": {
+          "location": {
+            "latitude": 0,
+            "longitude": 0
+          },
+          "time": 0
+        },
+        "parcels": [ "HP_01", "HP_02", "HP_03", "HP_04" ],
+        "load_volume": 0,
+        "available_space": 0,
+        "plan": "HPplan21864865932144692",
+        "completed_plan": {},
+        "remaining_plan": {
+          "id": "HPplan21864865932144692",
+          "recommendation": "DAILY-bec1c472-684a-480d-96ba-6b481363ef32",
+          "organization": "HP",
+          "execution_date": "2020-10-27 13:20:34",
+          "steps": [
+            {
+              "id": 1,
+              "rank": 1,
+              "location": {
+                "address": "Jesenice",
+                "latitude": 45.803142,
+                "longitude": 15.710135,
+                "station": "HPpostofficeH3"
+              },
+              "load": [
+                "HP_01",
+                "HP_02",
+                "HP_03",
+                "HP_04"
+              ],
+              "unload": [],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 10,
+              "rank": 10,
+              "location": {
+                "address": "Ul. Dure Basariceka 9",
+                "latitude": 45.83137,
+                "longitude": 15.689681,
+                "station": "HPpostofficeH2"
+              },
+              "load": [],
+              "unload": [
+                "HP_01"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 2,
+              "rank": 2,
+              "location": {
+                "address": "Ul. Ljudevita Gaja 4",
+                "latitude": 45.840296,
+                "longitude": 15.686514,
+                "station": "HPpostofficeH1"
+              },
+              "load": [
+              ],
+              "unload": [
+                "HP_02"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 8,
+              "rank": 8,
+              "location": {
+                "address": "Ul. Dr. Franje Tudmana 38a",
+                "latitude": 45.80844,
+                "longitude": 15.816546,
+                "station": "HPpostofficeH5"
+              },
+              "load": [],
+              "unload": [
+                "HP_03"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            },
+            {
+              "id": 6,
+              "rank": 6,
+              "location": {
+                "address": "Ul. Drage Svajcara 5",
+                "latitude": 45.942039,
+                "longitude": 15.478103,
+                "station": "PSpostofficeS5"
+              },
+              "load": [],
+              "unload": [
+                "HP_04"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+        "id": "HPvehicle2",
+        "info": {
+          "name": "HP truck 2",
+          "type": "transportation means",
+          "subtype": "vehicle",
+          "capacity": 1000,
+          "location": null,
+          "description": "truck",
+          "physical_id": "8",
+          "organization": "HP",
+          "capacity_unit": "kg",
+          "working_hours": null
+        },
+        "state": {
+          "plan": "HPplan21864865932133892",
+          "driver": null,
+          "status": null,
+          "parcels": [ "HP_06", "HP_07", "HP_08", "HP_09" ],
+          "location": {
+            "city": null,
+            "country": "CRO",
+            "latitude": 45.803142,
+            "longitude": 15.710135,
+            "station": "HPpostofficeH3",
+            "postal_code": null
+          },
+          "load_volume": null,
+          "capacity_unit": null,
+          "delay_minutes": null,
+          "remaining_plan": {
+            "steps": [
+              {
+                "id": 1,
+                "load": [
+                  "HP_06",
+                  "HP_07",
+                  "HP_08",
+                  "HP_09"
+                ],
+                "rank": 1,
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "latitude": 45.803142,
+                  "longitude": 15.710135,
+                  "station": "HPpostofficeH3",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": 0
+                }
+              },
+              {
+                "id": 2,
+                "rank": 2,
+                "unload": ["HP_06"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "HPpostofficeH8",
+                  "latitude": 45.878072,
+                  "longitude": 15.739208,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": 0
+                }
+              },
+              {
+                "id": 3,
+                "rank": 3,
+                "unload": [
+                  "HP_07"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "HPpostofficeH6",
+                  "latitude": 45.8872686,
+                  "longitude": 15.6968985,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": 0
+                }
+              },
+              {
+                "id": 3,
+                "rank": 3,
+                "unload": [
+                  "HP_08"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "PSpostofficeS8",
+                  "latitude": 45.89504865,
+                  "longitude": 15.66006978,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": 0
+                }
+              },
+              {
+                "id": 2,
+                "rank": 2,
+                "unload": [
+                  "HP_09"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "PSpostofficeS1",
+                  "latitude": 45.93107932,
+                  "longitude": 15.67793203,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": 0
+                }
+              }
+            ]
+          },
+          "available_space": null,
+          "availability_prediction": {
+            "time": null,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            }
+          }
+        }
+      }
+  ],
+  "parcels": [
+    {
+      "id": "HP_01",
+      "state": "unserved",
+      "issued": "2020-10-27T05:54:57Z",
+      "source": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "deadline": null,
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH2",
+        "latitude": 45.831867,
+        "longitude": 15.690455,
+        "postal_code": null
+      },
+      "organization": "HP",
+      "service_type": "normal",
+      "customs_checkpoint": null
+    },
+    {
+      "id": "HP_02",
+      "state": "unserved",
+      "issued": "2020-10-04T09:17:51Z",
+      "source": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "deadline": "2020-10-05T14:17:51Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "organization": "HP",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "HP_03",
+      "state": "unserved",
+      "issued": "2020-10-06T10:10:30Z",
+      "source": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "deadline": null,
+      "payweight": 6,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH5",
+        "latitude": 45.808406,
+        "longitude": 15.816847,
+        "postal_code": null
+      },
+      "organization": "HP",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "HP_04",
+      "state": "unserved",
+      "issued": "2020-10-04T15:39:34Z",
+      "source": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "deadline": "2020-10-05T20:39:34Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "PSpostofficeS3",
+        "latitude": 45.89320611,
+        "longitude": 15.6212996,
+        "postal_code": null
+      },
+      "organization": "HP",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "HP_06",
+      "state": "unserved",
+      "issued": "2020-10-04T13:07:43Z",
+      "source": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "deadline": "2020-10-05T18:07:43Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH8",
+        "latitude": 45.878072,
+        "longitude": 15.739208,
+        "postal_code": null
+      },
+      "organization": "HP",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "HP_07",
+      "state": "unserved",
+      "issued": "2020-10-04T12:41:46Z",
+      "source": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "deadline": "2020-10-05T17:41:46Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH6",
+        "latitude": 45.887335,
+        "longitude": 15.697116,
+        "postal_code": null
+      },
+      "organization": "HP",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "HP_08",
+      "state": "unserved",
+      "issued": "2020-10-04T17:44:43Z",
+      "source": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "deadline": "2020-10-05T22:44:43Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS8",
+        "latitude": 45.89504865,
+        "longitude": 15.66006978,
+        "postal_code": null
+      },
+      "organization": "HP",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "HP_09",
+      "state": "unserved",
+      "issued": "2020-10-04T10:51:53Z",
+      "source": {
+        "city": null,
+        "country": "CRO",
+        "station": "HPpostofficeH1",
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "postal_code": null
+      },
+      "deadline": "2020-10-05T15:51:53Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": "PSpostofficeS1",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "organization": "HP",
+      "service_type": null,
+      "customs_checkpoint": null
+    }
+  ],
+  "request": "21128134-f3fe-470c-8d2c-a68a245f0ace",
+  "organization": "HP"
+}

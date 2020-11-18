@@ -1,0 +1,213 @@
+{
+  "event": {
+    "time": "2020-09-24T19:34:44Z",
+    "event_type": "vehicle",
+    "event": "breakdown",
+    "initiator": "PSvehicle10",
+    "info": {
+      "location": {
+        "latitude": 45.88461153,
+        "longitude": 15.5231045
+      },
+      "comment": "To xalasa lemeeeee",
+      "clo": {
+        "id": "PSvehicle10",
+        "info": {
+          "name": "PS truck 001",
+          "type": "transportation means",
+          "subtype": "vehicle",
+          "capacity": 1000,
+          "location": null,
+          "description": "truck",
+          "physical_id": "10",
+          "organization": "PS",
+          "capacity_unit": "kg",
+          "working_hours": null
+        },
+        "state": {
+          "plan": "PSplan56a78aa7-51cb-4827-80aa-467185127beb",
+          "driver": null,
+          "status": null,
+          "parcels": [
+            "PSparcelCE233389836HR"
+          ],
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 45.88461153,
+            "longitude": 15.5231045,
+            "postal_code": null
+          },
+          "load_volume": null,
+          "capacity_unit": null,
+          "delay_minutes": null,
+          "completed_plan": {
+            "steps": [
+              {
+                "id": 1,
+                "load": [
+                  "PSparcelCE233389836HR"
+                ],
+                "rank": 1,
+                "complete": 1,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 45.93105,
+                  "longitude": 15.678094,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          },
+          "remaining_plan": {
+            "steps": [
+              {
+                "id": 1,
+                "rank": 6,
+                "unload": [
+                  "PSparcelCE233389836HR"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 45.89123853,
+                  "longitude": 15.57086927,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          },
+          "available_space": null,
+          "availability_prediction": {
+            "time": null,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "clos": [
+    {
+      "id": "PSvehicle11",
+      "info": {
+        "organization": "PS",
+        "physical_id": "11",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "capacity": 200,
+        "capacity_unit": "kg"
+      },
+      "state": {
+        "location": {
+          "latitude": 45.93107932,
+          "longitude": 15.67793203
+        },
+        "status": 1,
+        "load_volume": 1,
+        "available_space": 150,
+        "remaining_plan": {
+          "steps": [
+            {
+              "id": 3,
+              "rank": 3,
+              "location": {
+                "latitude": 45.89504865,
+                "longitude": 15.66006978
+              },
+              "unload": [
+                "PSparcelCE233389840HR"
+              ],
+              "complete": 0,
+              "dependency": {
+                "plan_step": 0
+              }
+            }
+          ]
+        },
+        "load_size": 1,
+        "parcels": [
+          "PSparcelCE233389840HR"
+        ],
+        "delay_minutes": 0
+      }
+    }
+  ],
+  "parcels": [
+    {
+      "id": "PSparcelCE233389836HR",
+      "state": "unserved",
+      "issued": "2020-09-22T10:41:34Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "station": null,
+        "latitude": 45.89320611,
+        "longitude": 15.6212996,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T15:41:34Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": null,
+        "latitude": 45.89123853,
+        "longitude": 15.57086927,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    },
+    {
+      "id": "PSparcelCE233389840HR",
+      "state": "unserved",
+      "issued": "2020-09-22T16:21:23Z",
+      "source": {
+        "city": null,
+        "country": "SLO",
+        "latitude": 45.93107932,
+        "longitude": 15.67793203,
+        "postal_code": null
+      },
+      "deadline": "2020-09-23T21:21:23Z",
+      "payweight": 1,
+      "destination": {
+        "city": null,
+        "country": "SLO",
+        "station": null,
+        "latitude": 45.89504865,
+        "longitude": 15.66006978,
+        "postal_code": null
+      },
+      "organization": "PS",
+      "service_type": null,
+      "customs_checkpoint": null
+    }
+  ],
+  "request": "392251f4-2ad2-46a4-959e-607e41ca7a06",
+  "organization": "SLO-CRO"
+}

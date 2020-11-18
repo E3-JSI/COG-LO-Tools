@@ -1,0 +1,351 @@
+{
+  "clos": [
+    {
+      "id": "PSvehicle10",
+      "info": {
+        "organization": "PS",
+        "physical_id": "10",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "name": "PS truck 001",
+        "capacity": 1000,
+        "capacity_unit": "kg"
+      },
+      "state": {
+        "status": 1,
+        "location": {
+          "country": "SLO",
+          "latitude": 45.90488128,
+          "longitude": 15.59338439
+        }
+      }
+    },
+    {
+      "id": "PSvehicle11",
+      "info": {
+        "organization": "PS",
+        "physical_id": "11",
+        "type": "transportation means",
+        "subtype": "vehicle",
+        "description": "truck",
+        "name": "PS truck 002",
+        "capacity": 1000,
+        "capacity_unit": "kg"
+      },
+      "state": {
+        "status": 1,
+        "location": {
+          "country": "SLO",
+          "latitude": 45.90488128,
+          "longitude": 15.59338439
+        }
+      }
+    }
+  ],
+  "parcels": [
+    {
+      "organization": "PS",
+      "id": "PSparcel_01HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.840296,
+        "longitude": 15.686514,
+        "station": "HPpostofficeH1",
+        "country": "CRO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T09:17:51Z",
+      "deadline": "2020-09-23T14:17:51Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_02HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.839828,
+        "longitude": 15.68643,
+        "station": "HPpostofficeH2",
+        "country": "CRO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T10:55:38Z",
+      "deadline": "2020-09-23T15:55:38Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_03HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.803142,
+        "longitude": 15.710135,
+        "station": "HPpostofficeH3",
+        "country": "CRO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T13:07:43Z",
+      "deadline": "2020-09-23T18:07:43Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_04HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.917165,
+        "longitude": 15.730056,
+        "station": "HPpostofficeH4",
+        "country": "CRO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T15:39:34Z",
+      "deadline": "2020-09-23T20:39:34Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_05HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.808406,
+        "longitude": 15.816847,
+        "station": "HPpostofficeH5",
+        "country": "CRO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T15:27:26Z",
+      "deadline": "2020-09-23T20:27:26Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_06HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.887335,
+        "longitude": 15.697116,
+        "station": "HPpostofficeH6",
+        "country": "CRO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T15:34:24Z",
+      "deadline": "2020-09-23T20:34:24Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel07HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.859075,
+        "longitude": 15.80341,
+        "station": "HPpostofficeH7",
+        "country": "CRO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T12:41:46Z",
+      "deadline": "2020-09-23T17:41:46Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_08HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.878072,
+        "longitude": 15.739208,
+        "station": "HPpostofficeH8",
+        "country": "CRO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T17:44:43Z",
+      "deadline": "2020-09-23T22:44:43Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_09HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.95503619,
+        "longitude": 15.63656969,
+        "station": "PSpostofficeS2",
+        "country": "SLO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T10:51:53Z",
+      "deadline": "2020-09-23T15:51:53Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_10HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.89320611,
+        "longitude": 15.6212996,
+        "station": "PSpostofficeS3",
+        "country": "SLO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T18:10:20Z",
+      "deadline": "2020-09-23T23:10:20Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_11HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.88461153,
+        "longitude": 15.5231045,
+        "station": "PSpostofficeS4",
+        "country": "SLO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T14:50:02Z",
+      "deadline": "2020-09-23T19:50:02Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_12HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.942039,
+        "longitude": 15.478103,
+        "station": "PSpostofficeS5",
+        "country": "SLO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T17:47:04Z",
+      "deadline": "2020-09-23T22:47:04Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_13HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.89123853,
+        "longitude": 15.57086927,
+        "station": "PSpostofficeS6",
+        "country": "SLO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T17:42:13Z",
+      "deadline": "2020-09-23T22:42:13Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_14HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T10:41:34Z",
+      "deadline": "2020-09-23T15:41:34Z",
+      "state": "unserved"
+    },
+    {
+      "organization": "PS",
+      "id": "PSparcel_15HR",
+      "source": {
+        "latitude": 45.90488128,
+        "longitude": 15.59338439,
+        "station": "PSpostofficeS7",
+        "country": "SLO"
+      },
+      "destination": {
+        "latitude": 45.89504865,
+        "longitude": 15.66006978,
+        "station": "PSpostofficeS8",
+        "country": "SLO"
+      },
+      "payweight": 1,
+      "issued": "2020-09-22T16:21:23Z",
+      "deadline": "2020-09-23T21:21:23Z",
+      "state": "unserved"
+    }
+  ],
+  "request": "DAILY-90d12325-6980-4483-982d-ea22310fb9cd",
+  "organization": "SLO-CRO",
+  "event": null
+}

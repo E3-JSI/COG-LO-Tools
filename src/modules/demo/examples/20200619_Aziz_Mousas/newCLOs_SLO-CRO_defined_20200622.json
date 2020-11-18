@@ -1,0 +1,293 @@
+{
+    "clos": [
+        {
+            "id": "PSpostofficeS1",
+            "info": {
+                "name": "Kapele",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "PS",
+                "physical_id": "S1",
+                "location": {
+                    "latitude": 45.93107932,
+                    "longitude": 15.67793203,
+                    "country": "SLO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "PSpostofficeS2",
+            "info": {
+                "name": "Globoko",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "PS",
+                "physical_id": "S2",
+                "location": {
+                    "latitude": 45.95503619,
+                    "longitude": 15.63656969,
+                    "country": "SLO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "PSpostofficeS3",
+            "info": {
+                "name": "Jesenice",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "PS",
+                "physical_id": "S3",
+                "location": {
+                    "latitude": 45.85945758,
+                    "longitude": 15.68964069,
+                    "country": "SLO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "PSpostofficeS4",
+            "info": {
+                "name": "Topliska cesta",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "PS",
+                "physical_id": "S4",
+                "location": {
+                    "latitude": 45.89320611,
+                    "longitude": 15.6212996,
+                    "country": "SLO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "PSpostofficeS5",
+            "info": {
+                "name": "Cerklje ob Krki",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "PS",
+                "physical_id": "S5",
+                "location": {
+                    "latitude": 45.88461153,
+                    "longitude": 15.5231045,
+                    "country": "SLO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "PSpostofficeS6",
+            "info": {
+                "name": "Ulica 11. novembra",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "PS",
+                "physical_id": "S6",
+                "location": {
+                    "latitude": 45.942039,
+                    "longitude": 15.478103,
+                    "country": "SLO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "PSpostofficeS7",
+            "info": {
+                "name": "Kriska vas",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "PS",
+                "physical_id": "S7",
+                "location": {
+                    "latitude": 45.89123853,
+                    "longitude": 15.57086927,
+                    "country": "SLO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "PSpostofficeS8",
+            "info": {
+                "name": "Ulica stare pravde",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "PS",
+                "physical_id": "S8",
+                "location": {
+                    "latitude": 45.90488128,
+                    "longitude": 15.59338439,
+                    "country": "SLO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "PSpostofficeS9",
+            "info": {
+                "name": "Ulica bratov Gerjovicev",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "PS",
+                "physical_id": "S9",
+                "location": {
+                    "latitude": 45.89504865,
+                    "longitude": 15.66006978,
+                    "country": "SLO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "HPpostofficeH1",
+            "info": {
+                "name": "Ul. ?ure Basari?eka 9",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "HP",
+                "physical_id": "H1",
+                "location": {
+                    "latitude": 45.839828,
+                    "longitude": 15.68643,
+                    "country": "CRO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "HPpostofficeH2",
+            "info": {
+                "name": "Ul. Ljudevita Gaja 4",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "HP",
+                "physical_id": "H2",
+                "location": {
+                    "latitude": 45.803142,
+                    "longitude": 15.710135,
+                    "country": "CRO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "HPpostofficeH3",
+            "info": {
+                "name": "Gori?ka 1",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "HP",
+                "physical_id": "H3",
+                "location": {
+                    "latitude": 45.917165,
+                    "longitude": 15.730056,
+                    "country": "CRO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "HPpostofficeH4",
+            "info": {
+                "name": "Ul. Dr. Franje Tu?mana 38a",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "HP",
+                "physical_id": "H4",
+                "location": {
+                    "latitude": 45.808406,
+                    "longitude": 15.816847,
+                    "country": "CRO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "HPpostofficeH5",
+            "info": {
+                "name": "Zagreba?ka ul. 45",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "HP",
+                "physical_id": "H5",
+                "location": {
+                    "latitude": 45.887335,
+                    "longitude": 15.697116,
+                    "country": "CRO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "HPpostofficeH6",
+            "info": {
+                "name": "Ul. Drage ?vajcara 5",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "HP",
+                "physical_id": "H6",
+                "location": {
+                    "latitude": 45.859075,
+                    "longitude": 15.80341,
+                    "country": "CRO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        },
+        {
+            "id": "HPpostofficeH7",
+            "info": {
+                "name": "Zagreba?ka ul. 29",
+                "type": "station",
+                "subtype": "post office",
+                "organization": "HP",
+                "physical_id": "H9",
+                "location": {
+                    "latitude": 45.878072,
+                    "longitude": 15.739208,
+                    "country": "CRO"
+                }
+            },
+            "state": {
+                "status": 1.0
+            }
+        }
+    ],
+    "useCase": "SLO-CRO"
+}

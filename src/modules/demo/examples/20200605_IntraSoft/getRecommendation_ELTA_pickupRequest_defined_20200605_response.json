@@ -1,0 +1,135 @@
+{
+  "topic": "recommendations",
+  "sender": "COGLOmoduleCA",
+  "message": {
+    "request": "Req001",
+    "recommendation": {
+      "organization": "ELTA",
+      "id": "Req001",
+      "cloplans": [
+        {
+          "clo": "UUID-4",
+          "plan": {
+            "id": "Req001",
+            "organization": "ELTA",
+            "execution_date": "2020-06-19 10:46:32",
+            "recommendation": "ELTArecommendation1",
+            "steps": [
+              {
+                "id": 0,
+                "rank": 0,
+                "complete": 0,
+                "due_time": null,
+                "load": [
+                  "UUID-1",
+                  "UUID-2",
+                  "UUID-3",
+                  "UUID-4",
+                  "UUID-10",
+                  "UUID-14",
+                  "UUID-15",
+                  "UUID-19",
+                  "UUID-20",
+                  "UUID-22",
+                  "UUID-23",
+                  "UUID-25",
+                  "UUID-26",
+                  "UUID-27",
+                  "UUID-11",
+                  "UUID-12",
+                  "UUID-13",
+                  "UUID-16",
+                  "UUID-17",
+                  "UUID-18",
+                  "UUID-21",
+                  "UUID-24"
+                ],
+                "unload": [
+                  "UUID-1",
+                  "UUID-10",
+                  "UUID-14",
+                  "UUID-15",
+                  "UUID-19",
+                  "UUID-20",
+                  "UUID-22",
+                  "UUID-23",
+                  "UUID-25",
+                  "UUID-26",
+                  "UUID-27"
+                ],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 38.0018656,
+                  "longitude": 23.8046006,
+                  "location_id": "2",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 1,
+                "rank": 1,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [
+                  "UUID-3"
+                ],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "address",
+                  "latitude": 38.0082779,
+                  "longitude": 23.8013441,
+                  "location_id": "5",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 2,
+                "rank": 2,
+                "complete": 0,
+                "due_time": null,
+                "load": [],
+                "unload": [
+                  "UUID-2",
+                  "UUID-4",
+                  "UUID-11",
+                  "UUID-12",
+                  "UUID-13",
+                  "UUID-16",
+                  "UUID-17",
+                  "UUID-18",
+                  "UUID-21",
+                  "UUID-24"
+                ],
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": "Amfissis 34",
+                  "latitude": 38.0041843,
+                  "longitude": 23.8451378,
+                  "location_id": "ELTApostoffice1",
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

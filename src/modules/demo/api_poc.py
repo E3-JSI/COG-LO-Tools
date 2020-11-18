@@ -1,8 +1,8 @@
 import csv
-import os
 import json
-
+import os
 import requests
+
 from flask import Flask, request
 from flask_jsonpify import jsonify
 from flask_restful import Resource
@@ -116,14 +116,24 @@ class RecReq(Resource):
             "message": json_for_serialization
         }
 
-        with open('response.json', 'w') as outfile:
+        print("Storing message for validation service...")
+        with open('validation_service_message_posted.json', 'w') as outfile:
+            json.dump(recommendations, outfile)
+
+        print("Storing message content posted...")
+        with open('content_message_posted.json', 'w') as outfile:
             json.dump(content, outfile)
 
-        try:
-            response = requests.post(response_validation_url, json = recommendations, headers=headers, verify=False).json()
-            print("validation code for recommendations message: ", response)
-        except Exception as ex:
-            print("Error occurred while validating response in validation service", ex)
+        #print("posting response to validation URL: " + response_validation_url)
+        #print(recommendations)
+        #try:
+        #    response = requests.post(response_validation_url, json = recommendations, headers=headers, verify=False).json()
+        #    print("validation code for recommendations message: ", response)
+        #except Exception as ex:
+        #    print("Error occurred while validating response in validation service", ex)
+
+        print("posting to MSB post URL: " + msb_post_url)
+        print(content)
 
         try:
             response = requests.post(msb_post_url, json = content, headers=headers, verify=False)
@@ -704,20 +714,26 @@ def handle_recommendation_request():
     global vrpProcessorReferenceSloCro
     global vrpProcessorReferenceElta
 
+    transformation_map = LocationParcelMap()
+
     """Main entry point for HTTP request"""
     received_request = request.get_json(force=True)
+    with open('received_request.json', 'w') as outfile:
+        json.dump(received_request, outfile)
 
     print("received getRecommendation request", received_request)
 
     # transforms received message for internal structures
     try:
-        data = InputOutputTransformer.parse_received_recommendation_message(received_request)
+        data = InputOutputTransformer.parse_received_recommendation_message(
+            received_request, transformation_map)
     except ValueError as error:
         return str(error)
 
     # needed for response handling
     request_id = received_request["request"]
     use_case = data['useCase']
+    organization = received_request["organization"]
 
     ##Errors
     if use_case != "SLO-CRO" and use_case != "ELTA":
@@ -740,16 +756,16 @@ def handle_recommendation_request():
         clos = data["clos"]
 
         if evt_type == "brokenVehicle":
-            if "clos" not in data or "brokenVehicle" not in data:
-                return {"msg": "Parameter 'clos' or 'BrokenVehicle' is missing", "status": 0}
-            broken_clo = data["brokenVehicle"]
-            recommendations = RecReq.process_broken_clo(evt_type, clos, broken_clo, vrp_processor_ref, use_case)
+            if "clos" not in data or "orders" not in data:
+                return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
+            broken_clo_orders = data["orders"]
+            recommendations = RecReq.process_broken_clo(evt_type, clos, broken_clo_orders, vrp_processor_ref, use_case)
         elif evt_type == "pickupRequest":
             if "clos" not in data or "orders" not in data:
                 return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
             requests = data["orders"]
             recommendations = RecReq.process_pickup_requests(evt_type, clos, requests, vrp_processor_ref, use_case)
-        elif evt_type == "crossBorder":
+        elif evt_type == "crossBorder" or "border":
             print("cross border event received")
             if "clos" not in data:
                 return {"msg": "Parameter 'clos' is missing", "status": 0}
@@ -763,17 +779,25 @@ def handle_recommendation_request():
         else:
             return jsonify({"message": "Invalid event type: {}".format(evt_type), "status": 0})
 
+        # Map parcel locations back to the original ones
+        #recommendations_raw = InputOutputTransformer.revert_coordinates(recommendations, transformation_map)
+
+        print("starting final reordering & TSP")
+        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations)
+
         # Executes TSP algorithm upon calculated recommendations by our VRP
-        recommendations = Tsp.order_recommendations(recommendations)
+        #recommendations = Tsp.order_recommendations(recommendations_raw)
 
+        # print route for all vehicles
+        P=InputOutputTransformer.PrintRoutes(recommendations)
         # Prepare output message from calculated recommendations
-        response = InputOutputTransformer.prepare_output_message(recommendations, use_case, request_id)
+        response = InputOutputTransformer.prepare_output_message(recommendations, use_case, request_id, organization)
 
-        # This piece of code posts optimization response to MSB
-        RecReq.post_response_msb(request_id, response)
-
-        # Always return generic message stating that request was received and is due to be processed
+        # Post response to MSB
+        #RecReq.post_response_msb(request_id, response)
+        # Return generic message stating that request was received and is due to be processed
         return generic_message_received_response
+
 
     ##Use Case ELTA
     elif use_case == "ELTA":
@@ -801,11 +825,10 @@ def handle_recommendation_request():
             data_requests = data_request["orders"]
             recommendations = RecReq.process_pickup_requests(evt_type, clos, data_requests, vrp_processor_ref, use_case)
         elif evt_type == "brokenVehicle":
-            if "brokenVehicle" not in data_request:
-                return {"msg": "Parameter 'BrokenVehicle' is missing", "status": 0}
-            broken_clo = data_request["brokenVehicle"]
-            recommendations = RecReq.process_broken_clo(evt_type, clos, broken_clo, vrp_processor_ref, use_case)
-
+            if "clos" not in data or "orders" not in data:
+                return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
+            broken_clo_orders = data["orders"]
+            recommendations = RecReq.process_broken_clo(evt_type, clos, broken_clo_orders, vrp_processor_ref, use_case)
         elif evt_type == "pickupRequest":
             if "orders" not in data_request:
                 return {"msg": "Parameter 'orders' is missing", "status": 0}
@@ -821,16 +844,17 @@ def handle_recommendation_request():
         recommendations_mapped = methods.map_coordinates_to_response(recommendations, transform_map_dict)
 
         # Transforms response in 'JSI' format to the one used for MSB
-        response1 = InputOutputTransformer.prepare_output_message(recommendations_mapped, use_case, request_id)
+        response1 = InputOutputTransformer.prepare_output_message(recommendations_mapped, use_case, request_id, organization)
 
         # restructures steps plan and and lists all the parcels from clusters as a list of locations
         response = methods.order_parcels_on_route(response1)
 
         # This piece of code posts optimization response to MSB
-        RecReq.post_response_msb(request_id, response)
+        #RecReq.post_response_msb(request_id, response)
 
         # Response is always a generic one which just states that CA received request and will process it.
-        return generic_message_received_response
+        #return generic_message_received_response
+        return response
 
 @app.route("/api/clo/newCLOs", methods=['POST'])
 def new_clos():
@@ -1178,3 +1202,20 @@ class CognitiveAdvisorAPI:
 
     def start(self):
         serve(app, host=self._host, port=self._port)
+
+
+class LocationParcelMap:
+    """
+    Class used for storing location for each parcel ID.
+    """
+    def __init__(self):
+        self.dict = {}
+
+    def map(self, key, location):
+        self.dict[key] = location
+
+    def keys(self):
+        return self.dict.keys()
+
+    def get(self, key):
+        return self.dict[key]

@@ -9,9 +9,9 @@ venv
 # Vim files
 .vimrc
 .idea/*
-*.osm
+#*.osm
 *.pbf
-*.csv
+#*.csv
 .ipynb_checkpoints/
 .vscode/
 # IntelliJ files
