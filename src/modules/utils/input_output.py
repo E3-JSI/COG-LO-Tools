@@ -184,8 +184,9 @@ class InputOutputTransformer:
         else:
             for step in clo["state"]["remaining_plan"]["steps"]:
                 parcels.extend(step["unload"])
-                clo_parcels = copy.deepcopy(parcels)
-                return clo_parcels
+                print (step["unload"])
+                #clo_parcels = copy.deepcopy(parcels)
+            return parcels
 
 
     @staticmethod

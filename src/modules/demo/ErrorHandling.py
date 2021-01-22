@@ -147,7 +147,7 @@ class ErrorHandling:
 
         self.check_remaining_plan(input_data)
 
-        self.check_locations(input_data)
+        #self.check_locations(input_data)
 
         self.check_payweight(input_data)
         self.check_parcel_clos(input_data)
