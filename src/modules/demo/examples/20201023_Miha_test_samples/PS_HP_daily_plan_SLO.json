@@ -20,7 +20,7 @@
           "longitude": 15.59338439,
           "station":"PSpostofficeS7"
         },
-        "remaining_plan":[]
+        "remaining_plan":null
       }
     },
     {
@@ -43,7 +43,7 @@
           "longitude": 15.59338439,
           "station":"PSpostofficeS7"
         },
-        "remaining_plan":[]
+        "remaining_plan":{"steps":[]}
       }
     }
   ],
