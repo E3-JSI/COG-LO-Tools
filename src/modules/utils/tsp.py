@@ -1,5 +1,6 @@
 import requests
 import json
+import copy
 
 # URL to our TSP service which runs on the same machine as COGLO services, but a different port.
 TSP_URL = "http://localhost:1234/api/tsp/"
@@ -106,17 +107,18 @@ class Tsp:
             # Cast to JSON object
             json_response = json.loads(response)
 
-            # extract vehicle_id
             vehicle_id = vehicle_array[index]
-
-            # Extract array of visits
             visits = json_response["visits"]
-
+            mapping_temp = copy.deepcopy(mapping)
             routes = []
-            for visit in visits[1:]:  # Skips first element, because TSP seems to have a bug and duplicates first entry
+
+            for visit in visits: #[1:]:  # Skips first element, because TSP seems to have a bug and duplicates first entry
                 # From "id" fields in visits we need to retrieve "route" that is stored in a dictionary
-                route = mapping[index][visit["id"]]
-                routes.append(route)
+
+                if visit["id"] in mapping_temp[index]:  # only add the node on the route the first time
+                    route = mapping_temp[index][visit["id"]]
+                    routes.append(route)
+                    del mapping_temp[index][visit["id"]]
 
             recommendations.append({
                 "UUID": vehicle_id,

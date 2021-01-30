@@ -709,7 +709,6 @@ class InputOutputTransformer:
                         dependencies_list.append(station)
                 dependencies_stations = copy.deepcopy(dependencies_list)
 
-
                 dependencies_stations_ids = [station["id"] for station in dependencies_stations]
                 dependencies_stations.pop(0)
                 dependencies_stations.reverse() #reverse ordered for adding to the the route
