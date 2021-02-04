@@ -179,14 +179,16 @@ class InputOutputTransformer:
     @staticmethod
     def get_clo_parcels(clo):
         parcels = []
+        parcels_loading =[]
         if clo["state"]["remaining_plan"] == None or len(clo["state"]["remaining_plan"]["steps"]) == 0:
             return parcels
         else:
             for step in clo["state"]["remaining_plan"]["steps"]:
                 parcels.extend(step["unload"])
-                print (step["unload"])
                 #clo_parcels = copy.deepcopy(parcels)
-            return parcels
+            for step in clo["state"]["remaining_plan"]["steps"][1:]:
+                parcels_loading.extend(step["load"])
+            return parcels, parcels_loading
 
 
     @staticmethod
@@ -284,7 +286,7 @@ class InputOutputTransformer:
             if "state" not in clo or clo["state"] is None:
                 clo["parcels"] = []
 
-            parcels = InputOutputTransformer.get_clo_parcels(clo)
+            parcels, parcels_loading = InputOutputTransformer.get_clo_parcels(clo)
             clo_parcels = []
 
             # Has parcels on the vehicle, go through them
@@ -373,7 +375,7 @@ class InputOutputTransformer:
             # Current vehicle state at breakdown
             vehicle_state = broken_clo["state"]
             InputOutputTransformer.validateMessageForValue(vehicle_state, ["parcels"])
-            parcel_ids = InputOutputTransformer.get_clo_parcels(broken_clo)
+            parcel_ids, parcels_not_loaded_jet = InputOutputTransformer.get_clo_parcels(broken_clo)
 
             # Currently loaded parcels on the vehicle need to be delivered as well!
             for parcel_id in parcel_ids:
@@ -396,13 +398,25 @@ class InputOutputTransformer:
                     parcel["country"] = "SLO" if parcel["UUIDParcel"].startswith("PS") else "CRO"
 
                 # Pickup of these parcels is the vehicle's location!
+
                 if payload["useCase"] == SLO_CRO_USE_CASE:
-                    station_id = InputOutputTransformer.getStationIdOrClosest(
-                        vehicle_location, config_parser.get_csv_path(use_case_graph), transformation_map)
-                    parcel['pickup'] = station_id
+                    if parcel["UUIDParcel"] not in parcels_not_loaded_jet:  # exclude parcels not oaded on broiken vehicle jet
+                        station_id = InputOutputTransformer.getStationIdOrClosest(
+                            vehicle_location, config_parser.get_csv_path(use_case_graph), transformation_map)
+                        parcel['pickup'] = station_id
+                    else:
+                        #source_location =
+                        station_id = InputOutputTransformer.getStationIdOrClosest(
+                            parcel["source"], config_parser.get_csv_path(use_case_graph), transformation_map)
+                        parcel['pickup'] = station_id
+
+
                 else: #ELTA use case
                     InputOutputTransformer.validateMessageForValue(vehicle_location, ["latitude", "longitude"])
-                    parcel['pickup'] = [vehicle_location["latitude"], vehicle_location["longitude"]]
+                    if parcel["UUIDParcel"] not in parcels_not_loaded_jet:  # exclude parcels not oaded on broiken vehicle jet
+                        parcel['pickup'] = [vehicle_location["latitude"], vehicle_location["longitude"]]
+                    else:
+                        parcel['pickup'] = [parcel["source"]["latitude"], parcel["source"]["longitude"]]
 
                 # Parse package destination
                 InputOutputTransformer.validateMessageForValue(parcel, ["destination"])
@@ -578,7 +592,7 @@ class InputOutputTransformer:
         return None
 
     @staticmethod
-    def prepare_output_message(recommendations, use_case, request_id, organization):
+    def  prepare_output_message(recommendations, use_case, request_id, organization):
         # TODO: Replace location_id in messages to be in form of:
         # "location": { "latitude" : "xxx", "longitude": "xxx", "station": location_id}
 
@@ -755,10 +769,21 @@ class InputOutputTransformer:
                             route_tsp = Tsp.order_recommendations(recommendations_new)
                             route_first_part = route_tsp[0]["route"]
                 final_route = route_first_part + route_second_part
+                final_route = InputOutputTransformer.orderStepId(final_route)
 
             recommendations_raw[i]["route"] = copy.deepcopy(final_route)
         return recommendations_raw
 
+    @staticmethod
+    def orderStepId(final_route):
+        updated_route = []
+        sequence_number=1
+        for step in final_route:
+            step["rank"]= sequence_number
+            step["id"]= sequence_number
+            updated_route.append(step)
+            sequence_number+=1
+        return(updated_route)
 
     @staticmethod
     def PrintRoutes(recommendations):

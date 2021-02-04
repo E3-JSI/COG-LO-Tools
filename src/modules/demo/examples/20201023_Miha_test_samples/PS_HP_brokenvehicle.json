@@ -39,7 +39,8 @@
                             "rank": 3,
                             "unload": [
                                 "PSparcel_02HR"
-                            ]
+                            ],
+                            "load":[]
                         }
                     ]
                 },
@@ -102,6 +103,7 @@
                                 },
                                 "rank": 1
                             }
+
                         ]
                     },
                     "delay_minutes": null,
@@ -140,7 +142,52 @@
                                 "rank": 6,
                                 "unload": [
                                     "PSparcel_01HR"
-                                ]
+                                ],
+                                "load": ["Test1", "Test2"]
+                            },
+                            {
+                                "complete": 0,
+                                "dependency": {
+                                    "plan": null,
+                                    "plan_step": null
+                                },
+                                "due_time": null,
+                                "id": 1,
+                                "location": {
+                                    "city": null,
+                                    "country": null,
+                                    "latitude": 45.942039,
+                                    "longitude": 15.478103,
+                                    "postal_code": null,
+                                    "station": "PSpostofficeS5"
+                                },
+                                "rank": 6,
+                                "load": [
+                                    "PSparcel_03HR"
+                                ],
+                                "unload": []
+                            },
+                             {
+                                "complete": 0,
+                                "dependency": {
+                                    "plan": null,
+                                    "plan_step": null
+                                },
+                                "due_time": null,
+                                "id": 1,
+                                "location": {
+                                    "city": null,
+                                    "country": null,
+                                    "latitude": 45.89320611,
+                                    "longitude": 15.6212996,
+                                    "postal_code": null,
+                                    "station": "PSpostofficeS3"
+                                },
+                                "rank": 6,
+                                "unload": [
+                                    "PSparcel_03HR"
+                                ],
+                                 "load": []
                             }
                         ]
                     },
@@ -205,6 +252,31 @@
                 "country": "SLO",
                 "latitude": 45.93107932,
                 "longitude": 15.67793203,
+                "postal_code": null
+            },
+            "state": "unserved"
+        },
+         {
+            "customs_checkpoint": null,
+            "deadline": "2020-09-23T21:21:23Z",
+            "destination": {
+                "city": null,
+                "country": "SLO",
+                "latitude": 45.942039,
+                "longitude": 15.478103,
+                "postal_code": null,
+                "station": null
+            },
+            "id": "PSparcel_03HR",
+            "issued": "2020-09-22T16:21:23Z",
+            "organization": "PS",
+            "payweight": 1,
+            "service_type": null,
+            "source": {
+                "city": null,
+                "country": "SLO",
+                "latitude": 45.89320611,
+                "longitude": 15.6212996,
                 "postal_code": null
             },
             "state": "unserved"

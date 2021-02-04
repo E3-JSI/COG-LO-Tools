@@ -274,7 +274,7 @@ def handle_recommendation_request():
         # Prepare output message from calculated recommendations
         response = InputOutputTransformer.prepare_output_message(recommendations, use_case, request_id, organization)
         # Post recommendations to MSB
-        RecReq.post_response_msb(request_id, response)
+        #RecReq.post_response_msb(request_id, response)
 
         # Return generic response message
         return generic_message_received_response
