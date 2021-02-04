@@ -319,7 +319,6 @@ class InputOutputTransformer:
         # REMOVE BROKEN VEHICLE FROM CANDIDATES FOR DELIVERIES AND CREATE
         # NEW ORDERS PLAN TO DELIVER REMAINING PARCELS FROM THE BROKEN VEHICLE
         ########################################################################
-        print ("test")
         if payload["eventType"] == "brokenVehicle":
             InputOutputTransformer.validateMessageForValue(json["event"], ["info"])
             InputOutputTransformer.validateMessageForValue(json["event"]["info"], ["clo"])

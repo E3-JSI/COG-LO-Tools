@@ -32,7 +32,7 @@ class ErrorHandling:
                     raise ValueError("Wrong organization. Organization should be the same at the same message")
 
         if input_data['organization'] == 'PS':
-            if input_data['event']['event_type'] != 'vehicle':
+            if input_data['event']['event_type'] != 'vehicle' and input_data['event']['event_type'] != 'border':
                 for item in input_data['event']['info']['items']:
                     if item['organization'] not in self.slo_case:
                         raise ValueError("Wrong organization. Organization should be the same at the same message")
@@ -108,7 +108,6 @@ class ErrorHandling:
 
     def check_payweight(self, input_data):
         for clo in input_data['parcels']:
-            print(clo)
             if 'payweight' not in clo or clo['payweight'] != 1:
                 self.error = ValueError("Payweight is missing or not == 1.", clo["id"])
                 raise self.error
@@ -125,7 +124,6 @@ class ErrorHandling:
         for clo in input_data['parcels']:
             l.append(clo["id"])
         if len(l) != len(set(l)):
-            print("true")
             raise ValueError("Parcelid are not unique - duplicate id.", clo["id"])
 
     def write_file(self, input_data):

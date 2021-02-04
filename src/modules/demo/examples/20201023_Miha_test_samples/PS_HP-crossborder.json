@@ -209,6 +209,7 @@
               {
                 "id": 2,
                 "rank": 2,
+                "load": [],
                 "unload": ["HP_06"
                 ],
                 "complete": 0,
@@ -229,6 +230,7 @@
               {
                 "id": 3,
                 "rank": 3,
+                "load": [],
                 "unload": [
                   "HP_07"
                 ],
@@ -250,6 +252,7 @@
               {
                 "id": 3,
                 "rank": 3,
+                "load": [],
                 "unload": [
                   "HP_08"
                 ],
@@ -271,6 +274,7 @@
               {
                 "id": 2,
                 "rank": 2,
+                "load": [],
                 "unload": [
                   "HP_09"
                 ],
