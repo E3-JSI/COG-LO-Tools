@@ -181,11 +181,10 @@ class InputOutputTransformer:
         parcels = []
         parcels_loading =[]
         if clo["state"]["remaining_plan"] == None or len(clo["state"]["remaining_plan"]["steps"]) == 0:
-            return parcels
+            return parcels, parcels_loading
         else:
             for step in clo["state"]["remaining_plan"]["steps"]:
                 parcels.extend(step["unload"])
-                #clo_parcels = copy.deepcopy(parcels)
             for step in clo["state"]["remaining_plan"]["steps"][1:]:
                 parcels_loading.extend(step["load"])
             return parcels, parcels_loading
