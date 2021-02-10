@@ -245,6 +245,9 @@ class InputOutputTransformer:
         if "parcels" in json:
             parcels_dict = {element["id"]: element for element in json_parcels[:]}
 
+        #list of parcels in clos remaing plan that have not been picked up jet
+        clos_not_loaded_parcels_jet = []
+
         for clo in clos:
             InputOutputTransformer.validateMessageForValue(clo, ["id"])
             clo["UUID"] = clo["id"]
@@ -285,31 +288,38 @@ class InputOutputTransformer:
             if "state" not in clo or clo["state"] is None:
                 clo["parcels"] = []
 
-            parcels, parcels_loading = InputOutputTransformer.get_clo_parcels(clo)
+            parcels, parcels_not_loaded_jet = InputOutputTransformer.get_clo_parcels(clo)
+            clos_not_loaded_parcels_jet.extend(parcels_not_loaded_jet)
             clo_parcels = []
 
             # Has parcels on the vehicle, go through them
             parcel_dict_cpy = copy.deepcopy(parcels_dict)
             for parcel_id in parcels:
-                parcel = parcel_dict_cpy[parcel_id]
-                InputOutputTransformer.validateMessageForValue(parcel, ["id"])
+                if parcel_id not in parcels_not_loaded_jet:
+                    parcel = parcel_dict_cpy[parcel_id]
+                    InputOutputTransformer.validateMessageForValue(parcel, ["id"])
 
-                parcel['UUIDParcel'] = parcel['id']
-                parcel['weight'] = parcel['payweight']
+                    parcel['UUIDParcel'] = parcel['id']
+                    parcel['weight'] = parcel['payweight']
 
-                InputOutputTransformer.validateMessageForValue(parcel, ["destination"])
-                destination = parcel['destination']
-                parcel["country"] = clo["country"]
+                    InputOutputTransformer.validateMessageForValue(parcel, ["destination"])
+                    destination = parcel['destination']
+                    parcel["country"] = clo["country"]
 
-                if payload["useCase"] == SLO_CRO_USE_CASE:
-                    csv_file = config_parser.get_csv_path(use_case_graph)
-                    station_id = InputOutputTransformer.getStationIdOrClosest(destination, csv_file, transformation_map,
-                                                                              parcel['id'])
-                    parcel['destination'] = station_id
-                else:
-                    InputOutputTransformer.validateMessageForValue(destination, ["latitude", "longitude"])
-                    parcel['destination'] = [destination["latitude"], destination["longitude"]]
-                clo_parcels.append(parcel)
+                    # change source location for all parcels that are already loaded on vehicle
+                    """if parcel["id"] not in parcels_not_loaded_jet:
+                        parcel["source"]["station"] = clo["currentLocation"]
+                    """
+                    if payload["useCase"] == SLO_CRO_USE_CASE:
+                        csv_file = config_parser.get_csv_path(use_case_graph)
+                        destination_station_id = InputOutputTransformer.getStationIdOrClosest(destination, csv_file, transformation_map,
+                                                                                  parcel['id'])
+                        parcel['destination'] = destination_station_id
+                    else:
+                        InputOutputTransformer.validateMessageForValue(destination, ["latitude", "longitude"])
+                        parcel['destination'] = [destination["latitude"], destination["longitude"]]
+
+                    clo_parcels.append(parcel)
 
             clo["parcels"] = clo_parcels  # Parcels already on the vehicle!
         payload["clos"] = clos
@@ -373,10 +383,14 @@ class InputOutputTransformer:
             # Current vehicle state at breakdown
             vehicle_state = broken_clo["state"]
             InputOutputTransformer.validateMessageForValue(vehicle_state, ["parcels"])
-            parcel_ids, parcels_not_loaded_jet = InputOutputTransformer.get_clo_parcels(broken_clo)
+            parcel_ids_brokenvehicle, parcels_not_loaded_jet_brokenvehicle = InputOutputTransformer.get_clo_parcels(broken_clo)
+            #clos_not_loaded_parcels_jet.extend(parcels_not_loaded_jet_ids)
 
-            # Currently loaded parcels on the vehicle need to be delivered as well!
-            for parcel_id in parcel_ids:
+            # Currently loaded parcels on the vehicle need to be delivered as well + parcels on clos that are not pickekup jet!
+            parcel_ids_brokenvehicle.extend(clos_not_loaded_parcels_jet)
+            parcels_not_loaded_jet_brokenvehicle.extend(clos_not_loaded_parcels_jet)
+
+            for parcel_id in parcel_ids_brokenvehicle:
                 parcel_dict_cpy = copy.deepcopy(parcels_dict)
                 if parcel_id not in parcel_dict_cpy:
                     raise ValueError("Parcel with ID " + str(parcel_id) +
@@ -395,23 +409,21 @@ class InputOutputTransformer:
                 if parcel["country"] is None and payload["useCase"] == SLO_CRO_USE_CASE:
                     parcel["country"] = "SLO" if parcel["UUIDParcel"].startswith("PS") else "CRO"
 
-                # Pickup of these parcels is the vehicle's location!
-
+                #set parcel pickup location
                 if payload["useCase"] == SLO_CRO_USE_CASE:
-                    if parcel["UUIDParcel"] not in parcels_not_loaded_jet:  # exclude parcels not oaded on broiken vehicle jet
+                    if parcel["UUIDParcel"] not in parcels_not_loaded_jet_brokenvehicle:  # parcels already loaded on vehicle - Pickup of these parcels is the vehicle's location!
                         station_id = InputOutputTransformer.getStationIdOrClosest(
                             vehicle_location, config_parser.get_csv_path(use_case_graph), transformation_map)
                         parcel['pickup'] = station_id
                     else:
-                        #source_location =
+                        # parcels not loaded on vehicle jet
                         station_id = InputOutputTransformer.getStationIdOrClosest(
                             parcel["source"], config_parser.get_csv_path(use_case_graph), transformation_map)
                         parcel['pickup'] = station_id
 
-
                 else: #ELTA use case
                     InputOutputTransformer.validateMessageForValue(vehicle_location, ["latitude", "longitude"])
-                    if parcel["UUIDParcel"] not in parcels_not_loaded_jet:  # exclude parcels not oaded on broiken vehicle jet
+                    if parcel["UUIDParcel"] not in parcels_not_loaded_jet_ids:  # exclude parcels not oaded on broiken vehicle jet
                         parcel['pickup'] = [vehicle_location["latitude"], vehicle_location["longitude"]]
                     else:
                         parcel['pickup'] = [parcel["source"]["latitude"], parcel["source"]["longitude"]]
@@ -450,6 +462,17 @@ class InputOutputTransformer:
             parcels = []
             for item in json["event"]["info"]["items"]:
                 parcels.append(item)
+            for parcel in json["parcels"]:
+                if parcel["id"] in clos_not_loaded_parcels_jet:
+                    parcels.append(parcel)
+            orders = InputOutputTransformer.buildOrdersFromParcels(parcels, payload["useCase"], use_case_graph, transformation_map)
+            payload["eventType"] = "pickupRequest"  # setting back the event_type to basic use case
+            payload["orders"] = orders
+        elif payload["eventType"] == "crossBorder":
+            parcels = []
+            for parcel in json["parcels"]:
+                if parcel["id"] in clos_not_loaded_parcels_jet:
+                    parcels.append(parcel)
             orders = InputOutputTransformer.buildOrdersFromParcels(parcels, payload["useCase"], use_case_graph, transformation_map)
             payload["eventType"] = "pickupRequest"  # setting back the event_type to basic use case
             payload["orders"] = orders

@@ -81,7 +81,7 @@
                 "longitude": 15.6212996,
                 "station": "PSpostofficeS3"
               },
-              "load": ["P_01", "P_02"],
+              "load": ["P_01"],
               "unload": [],
               "complete": 0,
               "dependency": {
@@ -97,7 +97,7 @@
                 "longitude": 15.5231045,
                 "station": "PSpostofficeS4"
               },
-              "load": [],
+              "load": [ "P_02"],
               "unload": [
                 "P_01"
               ],
@@ -217,9 +217,9 @@
       "issued": "2020-10-04T09:17:51Z",
       "source": {
         "country": "SLO",
-        "latitude": 45.89320611,
-        "longitude": 15.6212996,
-        "station": "PSpostofficeS3"
+        "latitude": 45.88461153,
+        "longitude": 15.5231045,
+        "station": "PSpostofficeS4"
       },
       "deadline": "2020-10-05T14:17:51Z",
       "payweight": 1,
