@@ -393,7 +393,7 @@ class VrpProcessor:
             deliveries_origin = []
             deliveries_diff = []
             # list of additional parcels from request
-            if evt_type == "brokenVehicle" or "pickupRequest" or "crossBorder":
+            if evt_type == "brokenVehicle":
                 deliveries_diff = [Parcel(x["UUIDParcel"], x["destination"],
                                           x["weight"], x["pickup"],
                                           "order", country=x["country"]) for x in requests]
