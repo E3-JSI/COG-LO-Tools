@@ -63,8 +63,7 @@
               "load": [
                 "HP_01",
                 "HP_02",
-                "HP_03",
-                "HP_04"
+                "HP_03"
               ],
               "unload": [],
               "complete": 0,
@@ -99,8 +98,7 @@
                 "longitude": 15.686514,
                 "station": "HPpostofficeH1"
               },
-              "load": [
-              ],
+              "load": ["HP_04"],
               "unload": [
                 "HP_02"
               ],
@@ -406,9 +404,9 @@
       "destination": {
         "city": null,
         "country": "CRO",
-        "station": "PSpostofficeS3",
-        "latitude": 45.89320611,
-        "longitude": 15.6212996,
+        "latitude": 45.942039,
+        "longitude": 15.478103,
+        "station": "PSpostofficeS5",
         "postal_code": null
       },
       "organization": "HP",

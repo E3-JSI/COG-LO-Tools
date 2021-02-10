@@ -41,6 +41,36 @@
                                 "PSparcel_02HR"
                             ],
                             "load":[]
+                        },
+                         {
+                            "complete": 0,
+                            "dependency": {
+                                "plan_step": 0
+                            },
+                            "id": 3,
+                            "location": {
+                                "latitude": 45.88461153,
+                                "longitude": 15.5231045
+                            },
+                            "rank": 3,
+                            "unload": [],
+                            "load":["PSparcel_04HR"]
+                        },
+                         {
+                            "complete": 0,
+                            "dependency": {
+                                "plan_step": 0
+                            },
+                            "id": 3,
+                            "location": {
+                                "latitude": 45.90488128,
+                                "longitude": 15.59338439
+                            },
+                            "rank": 3,
+                            "unload": [
+                                "PSparcel_04HR"
+                            ],
+                            "load":[]
                         }
                     ]
                 },
@@ -277,6 +307,31 @@
                 "country": "SLO",
                 "latitude": 45.89320611,
                 "longitude": 15.6212996,
+                "postal_code": null
+            },
+            "state": "unserved"
+        },
+        {
+            "customs_checkpoint": null,
+            "deadline": "2020-09-23T21:21:23Z",
+            "destination": {
+                "city": null,
+                "country": "SLO",
+                "latitude": 45.90488128,
+                "longitude": 15.59338439,
+                "postal_code": null,
+                "station": null
+            },
+            "id": "PSparcel_04HR",
+            "issued": "2020-09-22T16:21:23Z",
+            "organization": "PS",
+            "payweight": 1,
+            "service_type": null,
+            "source": {
+                "city": null,
+                "country": "SLO",
+                "latitude": 45.88461153,
+                "longitude": 15.5231045,
                 "postal_code": null
             },
             "state": "unserved"
