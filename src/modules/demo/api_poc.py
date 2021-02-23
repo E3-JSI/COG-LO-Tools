@@ -287,8 +287,8 @@ def handle_recommendation_request():
         if evt_type is None:
             data_request, data_CLOs = methods.proccess_elta_event(evt_type, data, use_case_graph)
             res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
-            if use_case_graph == "ELTA_urban1": # update graph with real-time TMS data
-                RecReq.post_request_graph_tms(use_case_graph)
+            #if use_case_graph == "ELTA_urban1": # update graph with real-time TMS data
+            #    RecReq.post_request_graph_tms(use_case_graph)
 
         else:
             data_request = methods.proccess_elta_event(evt_type, data, use_case_graph)
@@ -327,10 +327,11 @@ def handle_recommendation_request():
             return jsonify({"msg": "Invalid event type: {}".format(evt_type), "status": 0})
 
         print("starting final reordering & TSP")
-        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations)
+        if evt_type is None:
+            event = "dailyRequest"
+        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, event)
         # print route for all vehicles
         P = InputOutputTransformer.PrintRoutes(recommendations)
-
 
         # Maps recommendations based on transform_map_dict
         recommendations_mapped = methods.map_coordinates_to_response(recommendations, transform_map_dict)
