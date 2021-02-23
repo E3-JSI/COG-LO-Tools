@@ -397,7 +397,7 @@ class VrpProcessor:
                 deliveries_diff = [Parcel(x["UUIDParcel"], x["destination"],
                                           x["weight"], x["pickup"],
                                           "order", country=x["country"]) for x in requests]
-            elif evt_type == "pickupRequest" or "crossBorder":
+            elif evt_type == "dailyRequest" or "pickupRequest" or "crossBorder":
                 deliveries_diff = [Parcel(x["UUIDParcel"], x["destination"],
                                           x["weight"], x["pickup"],
                                           "order", country=x["country"]) for x in requests]

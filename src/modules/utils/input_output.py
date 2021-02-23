@@ -204,11 +204,11 @@ class InputOutputTransformer:
         if json["organization"] == SLO_CRO_USE_CASE or json["organization"] == "PS" or json["organization"] == "HP":
             payload["useCase"] = SLO_CRO_USE_CASE
             if "event" not in json:
-                payload["eventType"] = "pickupRequest"
+                payload["eventType"] = "dailyRequest"
             else:
                 event = json["event"]
                 if event is None:  # Procedure for daily plan is the same as for pickupRequest
-                    payload["eventType"] = "pickupRequest"
+                    payload["eventType"] = "dailyRequest"
                 else:
                     type = event["event_type"]
                     if type == "order":
@@ -423,7 +423,7 @@ class InputOutputTransformer:
 
                 else: #ELTA use case
                     InputOutputTransformer.validateMessageForValue(vehicle_location, ["latitude", "longitude"])
-                    if parcel["UUIDParcel"] not in parcels_not_loaded_jet_ids:  # exclude parcels not oaded on broiken vehicle jet
+                    if parcel["UUIDParcel"] not in parcels_not_loaded_jet_brokenvehicle:  # exclude parcels not oaded on broiken vehicle jet
                         parcel['pickup'] = [vehicle_location["latitude"], vehicle_location["longitude"]]
                     else:
                         parcel['pickup'] = [parcel["source"]["latitude"], parcel["source"]["longitude"]]
@@ -625,6 +625,9 @@ class InputOutputTransformer:
         for clo_plan in recommendations:
             counter += 1
 
+            #if evt_type != "dailyRequest":  #skip first step in route plan except in dailyPlan
+            #    clo_plan["route"].pop(0)
+
             plan_organization = "ELTA"
             if use_case == SLO_CRO_USE_CASE:
                 plan_organization = "PS" if clo_plan["UUID"].startswith("PS") else "HP"
@@ -704,7 +707,7 @@ class InputOutputTransformer:
         return recommendations
 
     @staticmethod
-    def PickupNodeReorder(recommendations_raw):
+    def PickupNodeReorder(recommendations_raw, evt_type):
         # 1. Itterate on vehicles.
         # 2. for each route -> find pickup nodes
         # 3. Reorder pickup nodes based on depencencies
@@ -792,6 +795,8 @@ class InputOutputTransformer:
                 final_route = route_first_part + route_second_part
                 final_route = InputOutputTransformer.orderStepId(final_route)
 
+            if evt_type != "dailyRequest":  #exclude the current location for all except daily plan
+                final_route.pop(0)
             recommendations_raw[i]["route"] = copy.deepcopy(final_route)
         return recommendations_raw
 
