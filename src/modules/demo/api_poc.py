@@ -328,8 +328,8 @@ def handle_recommendation_request():
 
         print("starting final reordering & TSP")
         if evt_type is None:
-            event = "dailyRequest"
-        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, event)
+            evt_type = "dailyRequest"
+        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, evt_type)
         # print route for all vehicles
         P = InputOutputTransformer.PrintRoutes(recommendations)
 
