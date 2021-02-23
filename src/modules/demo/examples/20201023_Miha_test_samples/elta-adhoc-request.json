@@ -230,6 +230,7 @@
               {
                 "id": 2,
                 "rank": 3,
+                "load": [],
                 "unload": [
                   "ELTAparcel_1"
                 ],
@@ -251,6 +252,7 @@
               {
                 "id": 3,
                 "rank": 3,
+                "load": [],
                 "unload": [
                   "ELTAparcel_2"
                 ],
