@@ -1,559 +1,2172 @@
 {
-  "event": {
-    "id": "HPborderEvent1",
-    "info": {
-      "location": {
-        "station": "HPborder1",
-        "latitude": "45.846066",
-        "longitude": "15.693642"
-      },
-      "use_case": [
-        "cross-border"
-      ]
-    },
-    "event": "closure",
-    "initiator": "system",
-    "event_type": "border"
-  },
-  "clos": [
-    {
-      "id": "PSvehicle11",
-      "info": {
-        "organization": "PS",
-        "use_case": [
-          "cross-border"
-        ],
-        "physical_id": "11",
-        "type": "transportation means",
-        "subtype": "vehicle",
-        "description": "truck",
-        "capacity": 1000,
-        "capacity_unit": "kg"
-      },
-      "state": {
-        "location": {
-          "country": "SLO",
-          "latitude": 45.93107932,
-          "longitude": 15.67793203
-        },
-        "status": 1,
-        "load_volume": 0,
-        "available_space": 0,
-        "plan": "PSplan30331585316809914",
-        "completed_plan": {},
-        "remaining_plan": {
-          "id": "PSplan30331585316809914",
-          "recommendation": "DAILY-6c8538a7-a912-40f2-82e1-b2e0101d7421",
-          "organization": "PS",
-          "execution_date": "2021-02-02 13:12:21",
-          "steps": [
-            {
-              "id": 1,
-              "rank": 1,
-              "location": {
-                "address": "Kapele",
-                "latitude": 45.9310499,
-                "longitude": 15.6780936,
-                "station": "PSpostofficeS1"
-              },
-              "load": [
-                "PSparcelCE232746718HR",
-                "PSparcelCE233389853HR",
-                "PSparcelCE233335515HR",
-                "PSparcelCE233493754HR",
-                "PSparcelCE233286522HR",
-                "PSparcelCE233454628HR",
-                "PSparcelCE233350203HR",
-                "PSparcelRC736399924HR",
-                "PSparcelCE233286540HR",
-                "PSparcelCE233454693HR",
-                "PSparcelCE233389840HR",
-                "PSparcelRC942733908HR"
-              ],
-              "unload": [],
-              "complete": 0,
-              "dependency": {
-                "plan_step": 0
-              }
+    "clos": [
+        {
+            "id": "ELTAvehicle0",
+            "info": {
+                "name": "ELTA truck 000",
+                "type": "transportation means",
+                "subtype": "vehicle",
+                "capacity": 200.0,
+                "location": {
+                    "city": null,
+                    "country": null,
+                    "station": null,
+                    "latitude": null,
+                    "longitude": null,
+                    "postal_code": null
+                },
+                "description": "truck",
+                "physical_id": "0",
+                "organization": "ELTA",
+                "capacity_unit": "kg",
+                "working_hours": null
             },
-            {
-              "id": 7,
-              "rank": 7,
-              "location": {
-                "address": "Cerklje ob Krki",
-                "latitude": 45.8844935,
-                "longitude": 15.5231733,
-                "station": "PSpostofficeS4"
-              },
-              "load": [
-                "newadhoc999999"
-              ],
-              "unload": [
-                "PSparcelCE233350203HR",
-                "PSparcelRC736399924HR"
-              ],
-              "complete": 0,
-              "dependency": {
-                "plan_step": 0
-              }
-            },
-            {
-              "id": 2,
-              "rank": 2,
-              "location": {
-                "address": "Ulica bratov Gerjovicev",
-                "latitude": 45.8949345,
-                "longitude": 15.6602321,
-                "station": "PSpostofficeS8"
-              },
-              "load": [],
-              "unload": [
-                "newadhoc999999",
-                "PSparcelCE233389840HR",
-                "PSparcelRC942733908HR"
-              ],
-              "complete": 0,
-              "dependency": {
-                "plan_step": 0
-              }
-            },
-            {
-              "id": 3,
-              "rank": 3,
-              "location": {
-                "address": "Zagrebacka ul. 45",
-                "latitude": 45.8872686,
-                "longitude": 15.6968985,
-                "station": "HPpostofficeH6"
-              },
-              "load": [],
-              "unload": [
-                "PSparcelCE233286522HR",
-                "PSparcelCE233454628HR"
-              ],
-              "complete": 0,
-              "dependency": {
-                "plan_step": 0
-              }
-            },
-            {
-              "id": 4,
-              "rank": 4,
-              "location": {
-                "address": "Zagrebacka ul. 29",
-                "latitude": 45.8778694,
-                "longitude": 15.7391413,
-                "station": "HPpostofficeH8"
-              },
-              "load": [],
-              "unload": [
-                "PSparcelCE233335515HR",
-                "PSparcelCE233493754HR"
-              ],
-              "complete": 0,
-              "dependency": {
-                "plan_step": 0
-              }
-            },
-            {
-              "id": 6,
-              "rank": 6,
-              "location": {
-                "address": "Ul. Drage Svajcara 5",
-                "latitude": 45.8588883,
-                "longitude": 15.8033733,
-                "station": "HPpostofficeH7"
-              },
-              "load": [],
-              "unload": [
-                "PSparcelCE233286540HR",
-                "PSparcelCE233454693HR"
-              ],
-              "complete": 0,
-              "dependency": {
-                "plan_step": 0
-              }
-            },
-            {
-              "id": 5,
-              "rank": 5,
-              "location": {
-                "address": "Jesenice",
-                "latitude": 45.8402267,
-                "longitude": 15.6863883,
-                "station": "HPpostofficeH1"
-              },
-              "load": [],
-              "unload": [
-                "PSparcelCE232746718HR",
-                "PSparcelCE233389853HR"
-              ],
-              "complete": 0,
-              "dependency": {
-                "plan_step": 0
-              }
+            "state": {
+                "plan": "ELTAplan06749423-b254-4e7e-8206-76ba311cb83f",
+                "driver": null,
+                "status": 1.0,
+                "parcels": [],
+                "location": {
+                    "city": null,
+                    "country": null,
+                    "station": null,
+                    "latitude": 38.012288,
+                    "longitude": 23.813838,
+                    "postal_code": null
+                },
+                "load_volume": null,
+                "capacity_unit": null,
+                "delay_minutes": null,
+                "remaining_plan": null,
+                "available_space": null,
+                "availability_prediction": {
+                    "time": null,
+                    "location": {
+                        "city": null,
+                        "country": null,
+                        "station": null,
+                        "latitude": null,
+                        "longitude": null,
+                        "postal_code": null
+                    }
+                },
+                "completed_plan": null
             }
-          ]
         },
-        "load_size": 0,
-        "parcels": [
-          "PSparcelRC736399924HR",
-          "PSparcelRC942733908HR",
-          "PSparcelCE233493754HR",
-          "PSparcelCE233454693HR",
-          "PSparcelCE233454628HR",
-          "PSparcelCE233389853HR",
-          "PSparcelCE233389840HR",
-          "PSparcelCE233350203HR",
-          "PSparcelCE233335515HR",
-          "PSparcelCE233286540HR",
-          "PSparcelCE233286522HR",
-          "PSparcelCE232746718HR"
-        ],
-        "delay_minutes": 0
-      }
-    }
-  ],
-  "parcels": [
-    {
-      "id": "PSparcelCE232746718HR",
-      "state": "unserved",
-      "issued": "2020-12-21T09:17:51Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T14:17:51Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "CRO",
-        "station": "HPpostofficeH1",
-        "latitude": 45.840296,
-        "longitude": 15.686514,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelCE233389853HR",
-      "state": "unserved",
-      "issued": "2020-12-21T13:10:51Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T18:10:51Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "CRO",
-        "station": "HPpostofficeH1",
-        "latitude": 45.840296,
-        "longitude": 15.686514,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelCE233335515HR",
-      "state": "unserved",
-      "issued": "2020-12-21T17:44:43Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T22:44:43Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "CRO",
-        "station": "HPpostofficeH8",
-        "latitude": 45.878072,
-        "longitude": 15.739208,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelCE233493754HR",
-      "state": "unserved",
-      "issued": "2020-12-21T12:10:07Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T17:10:07Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "CRO",
-        "station": "HPpostofficeH8",
-        "latitude": 45.878072,
-        "longitude": 15.739208,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelCE233286522HR",
-      "state": "unserved",
-      "issued": "2020-12-21T15:34:24Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T20:34:24Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "CRO",
-        "station": "HPpostofficeH6",
-        "latitude": 45.887335,
-        "longitude": 15.697116,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelCE233454628HR",
-      "state": "unserved",
-      "issued": "2020-12-21T10:36:39Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T15:36:39Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "CRO",
-        "station": "HPpostofficeH6",
-        "latitude": 45.887335,
-        "longitude": 15.697116,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelCE233350203HR",
-      "state": "unserved",
-      "issued": "2020-12-21T14:50:02Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T19:50:02Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS4",
-        "latitude": 45.88461153,
-        "longitude": 15.5231045,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelRC736399924HR",
-      "state": "unserved",
-      "issued": "2020-12-21T10:55:55Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T15:55:55Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS4",
-        "latitude": 45.88461153,
-        "longitude": 15.5231045,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelCE233286540HR",
-      "state": "unserved",
-      "issued": "2020-12-21T12:41:46Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T17:41:46Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "CRO",
-        "station": "HPpostofficeH7",
-        "latitude": 45.859075,
-        "longitude": 15.80341,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelCE233454693HR",
-      "state": "unserved",
-      "issued": "2020-12-21T19:02:53Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-23T00:02:53Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "CRO",
-        "station": "HPpostofficeH7",
-        "latitude": 45.859075,
-        "longitude": 15.80341,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelCE233389840HR",
-      "state": "unserved",
-      "issued": "2020-12-21T16:21:23Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T21:21:23Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS8",
-        "latitude": 45.89504865,
-        "longitude": 15.66006978,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "PSparcelRC942733908HR",
-      "state": "unserved",
-      "issued": "2020-12-21T15:19:13Z",
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS1",
-        "latitude": 45.93107932,
-        "longitude": 15.67793203,
-        "postal_code": null
-      },
-      "deadline": "2020-12-22T20:19:13Z",
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS8",
-        "latitude": 45.89504865,
-        "longitude": 15.66006978,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": null,
-      "customs_checkpoint": null
-    },
-    {
-      "id": "newadhoc999999",
-      "state": "unserved",
-      "issued": null,
-      "source": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS4",
-        "latitude": 45.88461153,
-        "longitude": 15.5231045,
-        "postal_code": null
-      },
-      "deadline": null,
-      "payweight": 1,
-      "destination": {
-        "city": null,
-        "country": "SLO",
-        "station": "PSpostofficeS8",
-        "latitude": 45.89504865,
-        "longitude": 15.66006978,
-        "postal_code": null
-      },
-      "organization": "PS",
-      "service_type": "express",
-      "customs_checkpoint": null
-    }
-  ],
-  "request": "2732317f-c7ae-4392-94be-ff7c6c051fc1",
-  "organization": "PS"
+        {
+            "id": "ELTAvehicle6",
+            "info": {
+                "name": "ELTA truck 001",
+                "type": "transportation means",
+                "subtype": "vehicle",
+                "capacity": 200.0,
+                "location": {
+                    "city": null,
+                    "country": null,
+                    "station": null,
+                    "latitude": null,
+                    "longitude": null,
+                    "postal_code": null
+                },
+                "description": "truck",
+                "physical_id": "6",
+                "organization": "ELTA",
+                "capacity_unit": "kg",
+                "working_hours": null
+            },
+            "state": {
+                "plan": "ELTAplan06749423-b254-4e7e-8206-76ba311cb83f",
+                "driver": null,
+                "status": 1.0,
+                "parcels": [],
+                "location": {
+                    "city": null,
+                    "country": "GR",
+                    "station": null,
+                    "latitude": 38.012288,
+                    "longitude": 23.813838,
+                    "postal_code": null
+                },
+                "load_volume": null,
+                "capacity_unit": null,
+                "delay_minutes": null,
+                "remaining_plan": null,
+                "available_space": null,
+                "availability_prediction": {
+                    "time": null,
+                    "location": {
+                        "city": null,
+                        "country": null,
+                        "station": null,
+                        "latitude": null,
+                        "longitude": null,
+                        "postal_code": null
+                    }
+                },
+                "completed_plan": null
+            }
+        },
+        {
+            "id": "ELTAvehicle7",
+            "info": {
+                "name": "ELTA truck 002",
+                "type": "transportation means",
+                "subtype": "vehicle",
+                "capacity": 200.0,
+                "location": {
+                    "city": null,
+                    "country": null,
+                    "station": null,
+                    "latitude": null,
+                    "longitude": null,
+                    "postal_code": null
+                },
+                "description": "truck",
+                "physical_id": "7",
+                "organization": "ELTA",
+                "capacity_unit": "kg",
+                "working_hours": null
+            },
+            "state": {
+                "plan": "ELTAplan0de5fb98-8798-40af-ba6c-5f3e52549205",
+                "driver": null,
+                "status": 1.0,
+                "parcels": [],
+                "location": {
+                    "city": null,
+                    "country": "GR",
+                    "station": null,
+                    "latitude": 38.012288,
+                    "longitude": 23.813838,
+                    "postal_code": null
+                },
+                "load_volume": null,
+                "capacity_unit": null,
+                "delay_minutes": null,
+                "remaining_plan": null,
+                "available_space": null,
+                "availability_prediction": {
+                    "time": null,
+                    "location": {
+                        "city": null,
+                        "country": null,
+                        "station": null,
+                        "latitude": null,
+                        "longitude": null,
+                        "postal_code": null
+                    }
+                },
+                "completed_plan": null
+            }
+        }
+    ],
+    "parcels": [
+        {
+            "id": "ELTAparcelEB713992272CN",
+            "state": "unserved",
+            "issued": "2020-12-21T14:10:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:10:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0007659,
+                "longitude": 23.7953166,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNB260416624GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:03:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:03:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9935131,
+                "longitude": 23.8066445,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNB461286532GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:14:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:14:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0143713,
+                "longitude": 23.8495366,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNE967924979GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:06:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:06:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9968259,
+                "longitude": 23.8068197,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNF660203320GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:25:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:25:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9987998,
+                "longitude": 23.7991783,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNH600166179GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:01:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:01:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0021117,
+                "longitude": 23.7937601,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNI061801671GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:27:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:27:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9995314,
+                "longitude": 23.7981764,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNI061812144GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:24:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:24:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0011932,
+                "longitude": 23.8028442,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNI470117744GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:38:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:38:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0040461,
+                "longitude": 23.796425,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNP090409975GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:21:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:21:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0080789,
+                "longitude": 23.8034886,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNV590736894GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:41:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:41:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0048727,
+                "longitude": 23.7963539,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelNX700241629GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:27:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:27:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.000764,
+                "longitude": 23.8025021,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD258660532GR",
+            "state": "unserved",
+            "issued": "2020-12-21T10:43:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T15:43:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9989929,
+                "longitude": 23.7851387,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD263796215GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:21:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:21:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9996065,
+                "longitude": 23.8004679,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD277216644GR",
+            "state": "unserved",
+            "issued": "2020-12-21T10:47:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T15:47:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9990785,
+                "longitude": 23.7888439,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD280867472GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:58:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:58:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9954257,
+                "longitude": 23.8069365,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD280867526GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:58:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:58:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9954257,
+                "longitude": 23.8069365,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD280867565GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:58:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:58:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9954257,
+                "longitude": 23.8069365,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD285010253GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:24:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:24:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9991241,
+                "longitude": 23.7966351,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD286232194GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:15:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:15:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0076851,
+                "longitude": 23.8024087,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD287890921GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:12:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:12:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0017904,
+                "longitude": 23.7977042,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD288046138GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:44:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:44:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0010407,
+                "longitude": 23.7927512,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD288332990GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:09:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:09:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0073146,
+                "longitude": 23.8021533,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD289016398GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:33:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:33:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9981833,
+                "longitude": 23.7961693,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD291964775GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:30:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:30:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9969707,
+                "longitude": 23.7967634,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPD292237765GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:27:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:27:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0000615,
+                "longitude": 23.8049804,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPS154117107GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:02:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:02:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.006207,
+                "longitude": 23.7981551,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelPS254559561GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:48:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:48:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9935238,
+                "longitude": 23.799003,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWB450035374GR",
+            "state": "unserved",
+            "issued": "2020-12-21T15:28:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T20:28:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0032198,
+                "longitude": 23.8012885,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWB670009780GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:53:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:53:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9952125,
+                "longitude": 23.8004013,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWB980299665GR",
+            "state": "unserved",
+            "issued": "2020-12-21T10:53:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T15:53:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.998915,
+                "longitude": 23.7873611,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWD450042619GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:05:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:05:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0024271,
+                "longitude": 23.7932109,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWE180013343GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:15:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:15:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0075142,
+                "longitude": 23.8026461,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWE180013649GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:16:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:16:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0075142,
+                "longitude": 23.8026461,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWE230089599GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:27:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:27:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9977556,
+                "longitude": 23.7969481,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWE230090504GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:03:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:03:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.999341,
+                "longitude": 23.7956984,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWE230090985GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:09:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:09:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9931239,
+                "longitude": 23.8043375,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWE230091487GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:20:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:20:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0017904,
+                "longitude": 23.7977042,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWN620204110GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:35:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:35:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0024465,
+                "longitude": 23.8042084,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWO400061116GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:34:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:34:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9962227,
+                "longitude": 23.7969295,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWQ451628189GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:45:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:45:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0043021,
+                "longitude": 23.7954189,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWQ451628192GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:01:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:01:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9963841,
+                "longitude": 23.7934294,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWQ451628201GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:37:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:37:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9966579,
+                "longitude": 23.8001792,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWQ451628229GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:15:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:15:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0019369,
+                "longitude": 23.7995565,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWQ451628246GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:27:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:27:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0053605,
+                "longitude": 23.8041156,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWQ451628250GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:30:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:30:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0001709,
+                "longitude": 23.8019027,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWQ451649453GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:07:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:07:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.995561,
+                "longitude": 23.7980314,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWQ451699790GR",
+            "state": "unserved",
+            "issued": "2020-12-21T16:09:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T21:09:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0028958,
+                "longitude": 23.80686,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWQ460078604GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:17:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:17:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0076108,
+                "longitude": 23.8032487,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWR980014561GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:21:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:21:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0080789,
+                "longitude": 23.8034886,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWT200017465GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:09:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:09:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0073146,
+                "longitude": 23.8021533,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWT420016270GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:18:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:18:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0012944,
+                "longitude": 23.80237,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWT420016575GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:11:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:11:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9926354,
+                "longitude": 23.8033338,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWT420017045GR",
+            "state": "unserved",
+            "issued": "2020-12-21T15:57:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T20:57:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9987223,
+                "longitude": 23.8047442,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWU810065011GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:58:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:58:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9959078,
+                "longitude": 23.7935184,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWX320002539GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:30:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:30:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0003214,
+                "longitude": 23.7939964,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWX640012683GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:54:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:54:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9943747,
+                "longitude": 23.7963939,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelWY320001309GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:05:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:05:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0060665,
+                "longitude": 23.7986587,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZA170027949GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:47:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:47:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0010407,
+                "longitude": 23.7927512,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZA170028652GR",
+            "state": "unserved",
+            "issued": "2020-12-21T10:59:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T15:59:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0057775,
+                "longitude": 23.7961791,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZA170028992GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:41:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:41:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0187605,
+                "longitude": 23.797768,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZA170029692GR",
+            "state": "unserved",
+            "issued": "2020-12-21T15:41:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T20:41:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0051833,
+                "longitude": 23.7989369,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZA170030143GR",
+            "state": "unserved",
+            "issued": "2020-12-21T15:36:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T20:36:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0024465,
+                "longitude": 23.8042084,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZD570723790GR",
+            "state": "unserved",
+            "issued": "2020-12-21T15:24:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T20:24:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.001945,
+                "longitude": 23.8002163,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZG350218701GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:15:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:15:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0074666,
+                "longitude": 23.8015227,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZH561189175GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:42:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:42:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9953765,
+                "longitude": 23.7987832,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZK630697445GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:57:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:57:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0006403,
+                "longitude": 23.7947119,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZK650002725GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:50:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:50:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9937032,
+                "longitude": 23.7999418,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZK720087875GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:07:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:07:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9925187,
+                "longitude": 23.8046361,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZN340992801GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:52:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:52:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0008079,
+                "longitude": 23.7916739,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZN341005629GR",
+            "state": "unserved",
+            "issued": "2020-12-21T12:14:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T17:14:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.994689,
+                "longitude": 23.8045377,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZR690351389GR",
+            "state": "unserved",
+            "issued": "2020-12-21T14:20:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T19:20:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.001326,
+                "longitude": 23.8033178,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZS560615623GR",
+            "state": "unserved",
+            "issued": "2020-12-21T13:17:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T18:17:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 38.0134748,
+                "longitude": 23.84964,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZW738597922GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:45:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:45:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9930816,
+                "longitude": 23.7978283,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZW738653584GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:27:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:27:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9983131,
+                "longitude": 23.7993674,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZW738690750GR",
+            "state": "unserved",
+            "issued": "2020-12-21T11:27:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T16:27:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9990119,
+                "longitude": 23.7988329,
+                "postal_code": "15561"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        },
+        {
+            "id": "ELTAparcelZX830068051GR",
+            "state": "unserved",
+            "issued": "2020-12-21T15:33:37Z",
+            "source": {
+                "city": "Agia Paraskevi",
+                "country": "GR",
+                "station": "ELTApostoffice1",
+                "latitude": 38.012288,
+                "longitude": 23.813838,
+                "postal_code": null
+            },
+            "deadline": "2020-12-22T20:33:37Z",
+            "payweight": 1.0,
+            "destination": {
+                "city": "Athens",
+                "country": "GR",
+                "station": null,
+                "latitude": 37.9987223,
+                "longitude": 23.8047442,
+                "postal_code": "15562"
+            },
+            "organization": "ELTA",
+            "service_type": null,
+            "customs_checkpoint": null
+        }
+    ],
+    "request": "DAILY-1fa5ad57-d6f3-4c56-9e72-de842526a1f7",
+    "organization": "ELTA",
+    "event": null,
+    "usecase": "urban",
+    "pilot": "urban"
 }
