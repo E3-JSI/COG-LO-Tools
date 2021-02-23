@@ -245,7 +245,7 @@ def handle_recommendation_request():
                 return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
             broken_clo_orders = data["orders"]
             recommendations = RecReq.process_broken_clo(evt_type, clos, broken_clo_orders, vrp_processor_ref, use_case, use_case_graph)
-        elif evt_type == "pickupRequest":
+        elif evt_type == "pickupRequest" or "dailyRequest":
             if "clos" not in data or "orders" not in data:
                 return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
             requests = data["orders"]
@@ -267,14 +267,14 @@ def handle_recommendation_request():
         # Map parcel locations back to the original ones
         #recommendations_raw = InputOutputTransformer.revert_coordinates(recommendations, transformation_map)
         #print("starting final reordering & TSP")
-        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations)
+        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, evt_type)
         # print route for all vehicles
         P=InputOutputTransformer.PrintRoutes(recommendations)
 
         # Prepare output message from calculated recommendations
         response = InputOutputTransformer.prepare_output_message(recommendations, use_case, request_id, organization)
         # Post recommendations to MSB
-        RecReq.post_response_msb(request_id, response)
+        #RecReq.post_response_msb(request_id, response)
 
         # Return generic response message
         return generic_message_received_response
