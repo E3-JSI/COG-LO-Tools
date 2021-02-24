@@ -124,6 +124,7 @@ class VrpProcessor:
 
             # compute input vectors
             dropoff = self.map_dropoff(plan.partition, plan.deliveries)
+            print("dropoff", dropoff)
             capacity = [v.capacity for v in plan.vehicles]
             start_loc = self.map_start_nodes(partition, plan.vehicles)
             costs = [e.cost for e in partition.edges]

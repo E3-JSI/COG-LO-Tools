@@ -707,7 +707,7 @@ class InputOutputTransformer:
         return recommendations
 
     @staticmethod
-    def PickupNodeReorder(recommendations_raw, evt_type):
+    def PickupNodeReorder(recommendations_raw, evt_type, deliveries):
         # 1. Itterate on vehicles.
         # 2. for each route -> find pickup nodes
         # 3. Reorder pickup nodes based on depencencies
@@ -793,12 +793,32 @@ class InputOutputTransformer:
                             route_tsp = Tsp.order_recommendations(recommendations_new)
                             route_first_part = route_tsp[0]["route"]
                 final_route = route_first_part + route_second_part
+                final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries)
                 final_route = InputOutputTransformer.orderStepId(final_route)
 
-            if evt_type != "dailyRequest":  #exclude the current location for all except daily plan
-                final_route.pop(0)
             recommendations_raw[i]["route"] = copy.deepcopy(final_route)
         return recommendations_raw
+
+
+    @staticmethod
+    def FirstStepProcessing(final_route, deliveries):
+        if len(deliveries.origin) == 0:
+            return final_route
+        else:
+            origin_ids = []
+            for parcel in deliveries.origin:
+                origin_ids.append(parcel.uuid)
+            for id in final_route[0]["load"][:]:
+                if id in origin_ids:
+                    final_route[0]["load"].remove(id)
+            for id in final_route[0]["unload"][:]:
+                if id in origin_ids:
+                    final_route[0]["unload"].remove(id)
+            #skip the first step if there are no new parcels
+            if len(final_route[0]["load"] + final_route[0]["unload"])==0:
+                final_route.pop(0)
+            return final_route
+
 
     @staticmethod
     def orderStepId(final_route):
