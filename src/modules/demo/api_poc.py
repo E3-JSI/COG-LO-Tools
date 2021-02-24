@@ -92,7 +92,7 @@ class RecReq(Resource):
         vehicles = vrp_processor_ref.parse_vehicles(clos)
         deliveries = vrp_processor_ref.parse_deliveries(evt_type, clos, requests, use_case)
 
-        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case_graph)
+        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case_graph), deliveries
 
     @staticmethod
     def process_broken_clo(evt_type, clos, broken_clo, vrp_processor_ref, use_case, use_case_graph):
@@ -100,7 +100,7 @@ class RecReq(Resource):
         vehicles = vrp_processor_ref.parse_vehicles(clos)
         deliveries = vrp_processor_ref.parse_deliveries(evt_type, clos, broken_clo, use_case)
 
-        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case_graph)
+        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case_graph), deliveries
 
     @staticmethod
     def process_cross_border_request(evt_type, clos, requests, vrp_processor_ref, use_case, use_case_graph):
@@ -108,7 +108,7 @@ class RecReq(Resource):
         vehicles = vrp_processor_ref.parse_vehicles(clos)
         deliveries = vrp_processor_ref.parse_deliveries(evt_type, clos, requests, use_case)
 
-        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case_graph)
+        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case_graph), deliveries
 
     @staticmethod
     def post_response_msb(UUID, recommendations):
@@ -244,12 +244,12 @@ def handle_recommendation_request():
             if "clos" not in data or "orders" not in data:
                 return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
             broken_clo_orders = data["orders"]
-            recommendations = RecReq.process_broken_clo(evt_type, clos, broken_clo_orders, vrp_processor_ref, use_case, use_case_graph)
+            recommendations, deliveries = RecReq.process_broken_clo(evt_type, clos, broken_clo_orders, vrp_processor_ref, use_case, use_case_graph)
         elif evt_type == "pickupRequest" or "dailyRequest":
             if "clos" not in data or "orders" not in data:
                 return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
             requests = data["orders"]
-            recommendations = RecReq.process_pickup_requests(evt_type, clos, requests, vrp_processor_ref, use_case, use_case_graph)
+            recommendations, deliveries = RecReq.process_pickup_requests(evt_type, clos, requests, vrp_processor_ref, use_case, use_case_graph)
         elif evt_type == "crossBorder" or "border":
             print("cross border event received")
             if "clos" not in data:
@@ -260,14 +260,14 @@ def handle_recommendation_request():
                 for parcel in parcels:
                     parcel["currentLocation"] = clo["currentLocation"]
                     requests.append(parcel)
-            recommendations = RecReq.process_cross_border_request(evt_type, clos, requests, vrp_processor_ref, use_case, use_case_graph)
+            recommendations, deliveries = RecReq.process_cross_border_request(evt_type, clos, requests, vrp_processor_ref, use_case, use_case_graph)
         else:
             return jsonify({"message": "Invalid event type: {}".format(evt_type), "status": 0})
 
         # Map parcel locations back to the original ones
         #recommendations_raw = InputOutputTransformer.revert_coordinates(recommendations, transformation_map)
         #print("starting final reordering & TSP")
-        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, evt_type)
+        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, evt_type, deliveries)
         # print route for all vehicles
         P=InputOutputTransformer.PrintRoutes(recommendations)
 
@@ -287,9 +287,9 @@ def handle_recommendation_request():
         if evt_type is None:
             data_request, data_CLOs = methods.proccess_elta_event(evt_type, data, use_case_graph)
             res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
-            #if use_case_graph == "ELTA_urban1": # update graph with real-time TMS data
+            #update graph with real-time TMS API
+            # if use_case_graph == "ELTA_urban1":
             #    RecReq.post_request_graph_tms(use_case_graph)
-
         else:
             data_request = methods.proccess_elta_event(evt_type, data, use_case_graph)
 
@@ -312,24 +312,24 @@ def handle_recommendation_request():
             if "orders" not in data_request:
                 return {"msg": "Parameter 'orders' is missing", "status": 0}
             data_requests = data_request["orders"]
-            recommendations = RecReq.process_pickup_requests(evt_type, clos, data_requests, vrp_processor_ref, use_case, use_case_graph)
+            recommendations, deliveries = RecReq.process_pickup_requests(evt_type, clos, data_requests, vrp_processor_ref, use_case, use_case_graph)
         elif evt_type == "brokenVehicle":
             if "clos" not in data or "orders" not in data:
                 return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
             broken_clo_orders = data_request["orders"]
-            recommendations = RecReq.process_broken_clo(evt_type, clos, broken_clo_orders, vrp_processor_ref, use_case, use_case_graph)
+            recommendations, deliveries = RecReq.process_broken_clo(evt_type, clos, broken_clo_orders, vrp_processor_ref, use_case, use_case_graph)
         elif evt_type == "pickupRequest":
             if "orders" not in data_request:
                 return {"msg": "Parameter 'orders' is missing", "status": 0}
             data_requests = data_request["orders"]
-            recommendations = RecReq.process_pickup_requests(evt_type, clos, data_requests, vrp_processor_ref, use_case, use_case_graph)
+            recommendations, deliveries = RecReq.process_pickup_requests(evt_type, clos, data_requests, vrp_processor_ref, use_case, use_case_graph)
         else:
             return jsonify({"msg": "Invalid event type: {}".format(evt_type), "status": 0})
 
         print("starting final reordering & TSP")
         if evt_type is None:
             evt_type = "dailyRequest"
-        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, evt_type)
+        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, evt_type, deliveries)
         # print route for all vehicles
         P = InputOutputTransformer.PrintRoutes(recommendations)
 

@@ -17,3 +17,4 @@ networkx
 sklearn
 pandas
 jsonschema
+haversine

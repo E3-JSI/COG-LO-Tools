@@ -1,9 +1,8 @@
 import copy
 import csv
-
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
-
 from ..config.config_parser import ConfigParser
 
 config_parser = ConfigParser()
@@ -97,68 +96,110 @@ def proccess_elta_event(proc_event, data, use_case_graph):
     elif proc_event == 'pickupRequest' or proc_event == 'brokenVehicle':
         return elta_map_parcels(data, use_case_graph)
 
-def find_min_pickup(coords, posts_nparray):
+
+def find_min_elta(coords, clos_list):
     import sys
-    posts = []
-    lat_cord,lon_cord = coords
-    for i, post in enumerate(posts_nparray):
-        posts.append([i, post])
+    from scipy.spatial import distance
+    import haversine as hs
     cur_min = sys.maxsize
     label = -1
-    for post in posts:
-        lat = float(lat_cord) - float(post[1][0])
-        lon = float(lon_cord) - float(post[1][1])
-        distance = (lat * lat) + (lon * lon)
+    lat, lon = coords
+    for post in clos_list:
+        lat_post = float(post["info"]["location"]["latitude"])
+        lon_post = float(post["info"]["location"]["longitude"])
+        distance = hs.haversine((lat, lon), (lat_post, lon_post))
         if distance < cur_min:
             cur_min = distance
-            label = post[0]
+            label = post["id"]
     if label == -1:
         raise Exception("Error in mapping parcels to nodes")
-
     return label
 
+
 def elta_clustering(orig_data, use_case_graph):
-    nClusters = 20
+    nClusters = 10
     data = copy.deepcopy(orig_data)
     l = []
-    for i, el in enumerate(data['clos']):
-        l.append([i, el['UUID'], 'clos', el['currentLocation'][0], el['currentLocation'][1]])
     for i, el in enumerate(data['orders']):
         l.append([i, el['UUIDParcel'], "destination"] + el['destination'])
+        #l.append([i, el['UUIDParcel'], "pickup"] + el['pickup'])
     df = pd.DataFrame(l)
-    # run clustering
 
-    if (len(orig_data["orders"]) + 5) <= nClusters:
-        nClusters = len(orig_data["orders"])-8
+        #skip clustering if number of parcels to small
+    if (len(orig_data["orders"]) + 5) <= (nClusters):
+        print("NO CLUSTERING - not enough parcels")
+        clos = {"useCase": "ELTA"}
+        clos_list = create_clo_list_elta_no_clusters(use_case_graph, data["orders"])
 
-    kmeans = KMeans(n_clusters=7)
-    kmeans.fit(df[[3, 4]])  # Compute k-means clustering.
-    centers = kmeans.cluster_centers_
-    df["labels"] = labels = kmeans.labels_
-    for index, row in df.iterrows():
-        if row[2] == 'clos':
-            data['clos'][row[0]]['currentLocation'] = str(row['labels'])
-        else:
-            data['orders'][row[0]][row[2] + '_location'] = data['orders'][row[0]][row[2]]
-            data['orders'][row[0]][row[2]] = str(row['labels'])
+    else:  # run clustering
+        kmeans = KMeans(n_clusters=nClusters)
+        kmeans.fit(df[[3, 4]])  # Compute k-means clustering.
+        centers = kmeans.cluster_centers_
+        clos = {"useCase": "ELTA"}
+        clos_list = create_clo_list_elta(use_case_graph, centers)
 
-    for el in data['orders']:
-        mapped_location = find_min_pickup(el['pickup'], centers)
-        el['pickup'] = str(mapped_location)
+    #mapping locations to postal_Id
+    for clo in data["clos"]:
+        mapped_location_clo = find_min_elta(clo["currentLocation"], clos_list)
+        clo["currentLocation"] = mapped_location_clo
+    for order in data["orders"]:
+        mapped_location_dest = find_min_elta(order["destination"], clos_list)
+        order["destination"] = mapped_location_dest
+        mapped_location_pickup = find_min_elta(order["pickup"], clos_list)
+        order["pickup"] = mapped_location_pickup
 
-    ## print clusters
-    # df.plot.scatter(x=3, y=4, c=labels, s=10, cmap='viridis')
-    # plt.scatter(centers[:, 0], centers[:, 1], c='black', s=80, alpha=0.5)
-    # plt.show()
+        ## print clusters
+        #df.plot.scatter(x=3, y=4, c=labels, s=10, cmap='viridis')
+        #plt.scatter(centers[:, 0], centers[:, 1], c='black', s=80, alpha=0.5)
+        #plt.show()
 
-    clos = {"useCase": "ELTA"}
+    clos["clos"] = clos_list
+    return data, clos
+
+
+def create_clo_list_elta_no_clusters(use_case_graph, orders):
+    clos_list = []
+    i = 0
+    for parcel in orders:
+        lat, lon = parcel["destination"]
+        clos_list.append({
+            "id": str(i),
+            "info": {
+                "address": "virtualPost",
+                "location": {
+                    "latitude": lat,
+                    "longitude": lon
+                }
+            }
+        })
+        i = i + 1
+
+    elta = config_parser.get_elta_path(use_case_graph)
+    with open(elta) as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        for row in csv_reader:
+            if len(row) != 0:
+                clos_list.append({
+                    "id": row[1],
+                    "info": {
+                        "address": row[0],
+                        "location": {
+                            "latitude": float(row[2]),
+                            "longitude": float(row[3])
+                        }
+                    }
+                })
+    return clos_list
+
+
+def create_clo_list_elta (use_case_graph, centers):
     clos_list = []
     i = 0
     for row in centers:
         clos_list.append({
             "id": str(i),
             "info": {
-                "address": "address",
+                "address": "virtualPost",
                 "location": {
                     "latitude": row[0],
                     "longitude": row[1]
@@ -177,14 +218,12 @@ def elta_clustering(orig_data, use_case_graph):
                     "info": {
                         "address": row[0],
                         "location": {
-                            "latitude": row[2],
-                            "longitude": row[3]
+                            "latitude": float(row[2]),
+                            "longitude": float(row[3])
                         }
                     }
-            })
-
-    clos["clos"] = clos_list
-    return data, clos
+                })
+    return clos_list
 
 def find_min(use_case_graph, lat_cord, lon_cord):
     elta = config_parser.get_csv_path(use_case_graph)
