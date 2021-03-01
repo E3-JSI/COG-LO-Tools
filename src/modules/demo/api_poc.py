@@ -35,7 +35,6 @@ generic_message_received_response = {
     "msg": "The CA has received a new request for optimization"
 }
 
-
 def process_new_CLOs_request(data, use_case_graph):
     global vrpProcessorReferenceElta1
     global vrpProcessorReferenceElta2
@@ -128,9 +127,9 @@ class RecReq(Resource):
         #with open('validation_service_message_posted.json', 'w') as outfile:
         #    json.dump(recommendations, outfile)
 
-        print("Storing message content posted...")
-        with open('content_message_posted.json', 'w') as outfile:
-            json.dump(content, outfile)
+        #print("Storing message content posted...")
+        #with open('content_message_posted.json', 'w') as outfile:
+        #    json.dump(content, outfile)
 
         #print("posting response to validation URL: " + response_validation_url)
         #print(recommendations)
@@ -286,10 +285,10 @@ def handle_recommendation_request():
         transform_map_dict = methods.get_orders_coordinates(data)
         if evt_type is None:
             data_request, data_CLOs = methods.proccess_elta_event(evt_type, data, use_case_graph)
-            res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
+            #res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
             #update graph with real-time TMS API
-            # if use_case_graph == "ELTA_urban1":
-            #    RecReq.post_request_graph_tms(use_case_graph)
+            #if use_case_graph == "ELTA_urban1":
+            RecReq.post_request_graph_tms(use_case_graph)
         else:
             data_request = methods.proccess_elta_event(evt_type, data, use_case_graph)
 
