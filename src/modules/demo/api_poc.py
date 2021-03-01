@@ -285,7 +285,7 @@ def handle_recommendation_request():
         transform_map_dict = methods.get_orders_coordinates(data)
         if evt_type is None:
             data_request, data_CLOs = methods.proccess_elta_event(evt_type, data, use_case_graph)
-            #res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
+            res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
             #update graph with real-time TMS API
             #if use_case_graph == "ELTA_urban1":
             RecReq.post_request_graph_tms(use_case_graph)
