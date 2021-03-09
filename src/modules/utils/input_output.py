@@ -793,11 +793,35 @@ class InputOutputTransformer:
                             route_tsp = Tsp.order_recommendations(recommendations_new)
                             route_first_part = route_tsp[0]["route"]
                 final_route = route_first_part + route_second_part
-                final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries)
-                final_route = InputOutputTransformer.orderStepId(final_route)
-
+            final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries)
+            final_route = InputOutputTransformer.orderStepId(final_route)
             recommendations_raw[i]["route"] = copy.deepcopy(final_route)
-        return recommendations_raw
+
+        recommendations = InputOutputTransformer.RemoveOldRoutes(recommendations_raw, deliveries)
+        return recommendations
+
+
+    @staticmethod
+    def RemoveOldRoutes(recommendations, deliveries):
+        if len(deliveries.origin) == 0:
+            return recommendations
+        new_orders_list = []
+        for parcel in deliveries.req:
+            new_orders_list.append(parcel.uuid)
+
+        for recommendation in recommendations:
+            new_route = False
+            route_parcels_list = []
+            for step in recommendation["route"]:
+                route_parcels_list.extend(step["load"])
+                route_parcels_list.extend(step["unload"])
+            for parcel in new_orders_list:
+                if parcel in route_parcels_list:
+                    new_route = True
+                    break
+            if not new_route:
+                recommendations.remove(recommendation)
+        return recommendations
 
 
     @staticmethod
