@@ -15,22 +15,42 @@ def map_coordinates_to_response(recommendations, transform_map_dict):
         for route in recommendation['route'][:]:
             pickup_parcels = []
             if route['load'] != '' and len(route['load']):
-                for pickup_parcel in route['load'][:]:
-                    pickup_parcels.append({
-                        'id': pickup_parcel,
-                        'latitude': transform_map_dict[(pickup_parcel, 'pickup')][0],
-                        'longitude': transform_map_dict[(pickup_parcel, 'pickup')][1]
-                    })
+                for route_parcel in route['load'][:]:
+                    latitude = transform_map_dict[(route_parcel, 'pickup')][0]
+                    longitude = transform_map_dict[(route_parcel, 'pickup')][1]
+                    parcel_mapped = False
+                    if len(pickup_parcels) != 0:
+                        for parcel in pickup_parcels:
+                            if latitude == parcel["latitude"] and longitude == parcel["longitude"]:
+                                parcel["id"].append(route_parcel)
+                                parcel_mapped = True
+                                break
+                    if parcel_mapped == False:
+                        pickup_parcels.append({
+                            'id': [route_parcel],
+                            'latitude': latitude,
+                            'longitude': longitude
+                        })
                 route['load'] = pickup_parcels
 
             if route['unload'] != '' and len(route['unload']):
                 delivery_parcels = []
-                for delivery_parcel in route['unload']:
-                    delivery_parcels.append({
-                        'id': delivery_parcel,
-                        'latitude': transform_map_dict[(delivery_parcel, 'destination')][0],
-                        'longitude': transform_map_dict[(delivery_parcel, 'destination')][1]
-                    })
+                for route_parcel in route['unload']:
+                    latitude = transform_map_dict[(route_parcel, 'destination')][0]
+                    longitude = transform_map_dict[(route_parcel, 'destination')][1]
+                    parcel_mapped = False
+                    if len(pickup_parcels) != 0:
+                        for parcel in delivery_parcels:
+                            if latitude == parcel["latitude"] and longitude == parcel["longitude"]:
+                                parcel["id"].append(route_parcel)
+                                parcel_mapped = True
+                                break
+                    if parcel_mapped == False:
+                        delivery_parcels.append({
+                            'id': route_parcel,
+                            'latitude': transform_map_dict[(route_parcel, 'destination')][0],
+                            'longitude': transform_map_dict[(route_parcel, 'destination')][1]
+                        })
                 route['unload'] = delivery_parcels
     return recommendations
 
