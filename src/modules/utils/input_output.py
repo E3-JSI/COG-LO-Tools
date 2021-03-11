@@ -733,7 +733,7 @@ class InputOutputTransformer:
             route_second_part = []
             #create and ordered list of all pickup and dependency nodes
             final_route = []
-            for station in route:
+            for idx, station in enumerate(route):
                 if len(station["load"]) != 0:
                     PickupNodes[station["id"]] = station
 
@@ -797,8 +797,9 @@ class InputOutputTransformer:
                             recommendations_new[0]["route"] = route_first_part
                             route_tsp = Tsp.order_recommendations(recommendations_new)
                             route_first_part = route_tsp[0]["route"]
-                final_route = route_first_part + route_second_part
+                    final_route = route_first_part + route_second_part
             final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries)
+            final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries) ## double check for ELTA pilot
             final_route = InputOutputTransformer.orderStepId(final_route)
             recommendations_raw[i]["route"] = copy.deepcopy(final_route)
 
