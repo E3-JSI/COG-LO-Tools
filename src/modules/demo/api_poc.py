@@ -199,11 +199,11 @@ def handle_recommendation_request():
     ##mockup for pilot scenario
     if received_request["organization"] == "SLO-CRO" or received_request["organization"] == "PS" or \
             received_request["organization"] == "HP":
-        received_request["pilot"] = "crossborder"
-        use_case_graph = "SLO-CRO" + "_" + received_request["pilot"]
-    else:
-        received_request["pilot"] = "urban1"
-        use_case_graph = "ELTA" + "_" + received_request["pilot"]
+        use_case_graph = "SLO-CRO" + "_" + "crossborder"
+    elif received_request["organization"] == "ELTA" and received_request["pilot"] == "urban":
+        use_case_graph = "ELTA" + "_" + "urban1"
+    elif received_request["organization"] == "ELTA" and received_request["pilot"] == "backbone":
+        use_case_graph = "ELTA" + "_" + "urban2"
 
     # transformation to internal structures
     try:
@@ -217,15 +217,6 @@ def handle_recommendation_request():
     organization = received_request["organization"]
     evt_type = data["eventType"]
 
-    """
-    ##Errors
-    if use_case != "SLO-CRO" and use_case != "ELTA":
-        return {"message": "Parameter 'useCase' can have value 'SLO-CRO' or 'ELTA'."}
-    if "useCase" not in data or "eventType" not in data:
-        return {"message": "Parameter 'eventType' or 'useCase' is missing"}
-    evt_type = data["eventType"]
-    use_case = data["useCase"]
-    """
 
     ##Use Case SLO-CRO
     if use_case == "SLO-CRO":
@@ -281,54 +272,68 @@ def handle_recommendation_request():
     ##Use Case ELTA
     elif use_case == "ELTA":
         print("processing ELTA usecase")
-        ### VRP INICIALIZATION AND MESSAGE PREPROCESSING
-        transform_map_dict = methods.get_orders_coordinates(data)
-        if evt_type is None:
-            data_request, data_CLOs = methods.proccess_elta_event(evt_type, data, use_case_graph)
-            res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
-            #update graph with real-time TMS API
-            #if use_case_graph == "ELTA_urban1":
-            RecReq.post_request_graph_tms(use_case_graph)
-        else:
-            data_request = methods.proccess_elta_event(evt_type, data, use_case_graph)
 
-        #seting graph instance reference
         if use_case_graph == "ELTA_urban1":
+
+            transform_map_dict = methods.get_orders_coordinates(data)
+            if evt_type is None:
+                data_request, data_CLOs = methods.proccess_elta_event(evt_type, data, use_case_graph)
+                res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
+                #update graph with real-time TMS API
+                #if use_case_graph == "ELTA_urban1":
+                RecReq.post_request_graph_tms(use_case_graph)
+            else:
+                data_request = methods.proccess_elta_event(evt_type, data, use_case_graph)
+
+            #seting graph instance reference
+
             if vrpProcessorReferenceElta1 is None:
                 vrpProcessorReferenceElta1 = RecReq.init_vrp(use_case_graph)
             vrp_processor_ref = vrpProcessorReferenceElta1
-        elif use_case_graph == "ELTA_urban2":
-            if vrpProcessorReferenceElta2 is None:
-               vrpProcessorReferenceElta2 = RecReq.init_vrp(use_case_graph)
-            vrp_processor_ref = vrpProcessorReferenceElta2
+            """elif use_case_graph == "ELTA_urban2":
+                if vrpProcessorReferenceElta2 is None:
+                   vrpProcessorReferenceElta2 = RecReq.init_vrp(use_case_graph)
+                vrp_processor_ref = vrpProcessorReferenceElta2
+            """
+            if "clos" not in data_request:
+                return {"msg": "Parameter 'clos' is missing", "status": 0}
+            clos = data_request["clos"]
 
-        if "clos" not in data_request:
-            return {"msg": "Parameter 'clos' is missing", "status": 0}
-        clos = data_request["clos"]
+            ### MESSAGE PROCESSING ....
+            if evt_type is None:
+                if "orders" not in data_request:
+                    return {"msg": "Parameter 'orders' is missing", "status": 0}
+                data_requests = data_request["orders"]
+                recommendations, deliveries = RecReq.process_pickup_requests(evt_type, clos, data_requests, vrp_processor_ref, use_case, use_case_graph)
+            elif evt_type == "brokenVehicle":
+                if "clos" not in data or "orders" not in data:
+                    return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
+                broken_clo_orders = data_request["orders"]
+                recommendations, deliveries = RecReq.process_broken_clo(evt_type, clos, broken_clo_orders, vrp_processor_ref, use_case, use_case_graph)
+            elif evt_type == "pickupRequest":
+                if "orders" not in data_request:
+                    return {"msg": "Parameter 'orders' is missing", "status": 0}
+                data_requests = data_request["orders"]
+                recommendations, deliveries = RecReq.process_pickup_requests(evt_type, clos, data_requests, vrp_processor_ref, use_case, use_case_graph)
+            else:
+                return jsonify({"msg": "Invalid event type: {}".format(evt_type), "status": 0})
 
-        ### MESSAGE PROCESSING ....
-        if evt_type is None:
-            if "orders" not in data_request:
-                return {"msg": "Parameter 'orders' is missing", "status": 0}
-            data_requests = data_request["orders"]
-            recommendations, deliveries = RecReq.process_pickup_requests(evt_type, clos, data_requests, vrp_processor_ref, use_case, use_case_graph)
-        elif evt_type == "brokenVehicle":
-            if "clos" not in data or "orders" not in data:
-                return {"msg": "Parameter 'clos' or 'orders' is missing", "status": 0}
-            broken_clo_orders = data_request["orders"]
-            recommendations, deliveries = RecReq.process_broken_clo(evt_type, clos, broken_clo_orders, vrp_processor_ref, use_case, use_case_graph)
-        elif evt_type == "pickupRequest":
-            if "orders" not in data_request:
-                return {"msg": "Parameter 'orders' is missing", "status": 0}
-            data_requests = data_request["orders"]
-            recommendations, deliveries = RecReq.process_pickup_requests(evt_type, clos, data_requests, vrp_processor_ref, use_case, use_case_graph)
-        else:
-            return jsonify({"msg": "Invalid event type: {}".format(evt_type), "status": 0})
+        if use_case_graph == "ELTA_urban2":
+            if "orders" not in data:
+                return {"msg": "Error: Parameter 'orders' is missing", "status": 0}
+            if len(data["clos"]) != 1:
+                return {"msg": "Error: Number of vehicles should be 1", "status": 0}
+
+            requests = data["orders"]
+            transform_map_dict = methods.get_orders_coordinates(data)
+            deliveries = methods.create_ELTA_urban2_deliveries(data["clos"], requests)
+            recommendations, last_step = methods.create_ELTA_urban2_recommendations(data, deliveries)
+            recommendations = methods.orderELTA2Recommendations(recommendations, last_step, deliveries)
 
         print("starting final reordering & TSP")
         if evt_type is None:
             evt_type = "dailyRequest"
-        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, evt_type, deliveries)
+        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, use_case_graph, deliveries)
         # print route for all vehicles
         P = InputOutputTransformer.PrintRoutes(recommendations)
 
@@ -337,7 +342,7 @@ def handle_recommendation_request():
         # Transforms response in 'JSI' format to the one used for MSB
         response1 = InputOutputTransformer.prepare_output_message(recommendations_mapped, use_case, request_id, organization)
         # restructures steps plan and and lists all the parcels from clusters as a list of locations
-        response = methods.order_parcels_on_route(response1)
+        response = methods.order_parcels_on_route(response1, use_case_graph)
         # Posting response to MSB endpoint
         RecReq.post_response_msb(request_id, response)
 

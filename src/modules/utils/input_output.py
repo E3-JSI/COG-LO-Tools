@@ -707,7 +707,7 @@ class InputOutputTransformer:
         return recommendations
 
     @staticmethod
-    def PickupNodeReorder(recommendations_raw, evt_type, deliveries):
+    def PickupNodeReorder(recommendations_raw, use_case_graph, deliveries):
         # 1. Itterate on vehicles.
         # 2. for each route -> find pickup nodes
         # 3. Reorder pickup nodes based on depencencies
@@ -716,6 +716,11 @@ class InputOutputTransformer:
         # 6. Put pickup node on route before dependency locations
         # 7. Split the first part of the route and run TSP on it
         # 8. Itterate till Aall pickup nodes added
+
+            #skip reordering for ELTA Larissa pilot
+        if use_case_graph == "ELTA_urban2":
+            return recommendations_raw
+
 
         """handling pickup locations nodes on route"""
         for i in range(len(recommendations_raw)):
@@ -826,22 +831,19 @@ class InputOutputTransformer:
 
     @staticmethod
     def FirstStepProcessing(final_route, deliveries):
-        if len(deliveries.origin) == 0:
-            return final_route
-        else:
-            origin_ids = []
-            for parcel in deliveries.origin:
-                origin_ids.append(parcel.uuid)
-            for id in final_route[0]["load"][:]:
-                if id in origin_ids:
-                    final_route[0]["load"].remove(id)
-            for id in final_route[0]["unload"][:]:
-                if id in origin_ids:
-                    final_route[0]["unload"].remove(id)
-            #skip the first step if there are no new parcels
-            if len(final_route[0]["load"] + final_route[0]["unload"])==0:
-                final_route.pop(0)
-            return final_route
+        origin_ids = []
+        for parcel in deliveries.origin:
+            origin_ids.append(parcel.uuid)
+        for id in final_route[0]["load"][:]:
+            if id in origin_ids:
+                final_route[0]["load"].remove(id)
+        for id in final_route[0]["unload"][:]:
+            if id in origin_ids:
+                final_route[0]["unload"].remove(id)
+        #skip the first step if there are no new parcels
+        if len(final_route[0]["load"] + final_route[0]["unload"])==0:
+            final_route.pop(0)
+        return final_route
 
 
     @staticmethod
