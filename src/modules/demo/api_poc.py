@@ -264,7 +264,7 @@ def handle_recommendation_request():
         # Prepare output message from calculated recommendations
         response = InputOutputTransformer.prepare_output_message(recommendations, use_case, request_id, organization)
         # Post recommendations to MSB
-        #RecReq.post_response_msb(request_id, response)
+        RecReq.post_response_msb(request_id, response)
 
         # Return generic response message
         return generic_message_received_response
@@ -278,10 +278,10 @@ def handle_recommendation_request():
             transform_map_dict = methods.get_orders_coordinates(data)
             if evt_type is None:
                 data_request, data_CLOs = methods.proccess_elta_event(evt_type, data, use_case_graph)
-                #res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
+                res = process_new_CLOs_request(data_CLOs, use_case_graph)  # make graph build
                 #update graph with real-time TMS API
                 #if use_case_graph == "ELTA_urban1":
-                #RecReq.post_request_graph_tms(use_case_graph)
+                RecReq.post_request_graph_tms(use_case_graph)
             else:
                 data_request = methods.proccess_elta_event(evt_type, data, use_case_graph)
 
@@ -344,7 +344,7 @@ def handle_recommendation_request():
         # restructures steps plan and and lists all the parcels from clusters as a list of locations
         response = methods.order_parcels_on_route(response1, use_case_graph)
         # Posting response to MSB endpoint
-        #RecReq.post_response_msb(request_id, response)
+        RecReq.post_response_msb(request_id, response)
 
         #return generic_message_received_response
         return generic_message_received_response
