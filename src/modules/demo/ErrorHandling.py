@@ -119,12 +119,16 @@ class ErrorHandling:
                 type(input_data['clos']) is not list:
             raise ValueError("Parcels and ClOs wrong type.")
 
-    def chech_parcel_id(self, input_data):
+    def check_parcel_id(self, input_data):
         l = []
         for clo in input_data['parcels']:
             l.append(clo["id"])
         if len(l) != len(set(l)):
             raise ValueError("Parcelid are not unique - duplicate id.", clo["id"])
+
+    def check_clos(self, input_data):
+        if input_data["organization"] == "ELTA" and input_data["pilot"] == "backbone" and len(input_data["clos"]) !=1:
+            raise ValueError("Incorrect number of clos, should be 1", len(input_data["clos"]))
 
     def write_file(self, input_data):
         date_time_obj = datetime.datetime.now()
@@ -139,15 +143,11 @@ class ErrorHandling:
     def check_messages_correction(self, input_data):
 
         self.write_file(input_data)
-
         self.check_event(input_data)
         self.check_organization(input_data)
-
         self.check_remaining_plan(input_data)
-
         #self.check_locations(input_data)
-
         self.check_payweight(input_data)
         self.check_parcel_clos(input_data)
-
-        self.chech_parcel_id(input_data)
+        self.check_clos(input_data)
+        self.check_parcel_id(input_data)

@@ -4,9 +4,175 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from ..config.config_parser import ConfigParser
+from ...utils.structures.deliveries import Deliveries
+from ...utils.structures.parcel import Parcel
+from ...utils.tsp import Tsp
+from ...utils.input_output import InputOutputTransformer
 
 config_parser = ConfigParser()
 url = "https://graphhopper.com/api/1/vrp?key=e8a55308-9419-4814-81f1-6250efe25b5c"
+
+#process Larissa use-case message
+def orderELTA2Recommendations (recommendations, last_step, deliveries):
+    ordered_recommendations = Tsp.order_recommendations(recommendations)
+    ordered_recommendations[0]["route"].append(last_step)
+
+    ordered_recommendations[0]["route"] = InputOutputTransformer.FirstStepProcessing(ordered_recommendations[0]["route"], deliveries)
+
+    index = 1
+    for step in ordered_recommendations[0]["route"]:
+        step["id"] = index
+        step["rank"] = index
+        index +=1
+
+    return ordered_recommendations
+
+
+def create_ELTA_urban2_recommendations (data, deliveries):
+    recommendations = []
+    recommendation = {}
+    start_address = {}
+    route = []
+    step_locations = []
+    delivery_location = []
+
+    recommendation["UUID"] = data["clos"][0]["UUID"]
+    start_address["location_id"] = "vehicle_location"
+    start_address["lat"] = data["clos"][0]["currentLocation"][0]
+    start_address["lon"] = data["clos"][0]["currentLocation"][1]
+    recommendation["start_address"] = start_address
+
+    # steps for route plan
+    index = 1
+    for parcel in deliveries.req:
+            # if more than one parcel on each step
+        if parcel.current_location in step_locations:
+            for step in route:
+                if step["location"]["latitude"] == parcel.current_location[0] and step["location"]["longitude"] == \
+                        parcel.current_location[1]:
+                    step["load"].append(parcel.uuid)
+
+        elif parcel.current_location not in step_locations:
+            step_locations.append(parcel.current_location)
+
+            step = {}
+            location = {}
+            dependency = {}
+
+            location["address"] = "Address"
+            location["city"] = None
+            location["country"] = parcel.country
+            location["latitude"] = parcel.current_location[0]
+            location["longitude"] = parcel.current_location[1]
+            location["postal_office"] = "Parcel Location" + str(index)
+            location["station"] = "Parcel Location" + str(index)
+
+            dependency["plan"] = None
+            dependency["plan_step"] = None
+
+            step["complete"] = 0
+            step["due_time"] = None
+            step["location"] = location
+            step["dependency"] = dependency
+            step["id"] = index
+            step["rank"] = index
+            step["load"] = [parcel.uuid]
+            step["unload"] = []
+
+            route.append(step)
+
+        if parcel.target not in delivery_location:
+            delivery_location.append(parcel.target)
+        index +=1
+
+    #add first step
+    clo = data["clos"][0]
+    if clo["currentLocation"] not in step_locations:
+        first_step = {}
+        location = {}
+        dependency = {}
+
+        location["address"] = "Address"
+        location["city"] = None
+        location["country"] = clo["country"]
+        location["latitude"] = clo["currentLocation"][0]
+        location["longitude"] = clo["currentLocation"][1]
+        location["postal_office"] = "vehicle_location"
+        location["station"] = "Vehicle Location"
+
+        dependency["plan"] = None
+        dependency["plan_step"] = None
+
+        first_step["complete"] = 0
+        first_step["due_time"] = None
+        first_step["location"] = location
+        first_step["dependency"] = dependency
+        first_step["id"] = 0
+        first_step["rank"] = 0
+        first_step["load"] = []
+        first_step["unload"] = []
+
+    elif clo["currentLocation"] in step_locations:
+        for idx, step in enumerate(route):
+            if step["location"]["latitude"] == clo["currentLocation"][0] and step["location"]["longitude"] == \
+                    clo["currentLocation"][1]:
+                first_step = copy.deepcopy(step)
+                route.pop(idx)
+
+    #create last step
+    parcel_ids = []
+    last_step = {}
+    location = {}
+    dependency = {}
+
+    for parcel in deliveries.req:
+        parcel_ids.append(parcel.uuid)
+    for parcel in deliveries.origin:
+        parcel_ids.append(parcel.uuid)
+
+    location["address"] = "Address"
+    location["city"] = None
+    location["country"] = clo["country"]
+    location["latitude"] = delivery_location[0][0]
+    location["longitude"] = delivery_location[0][1]
+    location["postal_office"] = "Delivery Location"
+    location["station"] = "LarissaDEPO"
+
+    dependency["plan"] = None
+    dependency["plan_step"] = None
+
+    last_step["complete"] = 0
+    last_step["due_time"] = None
+    last_step["location"] = location
+    last_step["dependency"] = dependency
+    last_step["id"] = index
+    last_step["rank"] = index
+    last_step["load"] = []
+    last_step["unload"] = parcel_ids
+
+    #create recommendations
+    route.insert(0, first_step)
+    recommendation["route"] = route
+    recommendations.append(recommendation)
+
+    return recommendations, last_step
+
+
+def create_ELTA_urban2_deliveries (clos, requests):
+    deliveries_origin = []
+    # list of additional parcels from request
+    deliveries_diff = [Parcel(x["UUIDParcel"], x["destination"], x["weight"], x["pickup"], "order") for x in requests]
+    # list of parcels on CLOs before request
+    if len(clos) != 1:
+        print("Incorrect number of vehicles, should be 1")
+    for clo in clos:
+        for parcel in clo["parcels"]:
+            deliveries_origin.append(Parcel(parcel["UUIDParcel"], parcel["destination"],
+                                            parcel["weight"], clo["currentLocation"], country=parcel["country"]))
+    deliveries = Deliveries(deliveries_origin, deliveries_diff)
+
+    return deliveries
+
 
 # map parcels to exisitng virtual nodes
 
@@ -79,7 +245,10 @@ def get_orders_coordinates(data):
                 transform_map_dict[(parcel['UUIDParcel'], "pickup")] = current_location
     return transform_map_dict
 
-def order_parcels_on_route(response):
+def order_parcels_on_route(response, use_case_graph):
+    if use_case_graph == "ELTA_urban2":
+        return response
+
     step_number = 1
     for idx, clo in enumerate(response["cloplans"]):
         new_steps = []
