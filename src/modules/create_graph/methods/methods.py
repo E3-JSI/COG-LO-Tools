@@ -257,7 +257,7 @@ def order_parcels_on_route(response, use_case_graph):
                 for parcel in step['load']:
                     new_step = copy.deepcopy(step)
                     new_step["id"] = step_number
-                    new_step["load"] = [parcel["id"]]
+                    new_step["load"] = parcel["id"]
                     new_step["location"]["latitude"] = parcel["latitude"]
                     new_step["location"]["longitude"] = parcel ["longitude"]
                     new_step["station"] = None
@@ -269,7 +269,7 @@ def order_parcels_on_route(response, use_case_graph):
                 for parcel in step['unload']:
                     new_step = copy.deepcopy(step)
                     new_step["id"] = step_number
-                    new_step["unload"] = [parcel["id"]]
+                    new_step["unload"] = parcel["id"]
                     new_step["location"]["latitude"] = parcel["latitude"]
                     new_step["location"]["longitude"] = parcel["longitude"]
                     new_step["station"] = None
