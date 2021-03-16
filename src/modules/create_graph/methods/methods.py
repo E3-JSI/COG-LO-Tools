@@ -50,7 +50,7 @@ def create_ELTA_urban2_recommendations (data, deliveries):
             for step in route:
                 if step["location"]["latitude"] == parcel.current_location[0] and step["location"]["longitude"] == \
                         parcel.current_location[1]:
-                    step["load"].append(parcel.uuid)
+                    step["load"].extend([parcel.uuid])
 
         elif parcel.current_location not in step_locations:
             step_locations.append(parcel.current_location)

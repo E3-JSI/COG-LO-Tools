@@ -707,7 +707,7 @@ class InputOutputTransformer:
         return recommendations
 
     @staticmethod
-    def PickupNodeReorder(recommendations_raw, use_case_graph, deliveries):
+    def PickupNodeReorder(recommendations_raw, deliveries):
         # 1. Itterate on vehicles.
         # 2. for each route -> find pickup nodes
         # 3. Reorder pickup nodes based on depencencies
@@ -716,10 +716,6 @@ class InputOutputTransformer:
         # 6. Put pickup node on route before dependency locations
         # 7. Split the first part of the route and run TSP on it
         # 8. Itterate till Aall pickup nodes added
-
-            #skip reordering for ELTA Larissa pilot
-        if use_case_graph == "ELTA_urban2":
-            return recommendations_raw
 
 
         """handling pickup locations nodes on route"""
