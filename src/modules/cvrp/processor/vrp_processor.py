@@ -20,6 +20,8 @@ CROATIA = "CRO"
 SLOVENIA = "SLO"
 
 config_parser = ConfigParser()
+import numpy as np
+
 
 class VrpProcessor:
     """Processes a request for routing
@@ -129,8 +131,61 @@ class VrpProcessor:
             start_loc = self.map_start_nodes(partition, plan.vehicles)
             costs = [e.cost for e in partition.edges]
 
-            computed_routes, dispatch, objc = self.vrp.vrp(partition.incident_matrix, dropoff, capacity, start_loc,
-                                                           costs)
+            # ============================================================================================
+            # MODIFICATION FOR STOPAR'S VRP
+            # ============================================================================================
+
+            # Only one vehicle per plan
+            indexes = []
+            for v in plan.vehicles:
+                for i in range(len(partition.nodes)):
+                    if partition.nodes[i].id == v.start_node:
+                        indexes.append(i)
+            start_loc_stopar = indexes
+
+            # Cost matrix per kilometer
+            cost_matrix = []
+            for vehicle in plan.vehicles:
+                for edge in partition.edges:
+                    cost_matrix.append(edge.cost/1000) # to kms
+            new_cost_matrix = cost_matrix #+ cost_matrix
+
+            """Build incidence matrix for LS VRP instance"""
+            incident_matrix = []
+            graph = plan.partition
+
+            for ni, n in enumerate(graph.nodes):
+                tmp_arr = [0] * len(graph.edges)
+                for ne, e in enumerate(graph.edges):
+                    if e.start == n.id:
+                        tmp_arr[ne] = -1
+                    elif e.end == n.id:
+                        tmp_arr[ne] = 1
+                tmp_arr_neg = np.negative(tmp_arr).tolist()
+                incident_matrix.append(tmp_arr)
+
+            req_json = {}
+            req_json['startV'] = start_loc_stopar
+            req_json['endV'] = start_loc_stopar
+            req_json['vehicleCapacityV'] = capacity
+            req_json['nodeDistributionV'] = dropoff
+
+            edge_vector = [edge.cost/(60*1000) for edge in partition.edges]
+            req_json['edgeTimeV'] = edge_vector# + edge_vector
+            req_json['nodeOpenV']= [0 for _ in partition.nodes] # from 0
+            req_json['nodeCloseV']= [16 for _ in partition.nodes] # to 16
+            req_json['costMat'] = new_cost_matrix
+            req_json["incidenceMat"] = incident_matrix
+
+            computed_routes, costs = self.vrp.vrp(req_json)
+            dispatch = dropoff
+
+            # ====================================================================================
+            # END
+            # ====================================================================================
+
+            # TODO: uncomment to use MIHA's VRP
+            # computed_routes, dispatch, objc = self.vrp.vrp(partition.incident_matrix, dropoff, capacity, start_loc, costs)
 
             # compute routes based on dispatch vectors from VRP. Since VRP output is incomplete/not best,
             # we add A* routing on top
