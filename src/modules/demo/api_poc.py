@@ -330,24 +330,27 @@ def handle_recommendation_request():
             recommendations, last_step = methods.create_ELTA_urban2_recommendations(data, deliveries)
             recommendations = methods.orderELTA2Recommendations(recommendations, last_step, deliveries)
 
-        print("starting final reordering & TSP")
-        if evt_type is None:
-            evt_type = "dailyRequest"
-        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, use_case_graph, deliveries)
-        # print route for all vehicles
-        P = InputOutputTransformer.PrintRoutes(recommendations)
+        if use_case_graph == "ELTA_urban1":
+            print("starting final reordering & TSP")
+            if evt_type is None:
+                evt_type = "dailyRequest"
+            recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, deliveries)
+            # print route for all vehicles
+            P = InputOutputTransformer.PrintRoutes(recommendations)
 
-        # Maps recommendations based on transform_map_dict
-        recommendations_mapped = methods.map_coordinates_to_response(recommendations, transform_map_dict)
-        # Transforms response in 'JSI' format to the one used for MSB
-        response1 = InputOutputTransformer.prepare_output_message(recommendations_mapped, use_case, request_id, organization)
+            # Maps recommendations based on transform_map_dict
+            recommendations = methods.map_coordinates_to_response(recommendations, transform_map_dict)
+            # Transforms response in 'JSI' format to the one used for MSB
+
+        recommendations = InputOutputTransformer.prepare_output_message(recommendations, use_case, request_id, organization)
         # restructures steps plan and and lists all the parcels from clusters as a list of locations
-        response = methods.order_parcels_on_route(response1, use_case_graph)
+        response = methods.order_parcels_on_route(recommendations, use_case_graph)
         # Posting response to MSB endpoint
         RecReq.post_response_msb(request_id, response)
 
         #return generic_message_received_response
         return generic_message_received_response
+
 
 @app.route("/api/clo/newCLOs", methods=['POST'])
 def new_clos():
