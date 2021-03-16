@@ -188,7 +188,7 @@ def map_coordinates_to_response(recommendations, transform_map_dict):
                     if len(pickup_parcels) != 0:
                         for parcel in pickup_parcels:
                             if latitude == parcel["latitude"] and longitude == parcel["longitude"]:
-                                parcel["id"].append(route_parcel)
+                                parcel["id"].extend([route_parcel])
                                 parcel_mapped = True
                                 break
                     if parcel_mapped == False:
@@ -208,7 +208,7 @@ def map_coordinates_to_response(recommendations, transform_map_dict):
                     if len(delivery_parcels) != 0:
                         for parcel in delivery_parcels:
                             if latitude == parcel["latitude"] and longitude == parcel["longitude"]:
-                                parcel["id"].append(route_parcel)
+                                parcel["id"].extend([route_parcel])
                                 parcel_mapped = True
                                 break
                     if parcel_mapped == False:
