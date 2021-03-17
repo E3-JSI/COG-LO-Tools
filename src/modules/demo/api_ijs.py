@@ -329,7 +329,7 @@ class RecReq(Resource):
         global brokenVehicle
         print(data)
 
-        vehicle_metadata = data['CLOS']
+        vehicle_metadata = data['clos']
         filtered = []  # ignore posts
         for clo in vehicle_metadata:
             if 'LoadCapacity' in clo['metadata']:
@@ -351,7 +351,7 @@ class RecReq(Resource):
         except Exception as e:
             print("Something went wrong at forwarding to MSB", e)
 
-        return jsonify({"CLOS": routes})
+        return jsonify({"clos": routes})
 
     def process_zagreb(self, data, evt_type, routes, vehicle_metadata):
         global brokenVehicle

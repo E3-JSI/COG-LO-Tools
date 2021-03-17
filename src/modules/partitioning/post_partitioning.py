@@ -162,5 +162,5 @@ class GraphPartitioner:
         return self.graphProcessors
 
 if __name__ == '__main__':
-    graph = GraphPartitioner(config_parser.get_slo_graph_path())
+    graph = GraphPartitioner(config_parser.get_graph_path("SLO-CRO"))
     node_parts, edge_parts = graph.partition(5)

@@ -178,4 +178,4 @@ if __name__ == '__main__':
     ontology_inspector = OntologyInspector(ontology_path)
 
     # start API
-    serve(app, host='localhost', port=5000)
+    serve(app, host='localhost', port=5555)

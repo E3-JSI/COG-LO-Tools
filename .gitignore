@@ -8,12 +8,16 @@ bin/
 venv
 # Vim files
 .vimrc
+# IntelliJ files
+*.iml
 .idea/*
-*.osm
+#*.osm
 *.pbf
-*.csv
+#*.csv
 .ipynb_checkpoints/
 .vscode/
 ./src/modules/demo/data/
+./src/response.json
+./src/received_request.json
 
 

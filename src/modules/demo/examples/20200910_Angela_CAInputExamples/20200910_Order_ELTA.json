@@ -1,0 +1,3639 @@
+{
+  "status": 1,
+  "msg": "Event process flow - CA:getRecommendation example input built",
+  "CAgetRecommendationParameters": {
+    "organization": "ELTA",
+    "clos": [
+      {
+        "id": "ELTAvehicle6",
+        "info": {
+          "name": "ELTA truck 001",
+          "type": "transportation means",
+          "subtype": "vehicle",
+          "capacity": 200,
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": null,
+            "longitude": null,
+            "postal_code": null
+          },
+          "description": "truck",
+          "physical_id": "XYZ 0006",
+          "organization": "ELTA",
+          "capacity_unit": "kg",
+          "working_hours": null
+        },
+        "state": {
+          "plan": "ELTAplan2ecf7525-e988-4437-9a3e-3387a04b90a5",
+          "driver": null,
+          "status": null,
+          "parcels": [
+            "ELTAparcel11",
+            "ELTAparcel13",
+            "ELTAparcel19",
+            "ELTAparcel21",
+            "ELTAparcel25",
+            "ELTAparcel27",
+            "ELTAparcel28",
+            "ELTAparcel29",
+            "ELTAparcel30",
+            "ELTAparcel32",
+            "ELTAparcel33",
+            "ELTAparcel34",
+            "ELTAparcel37",
+            "ELTAparcel39",
+            "ELTAparcel43",
+            "ELTAparcel49",
+            "ELTAparcel5",
+            "ELTAparcel50",
+            "ELTAparcel53",
+            "ELTAparcel54",
+            "ELTAparcel56",
+            "ELTAparcel60",
+            "ELTAparcel61",
+            "ELTAparcel63",
+            "ELTAparcel64",
+            "ELTAparcel65",
+            "ELTAparcel66",
+            "ELTAparcel67",
+            "ELTAparcel68",
+            "ELTAparcel69"
+          ],
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 36.37774,
+            "longitude": 25.722467,
+            "postal_code": null
+          },
+          "load_volume": null,
+          "capacity_unit": null,
+          "delay_minutes": null,
+          "completed_plan": {
+            "steps": [
+              {
+                "id": 1,
+                "load": [
+                  "ELTAparcel19",
+                  "ELTAparcel25",
+                  "ELTAparcel27",
+                  "ELTAparcel28",
+                  "ELTAparcel33",
+                  "ELTAparcel53",
+                  "ELTAparcel54",
+                  "ELTAparcel56",
+                  "ELTAparcel64",
+                  "ELTAparcel65",
+                  "ELTAparcel66",
+                  "ELTAparcel67",
+                  "ELTAparcel68",
+                  "ELTAparcel69",
+                  "ELTAparcel5",
+                  "ELTAparcel11",
+                  "ELTAparcel13",
+                  "ELTAparcel21",
+                  "ELTAparcel29",
+                  "ELTAparcel30",
+                  "ELTAparcel32",
+                  "ELTAparcel34",
+                  "ELTAparcel37",
+                  "ELTAparcel39",
+                  "ELTAparcel43",
+                  "ELTAparcel49",
+                  "ELTAparcel50",
+                  "ELTAparcel60",
+                  "ELTAparcel61",
+                  "ELTAparcel63",
+                  "ELTAparcel73",
+                  "ELTAparcel74",
+                  "ELTAparcel75",
+                  "ELTAparcel78",
+                  "ELTAparcel93",
+                  "ELTAparcel103",
+                  "ELTAparcel105",
+                  "ELTAparcel113",
+                  "ELTAparcel136",
+                  "ELTAparcel139",
+                  "ELTAparcel4",
+                  "ELTAparcel6",
+                  "ELTAparcel12",
+                  "ELTAparcel16",
+                  "ELTAparcel18",
+                  "ELTAparcel24",
+                  "ELTAparcel31",
+                  "ELTAparcel36",
+                  "ELTAparcel47"
+                ],
+                "rank": 1,
+                "complete": 1,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 38.012287,
+                  "longitude": 23.813837,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 4,
+                "rank": 4,
+                "unload": [
+                  "ELTAparcel4",
+                  "ELTAparcel6",
+                  "ELTAparcel12",
+                  "ELTAparcel16",
+                  "ELTAparcel18",
+                  "ELTAparcel24",
+                  "ELTAparcel31",
+                  "ELTAparcel36",
+                  "ELTAparcel47"
+                ],
+                "complete": 1,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 38.011024,
+                  "longitude": 23.828505,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 5,
+                "rank": 5,
+                "unload": [
+                  "ELTAparcel73",
+                  "ELTAparcel74",
+                  "ELTAparcel75",
+                  "ELTAparcel78",
+                  "ELTAparcel93",
+                  "ELTAparcel103",
+                  "ELTAparcel105",
+                  "ELTAparcel113",
+                  "ELTAparcel136",
+                  "ELTAparcel139"
+                ],
+                "complete": 1,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 37.992847,
+                  "longitude": 23.799177,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          },
+          "remaining_plan": {
+            "steps": [
+              {
+                "id": 2,
+                "rank": 2,
+                "unload": [
+                  "ELTAparcel19",
+                  "ELTAparcel25",
+                  "ELTAparcel27",
+                  "ELTAparcel28",
+                  "ELTAparcel33",
+                  "ELTAparcel53",
+                  "ELTAparcel54",
+                  "ELTAparcel56",
+                  "ELTAparcel64",
+                  "ELTAparcel65",
+                  "ELTAparcel66",
+                  "ELTAparcel67",
+                  "ELTAparcel68",
+                  "ELTAparcel69"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 37.999496,
+                  "longitude": 23.814207,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 3,
+                "rank": 3,
+                "unload": [
+                  "ELTAparcel5",
+                  "ELTAparcel11",
+                  "ELTAparcel13",
+                  "ELTAparcel21",
+                  "ELTAparcel29",
+                  "ELTAparcel30",
+                  "ELTAparcel32",
+                  "ELTAparcel34",
+                  "ELTAparcel37",
+                  "ELTAparcel39",
+                  "ELTAparcel43",
+                  "ELTAparcel49",
+                  "ELTAparcel50",
+                  "ELTAparcel60",
+                  "ELTAparcel61",
+                  "ELTAparcel63"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 38.00611,
+                  "longitude": 23.828236,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          },
+          "available_space": null,
+          "availability_prediction": {
+            "time": null,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            }
+          }
+        }
+      },
+      {
+        "id": "ELTAvehicle7",
+        "info": {
+          "name": "ELTA truck 002",
+          "type": "transportation means",
+          "subtype": "vehicle",
+          "capacity": 200,
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": null,
+            "longitude": null,
+            "postal_code": null
+          },
+          "description": "truck",
+          "physical_id": "XYZ 0007",
+          "organization": "ELTA",
+          "capacity_unit": "kg",
+          "working_hours": null
+        },
+        "state": {
+          "plan": "ELTAplance74330c-c63f-46b2-9003-9800df6d951a",
+          "driver": null,
+          "status": null,
+          "parcels": [
+            "ELTAparcel100",
+            "ELTAparcel101",
+            "ELTAparcel102",
+            "ELTAparcel104",
+            "ELTAparcel106",
+            "ELTAparcel107",
+            "ELTAparcel108",
+            "ELTAparcel109",
+            "ELTAparcel110",
+            "ELTAparcel111",
+            "ELTAparcel112",
+            "ELTAparcel114",
+            "ELTAparcel115",
+            "ELTAparcel116",
+            "ELTAparcel117",
+            "ELTAparcel118",
+            "ELTAparcel119",
+            "ELTAparcel120",
+            "ELTAparcel121",
+            "ELTAparcel122",
+            "ELTAparcel123",
+            "ELTAparcel124",
+            "ELTAparcel125",
+            "ELTAparcel126",
+            "ELTAparcel127",
+            "ELTAparcel128",
+            "ELTAparcel129",
+            "ELTAparcel130",
+            "ELTAparcel131",
+            "ELTAparcel132",
+            "ELTAparcel133",
+            "ELTAparcel134",
+            "ELTAparcel135",
+            "ELTAparcel137",
+            "ELTAparcel138",
+            "ELTAparcel14",
+            "ELTAparcel141",
+            "ELTAparcel142",
+            "ELTAparcel15",
+            "ELTAparcel17",
+            "ELTAparcel2",
+            "ELTAparcel20",
+            "ELTAparcel23",
+            "ELTAparcel26",
+            "ELTAparcel35",
+            "ELTAparcel41",
+            "ELTAparcel42",
+            "ELTAparcel45",
+            "ELTAparcel46",
+            "ELTAparcel51",
+            "ELTAparcel52",
+            "ELTAparcel57",
+            "ELTAparcel7",
+            "ELTAparcel70",
+            "ELTAparcel71",
+            "ELTAparcel76",
+            "ELTAparcel77",
+            "ELTAparcel79",
+            "ELTAparcel8",
+            "ELTAparcel80",
+            "ELTAparcel81",
+            "ELTAparcel82",
+            "ELTAparcel83",
+            "ELTAparcel84",
+            "ELTAparcel85",
+            "ELTAparcel86",
+            "ELTAparcel87",
+            "ELTAparcel88",
+            "ELTAparcel89",
+            "ELTAparcel9",
+            "ELTAparcel90",
+            "ELTAparcel92",
+            "ELTAparcel94",
+            "ELTAparcel95",
+            "ELTAparcel96",
+            "ELTAparcel97",
+            "ELTAparcel98",
+            "ELTAparcel99"
+          ],
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 37.9640792,
+            "longitude": 23.7594871,
+            "postal_code": null
+          },
+          "load_volume": null,
+          "capacity_unit": null,
+          "delay_minutes": null,
+          "completed_plan": {
+            "steps": [
+              {
+                "id": 1,
+                "load": [
+                  "ELTAparcel76",
+                  "ELTAparcel83",
+                  "ELTAparcel87",
+                  "ELTAparcel94",
+                  "ELTAparcel96",
+                  "ELTAparcel97",
+                  "ELTAparcel106",
+                  "ELTAparcel109",
+                  "ELTAparcel122",
+                  "ELTAparcel124",
+                  "ELTAparcel134",
+                  "ELTAparcel82",
+                  "ELTAparcel85",
+                  "ELTAparcel88",
+                  "ELTAparcel92",
+                  "ELTAparcel101",
+                  "ELTAparcel110",
+                  "ELTAparcel112",
+                  "ELTAparcel114",
+                  "ELTAparcel116",
+                  "ELTAparcel118",
+                  "ELTAparcel119",
+                  "ELTAparcel128",
+                  "ELTAparcel129",
+                  "ELTAparcel130",
+                  "ELTAparcel142",
+                  "ELTAparcel77",
+                  "ELTAparcel79",
+                  "ELTAparcel80",
+                  "ELTAparcel81",
+                  "ELTAparcel84",
+                  "ELTAparcel95",
+                  "ELTAparcel100",
+                  "ELTAparcel104",
+                  "ELTAparcel108",
+                  "ELTAparcel115",
+                  "ELTAparcel117",
+                  "ELTAparcel120",
+                  "ELTAparcel121",
+                  "ELTAparcel125",
+                  "ELTAparcel126",
+                  "ELTAparcel127",
+                  "ELTAparcel133",
+                  "ELTAparcel137",
+                  "ELTAparcel138",
+                  "ELTAparcel1",
+                  "ELTAparcel3",
+                  "ELTAparcel40",
+                  "ELTAparcel48",
+                  "ELTAparcel55",
+                  "ELTAparcel59",
+                  "ELTAparcel62",
+                  "ELTAparcel91",
+                  "ELTAparcel140",
+                  "ELTAparcel10",
+                  "ELTAparcel22",
+                  "ELTAparcel38",
+                  "ELTAparcel44",
+                  "ELTAparcel58",
+                  "ELTAparcel72",
+                  "ELTAparcel2",
+                  "ELTAparcel9",
+                  "ELTAparcel14",
+                  "ELTAparcel15",
+                  "ELTAparcel17",
+                  "ELTAparcel26",
+                  "ELTAparcel42",
+                  "ELTAparcel45",
+                  "ELTAparcel52",
+                  "ELTAparcel70",
+                  "ELTAparcel71",
+                  "ELTAparcel141",
+                  "ELTAparcel7",
+                  "ELTAparcel8",
+                  "ELTAparcel20",
+                  "ELTAparcel23",
+                  "ELTAparcel35",
+                  "ELTAparcel41",
+                  "ELTAparcel46",
+                  "ELTAparcel51",
+                  "ELTAparcel57",
+                  "ELTAparcel86",
+                  "ELTAparcel89",
+                  "ELTAparcel90",
+                  "ELTAparcel98",
+                  "ELTAparcel99",
+                  "ELTAparcel102",
+                  "ELTAparcel107",
+                  "ELTAparcel111",
+                  "ELTAparcel123",
+                  "ELTAparcel131",
+                  "ELTAparcel132",
+                  "ELTAparcel135"
+                ],
+                "rank": 1,
+                "unload": [
+                  "ELTAparcel10",
+                  "ELTAparcel22",
+                  "ELTAparcel38",
+                  "ELTAparcel44",
+                  "ELTAparcel58",
+                  "ELTAparcel72"
+                ],
+                "complete": 1,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 38.012287,
+                  "longitude": 23.813837,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 2,
+                "rank": 2,
+                "unload": [
+                  "ELTAparcel1",
+                  "ELTAparcel3",
+                  "ELTAparcel40",
+                  "ELTAparcel48",
+                  "ELTAparcel55",
+                  "ELTAparcel59",
+                  "ELTAparcel62",
+                  "ELTAparcel91",
+                  "ELTAparcel140"
+                ],
+                "complete": 1,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 38.005177,
+                  "longitude": 23.810453,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          },
+          "remaining_plan": {
+            "steps": [
+              {
+                "id": 3,
+                "rank": 3,
+                "unload": [
+                  "ELTAparcel2",
+                  "ELTAparcel9",
+                  "ELTAparcel14",
+                  "ELTAparcel15",
+                  "ELTAparcel17",
+                  "ELTAparcel26",
+                  "ELTAparcel42",
+                  "ELTAparcel45",
+                  "ELTAparcel52",
+                  "ELTAparcel70",
+                  "ELTAparcel71",
+                  "ELTAparcel141"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 38.009098,
+                  "longitude": 23.824299,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 4,
+                "rank": 4,
+                "unload": [
+                  "ELTAparcel7",
+                  "ELTAparcel8",
+                  "ELTAparcel20",
+                  "ELTAparcel23",
+                  "ELTAparcel35",
+                  "ELTAparcel41",
+                  "ELTAparcel46",
+                  "ELTAparcel51",
+                  "ELTAparcel57"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 38.001713,
+                  "longitude": 23.819843,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 5,
+                "rank": 5,
+                "unload": [
+                  "ELTAparcel86",
+                  "ELTAparcel89",
+                  "ELTAparcel90",
+                  "ELTAparcel98",
+                  "ELTAparcel99",
+                  "ELTAparcel102",
+                  "ELTAparcel107",
+                  "ELTAparcel111",
+                  "ELTAparcel123",
+                  "ELTAparcel131",
+                  "ELTAparcel132",
+                  "ELTAparcel135"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 38.007687,
+                  "longitude": 23.802408,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 6,
+                "rank": 6,
+                "unload": [
+                  "ELTAparcel77",
+                  "ELTAparcel79",
+                  "ELTAparcel80",
+                  "ELTAparcel81",
+                  "ELTAparcel84",
+                  "ELTAparcel95",
+                  "ELTAparcel100",
+                  "ELTAparcel104",
+                  "ELTAparcel108",
+                  "ELTAparcel115",
+                  "ELTAparcel117",
+                  "ELTAparcel120",
+                  "ELTAparcel121",
+                  "ELTAparcel125",
+                  "ELTAparcel126",
+                  "ELTAparcel127",
+                  "ELTAparcel133",
+                  "ELTAparcel137",
+                  "ELTAparcel138"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 37.99546,
+                  "longitude": 23.808159,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 7,
+                "rank": 7,
+                "unload": [
+                  "ELTAparcel82",
+                  "ELTAparcel85",
+                  "ELTAparcel88",
+                  "ELTAparcel92",
+                  "ELTAparcel101",
+                  "ELTAparcel110",
+                  "ELTAparcel112",
+                  "ELTAparcel114",
+                  "ELTAparcel116",
+                  "ELTAparcel118",
+                  "ELTAparcel119",
+                  "ELTAparcel128",
+                  "ELTAparcel129",
+                  "ELTAparcel130",
+                  "ELTAparcel142"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 37.99934,
+                  "longitude": 23.795698,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              },
+              {
+                "id": 8,
+                "rank": 8,
+                "unload": [
+                  "ELTAparcel76",
+                  "ELTAparcel83",
+                  "ELTAparcel87",
+                  "ELTAparcel94",
+                  "ELTAparcel96",
+                  "ELTAparcel97",
+                  "ELTAparcel106",
+                  "ELTAparcel109",
+                  "ELTAparcel122",
+                  "ELTAparcel124",
+                  "ELTAparcel134"
+                ],
+                "complete": 0,
+                "due_time": null,
+                "location": {
+                  "city": null,
+                  "country": null,
+                  "station": null,
+                  "latitude": 37.999077,
+                  "longitude": 23.788843,
+                  "postal_code": null
+                },
+                "dependency": {
+                  "plan": null,
+                  "plan_step": null
+                }
+              }
+            ]
+          },
+          "available_space": null,
+          "availability_prediction": {
+            "time": null,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            }
+          }
+        }
+      }
+    ],
+    "parcels": [
+      {
+        "id": "ELTAparcel19",
+        "state": "unserved",
+        "issued": "2020-06-24T17:01:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T22:01:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.999496,
+          "longitude": 23.814207,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel25",
+        "state": "unserved",
+        "issued": "2020-06-24T14:59:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T19:59:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00617,
+          "longitude": 23.812593,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel27",
+        "state": "unserved",
+        "issued": "2020-06-24T10:20:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T15:20:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003544,
+          "longitude": 23.815035,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel28",
+        "state": "unserved",
+        "issued": "2020-06-24T10:17:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T15:17:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00096,
+          "longitude": 23.810513,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel33",
+        "state": "unserved",
+        "issued": "2020-06-24T11:29:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T16:29:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00023,
+          "longitude": 23.812052,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel53",
+        "state": "unserved",
+        "issued": "2020-06-24T06:55:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T11:55:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.002888,
+          "longitude": 23.813623,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel54",
+        "state": "unserved",
+        "issued": "2020-06-24T03:46:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T08:46:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00337,
+          "longitude": 23.815514,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel56",
+        "state": "unserved",
+        "issued": "2020-06-24T08:23:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:23:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00251,
+          "longitude": 23.811132,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel64",
+        "state": "unserved",
+        "issued": "2020-06-24T18:40:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T23:40:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003544,
+          "longitude": 23.815035,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel65",
+        "state": "unserved",
+        "issued": "2020-06-24T03:19:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T08:19:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003544,
+          "longitude": 23.815035,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel66",
+        "state": "unserved",
+        "issued": "2020-06-24T06:41:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T11:41:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003544,
+          "longitude": 23.815035,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel67",
+        "state": "unserved",
+        "issued": "2020-06-24T14:17:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T19:17:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003544,
+          "longitude": 23.815035,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel68",
+        "state": "unserved",
+        "issued": "2020-06-24T12:45:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T17:45:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003544,
+          "longitude": 23.815035,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel69",
+        "state": "unserved",
+        "issued": "2020-06-24T17:47:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T22:47:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003544,
+          "longitude": 23.815035,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel5",
+        "state": "unserved",
+        "issued": "2020-06-24T10:12:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T15:12:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00611,
+          "longitude": 23.828236,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel11",
+        "state": "unserved",
+        "issued": "2020-06-24T14:11:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T19:11:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.005795,
+          "longitude": 23.829659,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel13",
+        "state": "unserved",
+        "issued": "2020-06-24T01:39:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:39:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.007317,
+          "longitude": 23.82781,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel21",
+        "state": "unserved",
+        "issued": "2020-06-24T13:32:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T18:32:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.002758,
+          "longitude": 23.828629,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel29",
+        "state": "unserved",
+        "issued": "2020-06-24T09:02:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T14:02:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.006573,
+          "longitude": 23.832579,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel30",
+        "state": "unserved",
+        "issued": "2020-06-24T13:34:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T18:34:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.005745,
+          "longitude": 23.828245,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel32",
+        "state": "unserved",
+        "issued": "2020-06-24T12:28:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T17:28:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.005478,
+          "longitude": 23.828484,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel34",
+        "state": "unserved",
+        "issued": "2020-06-24T09:03:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T14:03:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00442,
+          "longitude": 23.829594,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel37",
+        "state": "unserved",
+        "issued": "2020-06-24T10:32:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T15:32:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003796,
+          "longitude": 23.829948,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel39",
+        "state": "unserved",
+        "issued": "2020-06-24T01:47:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:47:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00776,
+          "longitude": 23.82897,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel43",
+        "state": "unserved",
+        "issued": "2020-06-24T05:45:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T10:45:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003048,
+          "longitude": 23.83014,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel49",
+        "state": "unserved",
+        "issued": "2020-06-24T16:24:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T21:24:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.002514,
+          "longitude": 23.82641,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel50",
+        "state": "unserved",
+        "issued": "2020-06-24T01:23:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:23:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00611,
+          "longitude": 23.828236,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel60",
+        "state": "unserved",
+        "issued": "2020-06-24T01:58:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:58:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00627,
+          "longitude": 23.82996,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel61",
+        "state": "unserved",
+        "issued": "2020-06-24T06:18:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T11:18:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00627,
+          "longitude": 23.82996,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel63",
+        "state": "unserved",
+        "issued": "2020-06-24T18:52:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T23:52:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00694,
+          "longitude": 23.827276,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel2",
+        "state": "unserved",
+        "issued": "2020-06-24T08:23:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:23:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.009098,
+          "longitude": 23.824299,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel9",
+        "state": "unserved",
+        "issued": "2020-06-24T12:48:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T17:48:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00891,
+          "longitude": 23.823776,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel14",
+        "state": "unserved",
+        "issued": "2020-06-24T12:35:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T17:35:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.01312,
+          "longitude": 23.823915,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel15",
+        "state": "unserved",
+        "issued": "2020-06-24T04:35:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T09:35:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.01195,
+          "longitude": 23.821005,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel17",
+        "state": "unserved",
+        "issued": "2020-06-24T16:16:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T21:16:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.009098,
+          "longitude": 23.824299,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel26",
+        "state": "unserved",
+        "issued": "2020-06-24T03:15:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T08:15:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.010765,
+          "longitude": 23.819527,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel42",
+        "state": "unserved",
+        "issued": "2020-06-24T03:40:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T08:40:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.0131,
+          "longitude": 23.819147,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel45",
+        "state": "unserved",
+        "issued": "2020-06-24T01:11:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:11:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.010597,
+          "longitude": 23.824207,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel52",
+        "state": "unserved",
+        "issued": "2020-06-24T08:59:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:59:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012905,
+          "longitude": 23.823496,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel70",
+        "state": "unserved",
+        "issued": "2020-06-24T00:21:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T05:21:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.01195,
+          "longitude": 23.821005,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel71",
+        "state": "unserved",
+        "issued": "2020-06-24T17:33:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T22:33:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.01195,
+          "longitude": 23.821005,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel141",
+        "state": "unserved",
+        "issued": "2020-06-24T18:38:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T23:38:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.014008,
+          "longitude": 23.824265,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel7",
+        "state": "unserved",
+        "issued": "2020-06-24T01:56:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:56:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.001713,
+          "longitude": 23.819843,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel8",
+        "state": "unserved",
+        "issued": "2020-06-24T09:58:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T14:58:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.007225,
+          "longitude": 23.822195,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel20",
+        "state": "unserved",
+        "issued": "2020-06-24T19:37:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-26T00:37:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.007225,
+          "longitude": 23.822195,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel23",
+        "state": "unserved",
+        "issued": "2020-06-24T08:02:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:02:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003223,
+          "longitude": 23.82222,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel35",
+        "state": "unserved",
+        "issued": "2020-06-24T14:31:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T19:31:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.006706,
+          "longitude": 23.823353,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel41",
+        "state": "unserved",
+        "issued": "2020-06-24T00:39:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T05:39:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003395,
+          "longitude": 23.82005,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel46",
+        "state": "unserved",
+        "issued": "2020-06-24T05:45:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T10:45:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.005505,
+          "longitude": 23.824032,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel51",
+        "state": "unserved",
+        "issued": "2020-06-24T05:59:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T10:59:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.003624,
+          "longitude": 23.819887,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel57",
+        "state": "unserved",
+        "issued": "2020-06-24T05:32:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T10:32:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.005478,
+          "longitude": 23.820107,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel86",
+        "state": "unserved",
+        "issued": "2020-06-24T15:38:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T20:38:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.007687,
+          "longitude": 23.802408,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel89",
+        "state": "unserved",
+        "issued": "2020-06-24T18:28:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T23:28:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.007313,
+          "longitude": 23.802153,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel90",
+        "state": "unserved",
+        "issued": "2020-06-24T07:14:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T12:14:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00611,
+          "longitude": 23.801043,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel98",
+        "state": "unserved",
+        "issued": "2020-06-24T01:43:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:43:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.007687,
+          "longitude": 23.802408,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel99",
+        "state": "unserved",
+        "issued": "2020-06-24T11:04:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T16:04:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00761,
+          "longitude": 23.80325,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel102",
+        "state": "unserved",
+        "issued": "2020-06-24T08:29:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:29:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.008373,
+          "longitude": 23.804796,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel107",
+        "state": "unserved",
+        "issued": "2020-06-24T09:18:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T14:18:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.007687,
+          "longitude": 23.802408,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel111",
+        "state": "unserved",
+        "issued": "2020-06-24T12:49:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T17:49:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.007313,
+          "longitude": 23.802153,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel123",
+        "state": "unserved",
+        "issued": "2020-06-24T17:52:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T22:52:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00501,
+          "longitude": 23.804258,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel131",
+        "state": "unserved",
+        "issued": "2020-06-24T08:00:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:00:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00674,
+          "longitude": 23.800104,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel132",
+        "state": "unserved",
+        "issued": "2020-06-24T19:14:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-26T00:14:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00512,
+          "longitude": 23.80119,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel135",
+        "state": "unserved",
+        "issued": "2020-06-24T13:44:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T18:44:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00375,
+          "longitude": 23.802578,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel76",
+        "state": "unserved",
+        "issued": "2020-06-24T02:16:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T07:16:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.999077,
+          "longitude": 23.788843,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel83",
+        "state": "unserved",
+        "issued": "2020-06-24T06:47:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T11:47:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00094,
+          "longitude": 23.787676,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel87",
+        "state": "unserved",
+        "issued": "2020-06-24T11:33:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T16:33:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.001205,
+          "longitude": 23.787916,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel94",
+        "state": "unserved",
+        "issued": "2020-06-24T16:07:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T21:07:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.002754,
+          "longitude": 23.791924,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel96",
+        "state": "unserved",
+        "issued": "2020-06-24T08:35:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:35:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.000195,
+          "longitude": 23.792976,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel97",
+        "state": "unserved",
+        "issued": "2020-06-24T13:13:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T18:13:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00104,
+          "longitude": 23.792751,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel106",
+        "state": "unserved",
+        "issued": "2020-06-24T19:12:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-26T00:12:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.999893,
+          "longitude": 23.789906,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel109",
+        "state": "unserved",
+        "issued": "2020-06-24T08:03:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:03:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.0023,
+          "longitude": 23.791063,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel122",
+        "state": "unserved",
+        "issued": "2020-06-24T06:01:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T11:01:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.001396,
+          "longitude": 23.790653,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel124",
+        "state": "unserved",
+        "issued": "2020-06-24T19:54:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-26T00:54:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.996296,
+          "longitude": 23.794466,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel134",
+        "state": "unserved",
+        "issued": "2020-06-24T12:37:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T17:37:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00104,
+          "longitude": 23.792751,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel82",
+        "state": "unserved",
+        "issued": "2020-06-24T07:47:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T12:47:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.99934,
+          "longitude": 23.795698,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel85",
+        "state": "unserved",
+        "issued": "2020-06-24T06:34:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T11:34:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.004303,
+          "longitude": 23.796867,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel88",
+        "state": "unserved",
+        "issued": "2020-06-24T15:16:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T20:16:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.002098,
+          "longitude": 23.799004,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel92",
+        "state": "unserved",
+        "issued": "2020-06-24T01:35:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:35:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00179,
+          "longitude": 23.797705,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel101",
+        "state": "unserved",
+        "issued": "2020-06-24T06:18:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T11:18:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00576,
+          "longitude": 23.796133,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel110",
+        "state": "unserved",
+        "issued": "2020-06-24T08:22:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:22:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00179,
+          "longitude": 23.797705,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel112",
+        "state": "unserved",
+        "issued": "2020-06-24T17:22:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T22:22:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00344,
+          "longitude": 23.797413,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel114",
+        "state": "unserved",
+        "issued": "2020-06-24T12:32:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T17:32:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.006065,
+          "longitude": 23.798658,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel116",
+        "state": "unserved",
+        "issued": "2020-06-24T01:37:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:37:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.001625,
+          "longitude": 23.797132,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel118",
+        "state": "unserved",
+        "issued": "2020-06-24T15:34:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T20:34:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00179,
+          "longitude": 23.797705,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel119",
+        "state": "unserved",
+        "issued": "2020-06-24T17:45:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T22:45:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.000507,
+          "longitude": 23.795616,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel128",
+        "state": "unserved",
+        "issued": "2020-06-24T11:04:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T16:04:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00179,
+          "longitude": 23.797705,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel129",
+        "state": "unserved",
+        "issued": "2020-06-24T13:15:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T18:15:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.005863,
+          "longitude": 23.798702,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel130",
+        "state": "unserved",
+        "issued": "2020-06-24T16:29:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T21:29:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.005196,
+          "longitude": 23.797874,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel142",
+        "state": "unserved",
+        "issued": "2020-06-24T14:38:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T19:38:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00179,
+          "longitude": 23.797705,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel77",
+        "state": "unserved",
+        "issued": "2020-06-24T07:19:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T12:19:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.99546,
+          "longitude": 23.808159,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel79",
+        "state": "unserved",
+        "issued": "2020-06-24T04:19:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T09:19:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.996708,
+          "longitude": 23.8109,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel80",
+        "state": "unserved",
+        "issued": "2020-06-24T19:58:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-26T00:58:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.001667,
+          "longitude": 23.8049,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel81",
+        "state": "unserved",
+        "issued": "2020-06-24T19:09:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-26T00:09:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.997395,
+          "longitude": 23.805342,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel84",
+        "state": "unserved",
+        "issued": "2020-06-24T02:06:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T07:06:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.000053,
+          "longitude": 23.801817,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel95",
+        "state": "unserved",
+        "issued": "2020-06-24T00:34:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T05:34:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.00211,
+          "longitude": 23.805017,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel100",
+        "state": "unserved",
+        "issued": "2020-06-24T01:16:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T06:16:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.99786,
+          "longitude": 23.806547,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel104",
+        "state": "unserved",
+        "issued": "2020-06-24T00:09:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T05:09:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.998722,
+          "longitude": 23.804745,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel108",
+        "state": "unserved",
+        "issued": "2020-06-24T09:16:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T14:16:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.998722,
+          "longitude": 23.804745,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel115",
+        "state": "unserved",
+        "issued": "2020-06-24T18:13:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T23:13:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.002262,
+          "longitude": 23.8057,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel117",
+        "state": "unserved",
+        "issued": "2020-06-24T12:05:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T17:05:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.002445,
+          "longitude": 23.804209,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel120",
+        "state": "unserved",
+        "issued": "2020-06-24T08:03:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:03:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.997562,
+          "longitude": 23.802721,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel121",
+        "state": "unserved",
+        "issued": "2020-06-24T06:15:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T11:15:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.998722,
+          "longitude": 23.804745,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel125",
+        "state": "unserved",
+        "issued": "2020-06-24T11:10:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T16:10:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.997562,
+          "longitude": 23.802721,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel126",
+        "state": "unserved",
+        "issued": "2020-06-24T19:22:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-26T00:22:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.996704,
+          "longitude": 23.806032,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel127",
+        "state": "unserved",
+        "issued": "2020-06-24T18:09:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T23:09:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.998722,
+          "longitude": 23.804745,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel133",
+        "state": "unserved",
+        "issued": "2020-06-24T08:04:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T13:04:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.998127,
+          "longitude": 23.802597,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel137",
+        "state": "unserved",
+        "issued": "2020-06-24T17:17:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T22:17:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.997772,
+          "longitude": 23.80742,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcel138",
+        "state": "unserved",
+        "issued": "2020-06-24T07:01:26Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": null,
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T12:01:26Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.998722,
+          "longitude": 23.804745,
+          "postal_code": null
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      },
+      {
+        "id": "ELTAparcelZX830068051XGR",
+        "state": "unserved",
+        "issued": "2020-06-24T15:33:25Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": "ELTApostoffice1",
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T20:33:25Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.998722,
+          "longitude": 23.804745,
+          "postal_code": "15562"
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      }
+    ],
+    "event": {
+      "id": "adhocorder_event_test",
+      "info": {
+        "item": "ELTAparcelZX830068051XGR",
+        "comment": null,
+        "location": {
+          "city": "Papagou",
+          "country": "GR",
+          "station": "ELTApostalbox4",
+          "latitude": 37.99876,
+          "longitude": 23.78431,
+          "postal_code": null
+        }
+      },
+      "time": "2020-07-02T17:37:46Z",
+      "event": "system",
+      "initiator": "ELTApostalbox4",
+      "event_type": "order"
+    },
+    "request": "COGLOrequestXXXXXXX"
+  }
+}

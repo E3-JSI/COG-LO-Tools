@@ -1,20 +1,47 @@
 {
-  "eps": 4,
-  "map_basic": "./modules/create_graph/data/PoC_1.osm",
-  "post_loc_slo_cro":"./modules/create_graph/data/slo_cro_postal_offices.csv",
-  "post_loc_elta":"./modules/create_graph/data/elta_postal_offices.csv",
+  "eps_slo_cro_crossborder": 4,
+  "eps_slo_cro_urban": 4,
+  "eps_elta_urban1": 1,
+  "eps_elta_urban2": 1,
+  "map_basic_SLO-CRO_crossborder": "./modules/create_graph/data/SLO-CRO_crossborder.osm",
+  "map_basic_SLO-CRO_urban": "./modules/create_graph/data/SLO-CRO_urban.osm",
+  "map_basic_ELTA_urban1": "./modules/create_graph/data/elta_urban1.osm",
+  "map_basic_ELTA_urban2": "./modules/create_graph/data/elta_urban2.osm",
+  "post_loc_slo_cro_crossborder": "./modules/create_graph/data/slo_cro_postal_offices_crossborder.csv",
+  "post_loc_slo_cro_urban": "./modules/create_graph/data/slo_cro_postal_offices_urban.csv",
+  "elta_static_locations_urban1": "./modules/create_graph/data/elta_static_locations_urban1.csv",
+  "elta_static_locations_urban2": "./modules/create_graph/data/elta_static_locations_urban2.csv",
+  "post_loc_elta_urban1": "./modules/create_graph/data/elta_postal_offices_urban1.csv",
+  "post_loc_elta_urban2": "./modules/create_graph/data/elta_postal_offices_urban2.csv",
   "post_loc_type_slo_cro": "si",
   "post_loc_type_elta": "elta",
   "msb_fwd": "http://116.203.13.198/api/postRecommendation",
-  "elta_json_graph_data_path": "./modules/demo/data/elta_graph_final.json",
-  "slo_cro_json_graph_data_path": "./modules/demo/data/slo_cro_graph_final.json",
-  "elta_pickle_path": "./modules/demo/data/elta_graphs.pickle",
-  "slo_cro_pickle_path": "./modules/demo/data/slo_cro_graph.pickle",
-  "slo_graph_json_path": "./modules/demo/data/slo_graph_json.json",
-  "cro_graph_json_path": "./modules/demo/data/cro_graph_json.json",
-  "slo_graph_pickle_path": "./modules/demo/data/slo_graph.pickle",
-  "cro_graph_pickle_path": "./modules/demo/data/cro_graph.pickle",
-  "slo_border_nodes": ["S1", "S3", "S5"],
-  "cro_border_nodes": ["H5", "H3", "H1"],
+  "elta_json_graph_data_path_urban1": "./modules/demo/data/elta_graph_final_urban1.json",
+  "elta_json_graph_data_path_urban2": "./modules/demo/data/elta_graph_final_urban2.json",
+  "slo_cro_json_graph_data_path_crossborder": "./modules/demo/data/slo_cro_graph_final_crossborder.json",
+  "slo_cro_json_graph_data_path_urban": "./modules/demo/data/slo_cro_graph_final_urban.json",
+  "elta_pickle_path_urban1": "./modules/demo/data/elta_graphs_urban1.pickle",
+  "elta_pickle_path_urban2": "./modules/demo/data/elta_graphs_urban2.pickle",
+  "slo_cro_pickle_path_crossborder": "./modules/demo/data/slo_cro_graph_crossborder.pickle",
+  "slo_cro_pickle_path_urban": "./modules/demo/data/slo_cro_graph_urban.pickle",
+  "logger_file_location": "./modules/demo/data/requests/",
+  "slo_border_nodes": [
+    "PSpostofficeS1",
+    "PSpostofficeS3",
+    "PSpostofficeS8"
+  ],
+  "cro_border_nodes": [
+    "HPpostofficeH1",
+    "HPpostofficeH4",
+    "HPpostofficeH6"
+  ],
+  "slo_border_nodes_cross_border": [
+    "PSpostofficeS3",
+    "PSpostofficeS8"
+  ],
+  "cro_border_nodes_cross_border": [
+    "HPpostofficeH1",
+    "HPpostofficeH6"
+  ],
   "graph_partitions": 1
 }

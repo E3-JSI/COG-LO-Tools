@@ -6,6 +6,7 @@ from src.modules.demo.api_poc import Parcel
 from src.modules.demo.api_poc import Vehicle
 from src.modules.demo.api_poc import VrpProcessor
 from src.modules.partitioning.post_partitioning import GraphPartitioner
+from src.modules.create_graph.config.config_parser import ConfigParser
 
 JSON_GRAPH_DATA_PATH = 'modules/demo/data/Graph_PoC.json'
 MSB_FWD = 'http://116.203.13.198/api/postRecommendation'
@@ -56,4 +57,4 @@ if __name__ == '__main__':
     print(['Vehicle {} at {}'.format(x.name, x.start_node) for x in available_vehicles])
     print(['Delivery of {} to {}'.format(x.volume, x.target) for x in requested_deliveries])
 
-    vrpProcessor.process(available_vehicles, requested_deliveries)
+    vrpProcessor.process(available_vehicles, requested_deliveries, "SLO-CRO")

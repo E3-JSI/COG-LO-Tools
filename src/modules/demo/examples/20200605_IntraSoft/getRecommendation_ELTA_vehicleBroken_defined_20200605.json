@@ -1,0 +1,101 @@
+{
+  "request": "Req001",
+  "event": {
+    "event_type": "brokenVehicle"
+  },
+  "organization": "ELTA",
+  "clos": [
+    {
+      "id": "UUID-V1",
+      "info": {
+        "location": {
+          "latitude": 38.005177,
+          "longitude": 23.810454
+        },
+        "capacity": 200
+      },
+      "state": {
+        "remaining_plan": {
+          "steps": [
+            {
+              "id": "UUID-1",
+              "payweight": 1,
+              "location": {
+                "latitude": 38.0051774,
+                "longitude": 23.8104539
+              }
+            },
+            {
+              "id": "UUID-2",
+              "payweight": 1,
+              "location": {
+                "latitude": 38.0090986,
+                "longitude": 23.824298499999998
+              }
+            },
+            {
+              "id": "UUID-3",
+              "payweight": 1,
+              "location": {
+                "latitude": 38.0098826,
+                "longitude": 23.807868300000003
+              }
+            },
+            {
+              "id": "UUID-4",
+              "payweight": 1,
+              "location": {
+                "latitude": 38.0110234,
+                "longitude": 23.8285047
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "brokenVehicle": {
+    "UUID": "UUID-V2",
+    "info": {
+      "location": {
+        "latitude": 38.003543900000004,
+        "longitude": 23.8150354
+      },
+      "capacity": 200
+    },
+    "parcels": [
+      {
+        "id": "UUID-20",
+        "payweight": 1,
+        "destination": {
+          "latitude": 38.0072252,
+          "longitude": 23.822195999999998
+        }
+      },
+      {
+        "id": "UUID-21",
+        "payweight": 1,
+        "destination": {
+          "latitude": 38.0027566,
+          "longitude": 23.828629199999998
+        }
+      },
+      {
+        "id": "UUID-22",
+        "payweight": 1,
+        "destination": {
+          "latitude": 38.0121346,
+          "longitude": 23.8159333
+        }
+      },
+      {
+        "id": "UUID-23",
+        "payweight": 1,
+        "destination": {
+          "latitude": 38.0032217,
+          "longitude": 23.8222195
+        }
+      }
+    ]
+  }
+}

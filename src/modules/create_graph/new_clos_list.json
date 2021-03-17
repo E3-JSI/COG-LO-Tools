@@ -1,51 +1,57 @@
 {
-  "CLOS": [
+  "clos": [
     {
         "address": "hrvaska1",
         "uuid": "H1",
-        "lat": "45.839828",
-        "lon": "15.686432"
+        "lat": "45.840296",
+        "lon": "15.686514"
     },
     {
         "address": "hrvaska2",
         "uuid": "H2",
-        "lat": "45.803142",
-        "lon": "15.710136"
+        "lat": "45.831867",
+        "lon": "15.690455"
     },
     {
         "address": "hrvaska3",
         "uuid": "H3",
-        "lat": "45.917167",
-        "lon": "15.730056"
+        "lat": "45.803142",
+        "lon": "15.710135"
     },
     {
         "address": "hrvaska4",
         "uuid": "H4",
-        "lat": "45.814559",
-        "lon": "15.815757"
+        "lat": "45.917165",
+        "lon": "15.730056"
     },
     {
         "address": "hrvaska5",
         "uuid": "H5",
-        "lat": "45.893543",
-        "lon": "15.696108"
+        "lat": "45.808406",
+        "lon": "15.816847"
     },
     {
         "address": "hrvaska6",
         "uuid": "H6",
-        "lat": "45.860454",
-        "lon": "15.803261"
+        "lat": "45.887335",
+        "lon": "15.697116"
     }
     {
         "address": "hrvaska9",
-        "uuid": "H9",
-        "lat": "45.881912",
-        "lon": "15.738285"
+        "uuid": "H7",
+        "lat": "45.859075",
+        "lon": "15.80341"
+    },
+    {
+        "address": "hrvaska9",
+        "uuid": "H8",
+        "lat": "45.878072",
+        "lon": "15.739208"
     },
     {
         "address": "Kapele",
         "uuid": "S1",
-        "lat": "45.93107931",
+        "lat": "45.93107932",
         "lon": "15.67793203"
     },
     {
@@ -57,43 +63,37 @@
     {
         "address": "Jesenice",
         "uuid": "S3",
-        "lat": "45.85945758",
-        "lon": "15.68964069"
+        "lat": "45.89320611",
+        "lon": "15.6212996"
     },
     {
         "address": "Topliska cesta",
         "uuid": "S4",
-        "lat": "45.89320611",
-        "lon": "15.62129961"
-    },
-    {
-        "address": "Cerklje ob Krki",
-        "uuid": "S5",
         "lat": "45.88461153",
         "lon": "15.5231045"
     },
     {
+        "address": "Cerklje ob Krki",
+        "uuid": "S5",
+        "lat": "45.942039",
+        "lon": "15.478103"
+    },
+    {
         "address": "Ulica 11. novembra",
         "uuid": "S6",
-        "lat": "45.94198222",
-        "lon": "15.47804086"
+        "lat": "45.89123853",
+        "lon": "15.57086927"
     },
     {
         "address": "Kriska vas",
         "uuid": "S7",
-        "lat": "45.89123853",
-        "lon": "15.57086928"
-    },
-    {
-        "address": "Ulica stare pravde",
-        "uuid": "S8",
         "lat": "45.90488128",
         "lon": "15.59338439"
     },
     {
-        "address": "Ulica bratov Gerjovicev",
-        "uuid": "S9",
-        "lat": "45.89504864",
+        "address": "Ulica stare pravde",
+        "uuid": "S8",
+        "lat": "45.89504865",
         "lon": "15.66006978"
     }
   ]
@@ -104,7 +104,7 @@
 {
 "eventType": "brokenVehicle",
 "useCase":"SLO-CRO",
-"CLOS": [{
+"clos": [{
 "UUID": "UUID-1",
 "currentLocation": "S1",
 "capacity": 400,
@@ -157,7 +157,7 @@
 }
 
 ],
-"BrokenVehicle": {
+"brokenVehicle": {
 "UUID": "UUID-3",
 "currentLocation": "H7",
 "capacity": 200,

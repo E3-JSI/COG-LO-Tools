@@ -1,0 +1,157 @@
+{
+  "status": 1,
+  "msg": "Event process flow - CA:getRecommendation example input built",
+    "organization": "ELTA",
+    "clos": [
+      {
+        "id": "ELTAvehicle6",
+        "info": {
+          "name": "ELTA truck 001",
+          "type": "transportation means",
+          "subtype": "vehicle",
+          "capacity": 200,
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 37.9894900012,
+            "longitude": 23.7942801234,
+            "postal_code": null
+          },
+          "description": "truck",
+          "physical_id": "XYZ 0006",
+          "organization": "ELTA",
+          "capacity_unit": "kg",
+          "working_hours": null
+        },
+        "state": {
+          "plan": null,
+          "driver": null,
+          "status": null,
+          "parcels": [],
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 37.9894900012,
+            "longitude": 23.7942801234,
+            "postal_code": null
+          },
+          "load_volume": null,
+          "capacity_unit": null,
+          "delay_minutes": null,
+          "available_space": null,
+          "availability_prediction": {
+            "time": null,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            }
+          }
+        }
+      },
+      {
+        "id": "ELTAvehicle7",
+        "info": {
+          "name": "ELTA truck 002",
+          "type": "transportation means",
+          "subtype": "vehicle",
+          "capacity": 200,
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 37.9894900012,
+            "longitude": 23.7942801234,
+            "postal_code": null
+          },
+          "description": "truck",
+          "physical_id": "XYZ 0007",
+          "organization": "ELTA",
+          "capacity_unit": "kg",
+          "working_hours": null
+        },
+        "state": {
+          "plan": null,
+          "driver": null,
+          "status": null,
+          "parcels": [],
+          "location": {
+            "city": null,
+            "country": null,
+            "station": null,
+            "latitude": 37.9794900012,
+            "longitude": 23.7642801234,
+            "postal_code": null
+          },
+          "load_volume": null,
+          "capacity_unit": null,
+          "delay_minutes": null,
+          "available_space": null,
+          "availability_prediction": {
+            "time": null,
+            "location": {
+              "city": null,
+              "country": null,
+              "station": null,
+              "latitude": null,
+              "longitude": null,
+              "postal_code": null
+            }
+          }
+        }
+      }
+    ],
+    "parcels": [
+      {
+        "id": "ELTAparcelZX830068051XGR",
+        "state": "unserved",
+        "issued": "2020-06-24T15:33:25Z",
+        "source": {
+          "city": "Agia Paraskevi",
+          "country": "GR",
+          "station": "ELTApostoffice1",
+          "latitude": 38.012287,
+          "longitude": 23.813837,
+          "postal_code": null
+        },
+        "deadline": "2020-06-25T20:33:25Z",
+        "payweight": 1,
+        "destination": {
+          "city": "Athens",
+          "country": "GR",
+          "station": null,
+          "latitude": 37.998722,
+          "longitude": 23.804745,
+          "postal_code": "15562"
+        },
+        "organization": "ELTA",
+        "service_type": null,
+        "customs_checkpoint": null
+      }
+    ],
+    "event": {
+      "id": "adhocorder_event_test",
+      "info": {
+        "item": "ELTAparcelZX830068051XGR",
+        "comment": null,
+        "location": {
+          "city": "Papagou",
+          "country": "GR",
+          "station": "ELTApostalbox4",
+          "latitude": 37.99876,
+          "longitude": 23.78431,
+          "postal_code": null
+        }
+      },
+      "time": "2020-07-02T17:37:46Z",
+      "event": "system",
+      "initiator": "ELTApostalbox4",
+      "event_type": "order"
+    },
+    "request": "COGLOrequestXXXXXXX"
+  }

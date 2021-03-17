@@ -5,19 +5,25 @@ from flask import request
 from flask import Flask
 
 import time
+
 import json
 
+if __name__ == '__main__':
 
-class VRP:
-    def __init__(self):
-        # initialize MATLAB
-        print('initializing the MATLAB engine')
+    app = Flask(__name__)
 
-        self.engine = matlab.engine.start_matlab()
-        self.engine.cd('modules/vrp/matlab')
-        self.engine.addpath('./utils')
+    # initialize MATLAB
+    engine = matlab.engine.start_matlab()
+    engine.cd('./matlab')
+    engine.addpath('./utils')
 
-    def vrp(self, req_json):
+    @app.route('/api/vrptw', methods=['POST'])
+    def callVrptw():
+        req_json = request.json
+
+        if req_json is None or req_json == 'null':
+            return 'Error parsing request! Should be in JSON format!'
+
         incidence_mat = req_json['incidenceMat']
         cost_mat = req_json['costMat']
         edge_time_vec = req_json['edgeTimeV']
@@ -40,7 +46,7 @@ class VRP:
 
         start_tm = time.time()
 
-        R, cost = self.engine.vrptw_solve(
+        R, cost = engine.vrptw_solve(
             E,
             C,
             t_vec,
@@ -60,31 +66,10 @@ class VRP:
 
         R_py = [[R[rowN][colN] for colN in range(n_cols)] for rowN in range(n_rows)]
 
-        print('request processed in ' + str(round(end_tm - start_tm, 2)) + ' seconds')
-
-        # Return computed routes (R_py) and costs (cost)
-        return R_py, cost
-
-
-if __name__ == '__main__':
-
-    print('initializing Flask')
-    app = Flask(__name__)
-    vrp = VRP()
-
-    @app.route('/api/vrptw', methods=['POST'])
-    def callVrptw():
-        print('processing VRPTW request')
-        req_json = request.json
-
-        if req_json is None or req_json == 'null':
-            return 'Error parsing request! Should be in JSON format!'
-
-        routes, cost = vrp.vrp(req_json)
-
         return json.dumps({
-            'routes': routes,
+            'routes': R_py,
             'cost': cost
         })
+
 
     serve(app, host='localhost', port=4504)

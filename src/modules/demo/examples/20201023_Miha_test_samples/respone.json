@@ -1,0 +1,113 @@
+{
+   "request":"67c906a8-75da-46f6-aa67-9ee898e8baf5",
+   "topic":"recommendations",
+   "sender":"COGLOmoduleCA",
+   "message":{
+      "recommendation":{
+         "organization":"PS",
+         "id":"67c906a8-75da-46f6-aa67-9ee898e8baf5",
+         "cloplans":[
+            {
+               "clo":"PSvehicle10",
+               "id":"SLO-CROrecommendation1",
+               "plan":{
+                  "id":"SLO-CROplan1",
+                  "organization":"PS",
+                  "execution_date":"2021-01-22 14:04:28",
+                  "recommendation":"67c906a8-75da-46f6-aa67-9ee898e8baf5",
+                  "steps":[
+                     {
+                        "id":1,
+                        "rank":1,
+                        "complete":0,
+                        "due_time":null,
+                        "load":[
+
+                        ],
+                        "unload":[
+
+                        ],
+                        "location":{
+                           "city":null,
+                           "country":null,
+                           "address":"Kapele",
+                           "latitude":45.9310499,
+                           "longitude":15.6780936,
+                           "station":"PSpostofficeS1",
+                           "postal_code":null
+                        },
+                        "dependency":{
+                           "plan":null,
+                           "plan_step":null
+                        }
+                     },
+                     {
+                        "id":2,
+                        "rank":2,
+                        "complete":0,
+                        "due_time":null,
+                        "load":[
+
+                        ],
+                        "unload":[
+                           "random1234567"
+                        ],
+                        "location":{
+                           "city":null,
+                           "country":null,
+                           "address":"Ulica stare pravde",
+                           "latitude":45.9046721,
+                           "longitude":15.5934382,
+                           "station":"PSpostofficeS7",
+                           "postal_code":null
+                        },
+                        "dependency":{
+                           "plan":null,
+                           "plan_step":null
+                        }
+                     },
+                     {
+                        "id":3,
+                        "rank":3,
+                        "complete":0,
+                        "due_time":null,
+                        "load":[
+                           "random1234567"
+                        ],
+                        "unload":[
+
+                        ],
+                        "location":{
+                           "city":null,
+                           "country":null,
+                           "address":"Globoko",
+                           "latitude":45.9548852,
+                           "longitude":15.6365929,
+                           "station":"PSpostofficeS2",
+                           "postal_code":null
+                        },
+                        "dependency":{
+                           "plan":null,
+                           "plan_step":null
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "clo":"PSvehicle11",
+               "id":"SLO-CROrecommendation2",
+               "plan":{
+                  "id":"SLO-CROplan2",
+                  "organization":"PS",
+                  "execution_date":"2021-01-22 14:04:28",
+                  "recommendation":"67c906a8-75da-46f6-aa67-9ee898e8baf5",
+                  "steps":[
+
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}
