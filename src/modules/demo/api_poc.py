@@ -257,7 +257,7 @@ def handle_recommendation_request():
         # Map parcel locations back to the original ones
         #recommendations_raw = InputOutputTransformer.revert_coordinates(recommendations, transformation_map)
         #print("starting final reordering & TSP")
-        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, evt_type, deliveries)
+        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, deliveries)
         # print route for all vehicles
         P=InputOutputTransformer.PrintRoutes(recommendations)
 
