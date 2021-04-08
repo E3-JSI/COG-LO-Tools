@@ -810,17 +810,18 @@ class InputOutputTransformer:
         vehicle_parcels_dict = {}
         for clo in data_request["clos"]:
             parcels = []
-            for parcel in clo["state"]["remaining_plan"]["steps"]:
-                parcels.extend(parcel["load"])
-                parcels.extend(parcel["unload"])
-            vehicle_parcels_dict[clo["id"]] = parcels
+            if clo["state"]["remaining_plan"] == None:
+                vehicle_parcels_dict[clo["id"]] = []
+            else:
+                for parcel in clo["state"]["remaining_plan"]["steps"]:
+                    parcels.extend(parcel["load"])
+                    parcels.extend(parcel["unload"])
+                vehicle_parcels_dict[clo["id"]] = parcels
 
         for recommendation in recommendations:
             route_updated = False
             vehicle_parcels = vehicle_parcels_dict[recommendation["UUID"]]
             parcels_route = []
-
-            print("vehicle route update check:", recommendation["UUID"])
 
             for step in recommendation["route"]:
                 step_parcels = []
@@ -836,7 +837,7 @@ class InputOutputTransformer:
             for parcel in vehicle_parcels:
                 if parcel not in parcels_route:
                     route_updated = True
-                    print("route updated:", parcel)
+                    print("route updated based on removed parcel:", parcel)
 
             if not route_updated:
                 recommendations.remove(recommendation)
@@ -902,7 +903,7 @@ class InputOutputTransformer:
         # Print route sequence for each CLO in recommendations plan.
         print("*******Route plan for delivery********")
         for plan in recommendations:
-            print("Plan for VEHICLE:", plan["UUID"])
+            print("------Plan for VEHICLE:", plan["UUID"], "-------")
             string = ""
             parcelson = []
             parcelsoff = []

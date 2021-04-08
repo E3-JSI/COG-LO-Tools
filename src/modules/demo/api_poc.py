@@ -341,7 +341,7 @@ def handle_recommendation_request():
         # restructures steps plan and and lists all the parcels from clusters as a list of locations
         response = methods.order_parcels_on_route(recommendations, use_case_graph)
         # Posting response to MSB endpoint
-        RecReq.post_response_msb(request_id, response)
+        #RecReq.post_response_msb(request_id, response)
 
         #return generic_message_received_response
         return generic_message_received_response
