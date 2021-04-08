@@ -257,7 +257,7 @@ def handle_recommendation_request():
         # Map parcel locations back to the original ones
         #recommendations_raw = InputOutputTransformer.revert_coordinates(recommendations, transformation_map)
         #print("starting final reordering & TSP")
-        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, deliveries)
+        recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, deliveries, data)
         # print route for all vehicles
         P=InputOutputTransformer.PrintRoutes(recommendations)
 
@@ -286,15 +286,10 @@ def handle_recommendation_request():
                 data_request = methods.proccess_elta_event(evt_type, data, use_case_graph)
 
             #seting graph instance reference
-
             if vrpProcessorReferenceElta1 is None:
                 vrpProcessorReferenceElta1 = RecReq.init_vrp(use_case_graph)
             vrp_processor_ref = vrpProcessorReferenceElta1
-            """elif use_case_graph == "ELTA_urban2":
-                if vrpProcessorReferenceElta2 is None:
-                   vrpProcessorReferenceElta2 = RecReq.init_vrp(use_case_graph)
-                vrp_processor_ref = vrpProcessorReferenceElta2
-            """
+
             if "clos" not in data_request:
                 return {"msg": "Parameter 'clos' is missing", "status": 0}
             clos = data_request["clos"]
@@ -334,7 +329,7 @@ def handle_recommendation_request():
             print("starting final reordering & TSP")
             if evt_type is None:
                 evt_type = "dailyRequest"
-            recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, deliveries)
+            recommendations = InputOutputTransformer.PickupNodeReorder(recommendations, deliveries, data_request)
             # print route for all vehicles
             P = InputOutputTransformer.PrintRoutes(recommendations)
 
@@ -350,6 +345,7 @@ def handle_recommendation_request():
 
         #return generic_message_received_response
         return generic_message_received_response
+        #return response
 
 
 @app.route("/api/clo/newCLOs", methods=['POST'])

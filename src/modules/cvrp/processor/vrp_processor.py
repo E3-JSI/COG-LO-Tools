@@ -210,29 +210,38 @@ class VrpProcessor:
         converted_routes = []
         loads_new = []
         vehicle_node_sequence = []
+        all_loads_origin = []
+
+        #map of parcels already loaded on vehicles
+        for vehicle in vehicles:
+            all_loads_origin.extend(vehicle.parcels)
+        all_loads_origin = self.map_dropoff(graph, all_loads_origin)
 
         # update list of vehicle parcels: add new parcels to vehicle.parcels list)
         # exception: crossborder - as the mapping of parcels on the nodes change. We keep the final list not updated
         for x, vehicle in enumerate(vehicles):
             load = loads[x]
             load = [int(x) for x in load]
-            loads_origin = self.map_dropoff(graph, vehicle.parcels)
+            vehicle_loads_origin = self.map_dropoff(graph, vehicle.parcels)
+
             if event_type != "crossBorder":
                 for i in range(len(nodes)):     # add new parcels to the vehicle from the orders
-                    vehicle_load_diff = load[i] - loads_origin[i]
+                    if all_loads_origin[i] <= load[i]:
+                        vehicle_load_diff = load[i] - all_loads_origin[i]
+                    else:
+                        vehicle_load_diff = 0
 
-                    while vehicle_load_diff > 0:
-                        for j in range(len(deliveries_req)):
-                            if deliveries_req[j].target == nodes[i].id:
 
-                                # Payweight needs to be decreased from vehicle_load_diff, because it
-                                # drops all packets for one location at once
-                                pay_weight = deliveries_req[j].volume
+                    if vehicle_load_diff > 0:
+                        for new_parcel in deliveries_req[:]:
+                                if new_parcel.target == nodes[i].id and vehicle_load_diff > 0:
 
-                                vehicle.parcels.append(deliveries_req[j])
-                                deliveries_req.remove(deliveries_req[j])
-                                vehicle_load_diff -= pay_weight
-                                break
+                                    # Payweight needs to be decreased from vehicle_load_diff, because it
+                                    # drops all packets for one location at once
+                                    vehicle.parcels.append(new_parcel)
+                                    vehicle_load_diff -= new_parcel.volume
+                                    deliveries_req.remove(new_parcel)
+                                    break
 
             loads_new.append(self.map_dropoff(graph, vehicle.parcels))
 

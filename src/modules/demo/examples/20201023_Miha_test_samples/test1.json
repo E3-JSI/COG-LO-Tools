@@ -1,1307 +1,1761 @@
 {
-   "event":{
-      "time":"2021-01-22T14:00:39Z",
-      "event_type":"order",
-      "event":"system",
-      "initiator":"COGLOmoduleWebIF",
-      "info":{
-         "items":[
-            {
-               "organization":"PS",
-               "usecase":"cross-border",
-               "id":"random1234567",
-               "source":{
-                  "country":"SLO",
-                  "station":"PSpostofficeS2",
-                  "latitude":45.95503619,
-                  "longitude":15.63656969
-               },
-               "destination":{
-                  "country":"SLO",
-                  "station":"PSpostofficeS7",
-                  "latitude":45.90488128,
-                  "longitude":15.59338439
-               },
-               "service_type":"normal",
-               "payweight":1.0,
-               "state":"unserved"
+    "cloplans": [
+        {
+            "clo": "ELTAvehicle6",
+            "id": "ELTArecommendation1",
+            "plan": {
+                "execution_date": "2021-04-07 09:13:42",
+                "id": "ELTAplan1",
+                "organization": "ELTA",
+                "recommendation": "0f5f38f4-8282-4c6e-b8ad-a9c4cb6c3ef5",
+                "steps": [
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 1,
+                        "load": [
+                            "ELTAparcelPS254559561GR",
+                            "ELTAparcelWB670009780GR",
+                            "ELTAparcelWQ451628201GR",
+                            "ELTAparcelWQ451649453GR",
+                            "ELTAparcelWX640012683GR",
+                            "ELTAparcelZH561189175GR",
+                            "ELTAparcelZK650002725GR",
+                            "ELTAparcelZW738597922GR",
+                            "ELTAparcelNF660203320GR",
+                            "ELTAparcelNI061801671GR",
+                            "ELTAparcelPD263796215GR",
+                            "ELTAparcelPD287890921GR",
+                            "ELTAparcelWE230091487GR",
+                            "ELTAparcelWQ451628229GR",
+                            "ELTAparcelZD570723790GR",
+                            "ELTAparcelZW738653584GR",
+                            "ELTAparcelZW738690750GR",
+                            "ELTAparcelNI061812144GR",
+                            "ELTAparcelNX700241629GR",
+                            "ELTAparcelPD292237765GR",
+                            "ELTAparcelWB450035374GR",
+                            "ELTAparcelWN620204110GR",
+                            "ELTAparcelZA170030143GR",
+                            "ELTAparcelWQ451628250GR",
+                            "ELTAparcelWQ451699790GR",
+                            "ELTAparcelWT420016270GR",
+                            "ELTAparcelZR690351389GR",
+                            "ELTAparcelPS154117107GR",
+                            "ELTAparcelWY320001309GR",
+                            "ELTAparcelZA170028652GR",
+                            "ELTAparcelWX320002539GR",
+                            "ELTAparcelZN340992801GR",
+                            "ELTAparcelNP090409975GR",
+                            "ELTAparcelWR980014561GR",
+                            "ELTAparcelPD286232194GR",
+                            "ELTAparcelPD288332990GR",
+                            "ELTAparcelWT200017465GR",
+                            "ELTAparcelWE180013343GR",
+                            "ELTAparcelWE180013649GR",
+                            "ELTAparcelWQ451628246GR",
+                            "ELTAparcelWQ460078604GR",
+                            "ELTAparcelZG350218701GR",
+                            "ELTAparcelPD285010253GR",
+                            "ELTAparcelPD289016398GR",
+                            "ELTAparcelPD291964775GR",
+                            "ELTAparcelWE230089599GR",
+                            "ELTAparcelWE230090504GR",
+                            "ELTAparcelWO400061116GR",
+                            "ELTAparcelWQ451628192GR",
+                            "ELTAparcelWU810065011GR"
+                        ],
+                        "location": {
+                            "address": "VEHICLE DEPO - Mesogeion 395 Ave., Agia Paraskevi",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.012288,
+                            "longitude": 23.813838,
+                            "postal_code": null,
+                            "station": "ELTApostoffice1"
+                        },
+                        "rank": 1,
+                        "station": null,
+                        "unload": []
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 2,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0080789,
+                            "longitude": 23.8034886,
+                            "postal_code": null,
+                            "station": "3"
+                        },
+                        "rank": 2,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNP090409975GR",
+                            "ELTAparcelWR980014561GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 3,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0076851,
+                            "longitude": 23.8024087,
+                            "postal_code": null,
+                            "station": "3"
+                        },
+                        "rank": 2,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD286232194GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 4,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0073146,
+                            "longitude": 23.8021533,
+                            "postal_code": null,
+                            "station": "3"
+                        },
+                        "rank": 2,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD288332990GR",
+                            "ELTAparcelWT200017465GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 5,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0075142,
+                            "longitude": 23.8026461,
+                            "postal_code": null,
+                            "station": "3"
+                        },
+                        "rank": 2,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWE180013343GR",
+                            "ELTAparcelWE180013649GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 6,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0053605,
+                            "longitude": 23.8041156,
+                            "postal_code": null,
+                            "station": "3"
+                        },
+                        "rank": 2,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWQ451628246GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 7,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0076108,
+                            "longitude": 23.8032487,
+                            "postal_code": null,
+                            "station": "3"
+                        },
+                        "rank": 2,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWQ460078604GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 8,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0074666,
+                            "longitude": 23.8015227,
+                            "postal_code": null,
+                            "station": "3"
+                        },
+                        "rank": 2,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZG350218701GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 9,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0011932,
+                            "longitude": 23.8028442,
+                            "postal_code": null,
+                            "station": "1"
+                        },
+                        "rank": 3,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNI061812144GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 10,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.000764,
+                            "longitude": 23.8025021,
+                            "postal_code": null,
+                            "station": "1"
+                        },
+                        "rank": 3,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNX700241629GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 11,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0000615,
+                            "longitude": 23.8049804,
+                            "postal_code": null,
+                            "station": "1"
+                        },
+                        "rank": 3,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD292237765GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 12,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0032198,
+                            "longitude": 23.8012885,
+                            "postal_code": null,
+                            "station": "1"
+                        },
+                        "rank": 3,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWB450035374GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 13,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0024465,
+                            "longitude": 23.8042084,
+                            "postal_code": null,
+                            "station": "1"
+                        },
+                        "rank": 3,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWN620204110GR",
+                            "ELTAparcelZA170030143GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 14,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0001709,
+                            "longitude": 23.8019027,
+                            "postal_code": null,
+                            "station": "1"
+                        },
+                        "rank": 3,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWQ451628250GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 15,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0028958,
+                            "longitude": 23.80686,
+                            "postal_code": null,
+                            "station": "1"
+                        },
+                        "rank": 3,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWQ451699790GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 16,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0012944,
+                            "longitude": 23.80237,
+                            "postal_code": null,
+                            "station": "1"
+                        },
+                        "rank": 3,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWT420016270GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 17,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.001326,
+                            "longitude": 23.8033178,
+                            "postal_code": null,
+                            "station": "1"
+                        },
+                        "rank": 3,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZR690351389GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 18,
+                        "load": [],
+                        "location": {
+                            "address": "Red Box #2, Mesogeion Aven. 260, Cholargos",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.006207,
+                            "longitude": 23.7981551,
+                            "postal_code": null,
+                            "station": "ELTApostalbox5"
+                        },
+                        "rank": 4,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPS154117107GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 19,
+                        "load": [],
+                        "location": {
+                            "address": "Red Box #2, Mesogeion Aven. 260, Cholargos",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0060665,
+                            "longitude": 23.7986587,
+                            "postal_code": null,
+                            "station": "ELTApostalbox5"
+                        },
+                        "rank": 4,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWY320001309GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 20,
+                        "load": [],
+                        "location": {
+                            "address": "Red Box #2, Mesogeion Aven. 260, Cholargos",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0057775,
+                            "longitude": 23.7961791,
+                            "postal_code": null,
+                            "station": "ELTApostalbox5"
+                        },
+                        "rank": 4,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZA170028652GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 21,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0040461,
+                            "longitude": 23.796425,
+                            "postal_code": null,
+                            "station": "4"
+                        },
+                        "rank": 5,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNI470117744GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 22,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0048727,
+                            "longitude": 23.7963539,
+                            "postal_code": null,
+                            "station": "4"
+                        },
+                        "rank": 5,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNV590736894GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 23,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0043021,
+                            "longitude": 23.7954189,
+                            "postal_code": null,
+                            "station": "4"
+                        },
+                        "rank": 5,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWQ451628189GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 24,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0051833,
+                            "longitude": 23.7989369,
+                            "postal_code": null,
+                            "station": "4"
+                        },
+                        "rank": 5,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZA170029692GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 25,
+                        "load": [
+                            "Test20210330xxxxxxxx",
+                            "Test20210330yyyyyyyy",
+                            "Test20210330zzzzzzz"
+                        ],
+                        "location": {
+                            "address": "Papagou (Post Office) , Leukosias 25, Papagou",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.98949,
+                            "longitude": 23.79428,
+                            "postal_code": null,
+                            "station": "ELTApostoffice2"
+                        },
+                        "rank": 6,
+                        "station": null,
+                        "unload": []
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 26,
+                        "load": [
+                            "XXX20210406"
+                        ],
+                        "location": {
+                            "address": "Red Box #1, Mesogeion Aven. 156-158, Papagou",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.99876,
+                            "longitude": 23.78431,
+                            "postal_code": null,
+                            "station": "ELTApostalbox4"
+                        },
+                        "rank": 7,
+                        "station": null,
+                        "unload": []
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 27,
+                        "load": [],
+                        "location": {
+                            "address": "Red Box #1, Mesogeion Aven. 156-158, Papagou",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9989929,
+                            "longitude": 23.7851387,
+                            "postal_code": null,
+                            "station": "ELTApostalbox4"
+                        },
+                        "rank": 7,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD258660532GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 28,
+                        "load": [
+                            "ELTAparcelZX830068051GR"
+                        ],
+                        "location": {
+                            "address": "Cholargou (Post Office), Aspasias 70, Cholargos ",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.00034,
+                            "longitude": 23.79328,
+                            "postal_code": null,
+                            "station": "ELTApostoffice3"
+                        },
+                        "rank": 8,
+                        "station": null,
+                        "unload": []
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 29,
+                        "load": [],
+                        "location": {
+                            "address": "Cholargou (Post Office), Aspasias 70, Cholargos ",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0003214,
+                            "longitude": 23.7939964,
+                            "postal_code": null,
+                            "station": "ELTApostoffice3"
+                        },
+                        "rank": 8,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWX320002539GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 30,
+                        "load": [],
+                        "location": {
+                            "address": "Cholargou (Post Office), Aspasias 70, Cholargos ",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0008079,
+                            "longitude": 23.7916739,
+                            "postal_code": null,
+                            "station": "ELTApostoffice3"
+                        },
+                        "rank": 8,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZN340992801GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 31,
+                        "load": [],
+                        "location": {
+                            "address": "Cholargou (Post Office), Aspasias 70, Cholargos ",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.00034,
+                            "longitude": 23.79328,
+                            "postal_code": null,
+                            "station": "ELTApostoffice3"
+                        },
+                        "rank": 8,
+                        "station": null,
+                        "unload": [
+                            "Test20210330xxxxxxxx",
+                            "Test20210330yyyyyyyy",
+                            "Test20210330zzzzzzz",
+                            "XXX20210406"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 32,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9968259,
+                            "longitude": 23.8068197,
+                            "postal_code": null,
+                            "station": "7"
+                        },
+                        "rank": 9,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNE967924979GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 33,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9954257,
+                            "longitude": 23.8069365,
+                            "postal_code": null,
+                            "station": "7"
+                        },
+                        "rank": 9,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD280867472GR",
+                            "ELTAparcelPD280867526GR",
+                            "ELTAparcelPD280867565GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 34,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9987223,
+                            "longitude": 23.8047442,
+                            "postal_code": null,
+                            "station": "7"
+                        },
+                        "rank": 9,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWT420017045GR",
+                            "ELTAparcelZX830068051GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 35,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9987998,
+                            "longitude": 23.7991783,
+                            "postal_code": null,
+                            "station": "9"
+                        },
+                        "rank": 10,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNF660203320GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 36,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9995314,
+                            "longitude": 23.7981764,
+                            "postal_code": null,
+                            "station": "9"
+                        },
+                        "rank": 10,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNI061801671GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 37,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9996065,
+                            "longitude": 23.8004679,
+                            "postal_code": null,
+                            "station": "9"
+                        },
+                        "rank": 10,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD263796215GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 38,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0017904,
+                            "longitude": 23.7977042,
+                            "postal_code": null,
+                            "station": "9"
+                        },
+                        "rank": 10,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD287890921GR",
+                            "ELTAparcelWE230091487GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 39,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0019369,
+                            "longitude": 23.7995565,
+                            "postal_code": null,
+                            "station": "9"
+                        },
+                        "rank": 10,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWQ451628229GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 40,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.001945,
+                            "longitude": 23.8002163,
+                            "postal_code": null,
+                            "station": "9"
+                        },
+                        "rank": 10,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZD570723790GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 41,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9983131,
+                            "longitude": 23.7993674,
+                            "postal_code": null,
+                            "station": "9"
+                        },
+                        "rank": 10,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZW738653584GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 42,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9990119,
+                            "longitude": 23.7988329,
+                            "postal_code": null,
+                            "station": "9"
+                        },
+                        "rank": 10,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZW738690750GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 43,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0007659,
+                            "longitude": 23.7953166,
+                            "postal_code": null,
+                            "station": "2"
+                        },
+                        "rank": 11,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelEB713992272CN"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 44,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0021117,
+                            "longitude": 23.7937601,
+                            "postal_code": null,
+                            "station": "2"
+                        },
+                        "rank": 11,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNH600166179GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 45,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0010407,
+                            "longitude": 23.7927512,
+                            "postal_code": null,
+                            "station": "2"
+                        },
+                        "rank": 11,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD288046138GR",
+                            "ELTAparcelZA170027949GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 46,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0024271,
+                            "longitude": 23.7932109,
+                            "postal_code": null,
+                            "station": "2"
+                        },
+                        "rank": 11,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWD450042619GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 47,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 38.0006403,
+                            "longitude": 23.7947119,
+                            "postal_code": null,
+                            "station": "2"
+                        },
+                        "rank": 11,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZK630697445GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 48,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9935131,
+                            "longitude": 23.8066445,
+                            "postal_code": null,
+                            "station": "5"
+                        },
+                        "rank": 12,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelNB260416624GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 49,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9931239,
+                            "longitude": 23.8043375,
+                            "postal_code": null,
+                            "station": "5"
+                        },
+                        "rank": 12,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWE230090985GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 50,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9926354,
+                            "longitude": 23.8033338,
+                            "postal_code": null,
+                            "station": "5"
+                        },
+                        "rank": 12,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWT420016575GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 51,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9925187,
+                            "longitude": 23.8046361,
+                            "postal_code": null,
+                            "station": "5"
+                        },
+                        "rank": 12,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZK720087875GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 52,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.994689,
+                            "longitude": 23.8045377,
+                            "postal_code": null,
+                            "station": "5"
+                        },
+                        "rank": 12,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZN341005629GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 53,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9991241,
+                            "longitude": 23.7966351,
+                            "postal_code": null,
+                            "station": "6"
+                        },
+                        "rank": 13,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD285010253GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 54,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9981833,
+                            "longitude": 23.7961693,
+                            "postal_code": null,
+                            "station": "6"
+                        },
+                        "rank": 13,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD289016398GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 55,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9969707,
+                            "longitude": 23.7967634,
+                            "postal_code": null,
+                            "station": "6"
+                        },
+                        "rank": 13,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD291964775GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 56,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9977556,
+                            "longitude": 23.7969481,
+                            "postal_code": null,
+                            "station": "6"
+                        },
+                        "rank": 13,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWE230089599GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 57,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.999341,
+                            "longitude": 23.7956984,
+                            "postal_code": null,
+                            "station": "6"
+                        },
+                        "rank": 13,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWE230090504GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 58,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9962227,
+                            "longitude": 23.7969295,
+                            "postal_code": null,
+                            "station": "6"
+                        },
+                        "rank": 13,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWO400061116GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 59,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9963841,
+                            "longitude": 23.7934294,
+                            "postal_code": null,
+                            "station": "6"
+                        },
+                        "rank": 13,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWQ451628192GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 60,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9959078,
+                            "longitude": 23.7935184,
+                            "postal_code": null,
+                            "station": "6"
+                        },
+                        "rank": 13,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWU810065011GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 61,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9935238,
+                            "longitude": 23.799003,
+                            "postal_code": null,
+                            "station": "0"
+                        },
+                        "rank": 14,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPS254559561GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 62,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9952125,
+                            "longitude": 23.8004013,
+                            "postal_code": null,
+                            "station": "0"
+                        },
+                        "rank": 14,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWB670009780GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 63,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9966579,
+                            "longitude": 23.8001792,
+                            "postal_code": null,
+                            "station": "0"
+                        },
+                        "rank": 14,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWQ451628201GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 64,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.995561,
+                            "longitude": 23.7980314,
+                            "postal_code": null,
+                            "station": "0"
+                        },
+                        "rank": 14,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWQ451649453GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 65,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9943747,
+                            "longitude": 23.7963939,
+                            "postal_code": null,
+                            "station": "0"
+                        },
+                        "rank": 14,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWX640012683GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 66,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9953765,
+                            "longitude": 23.7987832,
+                            "postal_code": null,
+                            "station": "0"
+                        },
+                        "rank": 14,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZH561189175GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 67,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9937032,
+                            "longitude": 23.7999418,
+                            "postal_code": null,
+                            "station": "0"
+                        },
+                        "rank": 14,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZK650002725GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 68,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9930816,
+                            "longitude": 23.7978283,
+                            "postal_code": null,
+                            "station": "0"
+                        },
+                        "rank": 14,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelZW738597922GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 69,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.9990785,
+                            "longitude": 23.7888439,
+                            "postal_code": null,
+                            "station": "8"
+                        },
+                        "rank": 15,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelPD277216644GR"
+                        ]
+                    },
+                    {
+                        "complete": 0,
+                        "dependency": {
+                            "plan": null,
+                            "plan_step": null
+                        },
+                        "due_time": null,
+                        "id": 70,
+                        "load": [],
+                        "location": {
+                            "address": "virtualPost",
+                            "city": null,
+                            "country": null,
+                            "latitude": 37.998915,
+                            "longitude": 23.7873611,
+                            "postal_code": null,
+                            "station": "8"
+                        },
+                        "rank": 15,
+                        "station": null,
+                        "unload": [
+                            "ELTAparcelWB980299665GR"
+                        ]
+                    }
+                ]
             }
-         ],
-         "issued":"2021-01-22T14:00:39Z",
-         "location":{
-            "country":"SLO",
-            "station":"PSpostofficeS2",
-            "latitude":45.95503619,
-            "longitude":15.63656969
-         }
-      }
-   },
-   "clos":[
-      {
-         "id":"PSvehicle10",
-         "info":{
-            "organization":"PS",
-            "use_case":[
-               "cross-border"
-            ],
-            "physical_id":"10",
-            "type":"transportation means",
-            "subtype":"vehicle",
-            "description":"truck",
-            "capacity":1000.0,
-            "capacity_unit":"kg"
-         },
-         "state":{
-            "location":{
-               "latitude":45.93107932,
-               "longitude":15.67793203
-            },
-            "status":0.0,
-            "load_volume":0.0,
-            "available_space":0.0,
-            "plan":"PSplan29383866754845350",
-            "completed_plan":{
-
-            },
-            "remaining_plan":{
-               "id":"PSplan29383866754845350",
-               "recommendation":"DAILY-9e823de5-5568-4c75-87ce-645ae57d9f59",
-               "organization":"PS",
-               "execution_date":"2021-01-22 13:57:07",
-               "steps":[
-                  {
-                     "id":1.0,
-                     "rank":1.0,
-                     "location":{
-                        "address":"Kapele",
-                        "latitude":45.9310499,
-                        "longitude":15.6780936,
-                        "station":"PSpostofficeS1"
-                     },
-                     "load":[
-                        "PSparcelCE233286434HR",
-                        "PSparcelCE233446079HR",
-                        "PSparcelCE232810549HR",
-                        "PSparcelCE233399590HR",
-                        "PSparcelCE233248325HR",
-                        "PSparcelCE233411123HR",
-                        "PSparcelCE233350194HR",
-                        "PSparcelEB058213256HR",
-                        "PSparcelCE233248348HR",
-                        "PSparcelCE233445011HR",
-                        "PSparcelCE233350163HR",
-                        "PSparcelCE233503125HR",
-                        "PSparcelCE233350217HR",
-                        "PSparcelRC942644187HR",
-                        "PSparcelCE233389836HR",
-                        "PSparcelRC942733315HR",
-                        "PSparcelCE233350282HR",
-                        "PSparcelRC942733179HR"
-                     ],
-                     "unload":[
-
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":2.0,
-                     "rank":2.0,
-                     "location":{
-                        "address":"Goricka 1",
-                        "latitude":45.9171602,
-                        "longitude":15.7280016,
-                        "station":"HPpostofficeH4"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233248348HR",
-                        "PSparcelCE233445011HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":3.0,
-                     "rank":3.0,
-                     "location":{
-                        "address":"Globoko",
-                        "latitude":45.9548852,
-                        "longitude":15.6365929,
-                        "station":"PSpostofficeS2"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233350163HR",
-                        "PSparcelCE233503125HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":9.0,
-                     "rank":9.0,
-                     "location":{
-                        "address":"Ulica 11. novembra",
-                        "latitude":45.9419906,
-                        "longitude":15.4781109,
-                        "station":"PSpostofficeS5"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233350217HR",
-                        "PSparcelRC942644187HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":6.0,
-                     "rank":6.0,
-                     "location":{
-                        "address":"Kriska vas",
-                        "latitude":45.8913565,
-                        "longitude":15.5705945,
-                        "station":"PSpostofficeS6"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233350282HR",
-                        "PSparcelRC942733179HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":5.0,
-                     "rank":5.0,
-                     "location":{
-                        "address":"Ulica stare pravde",
-                        "latitude":45.9046721,
-                        "longitude":15.5934382,
-                        "station":"PSpostofficeS7"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233389836HR",
-                        "PSparcelRC942733315HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":4.0,
-                     "rank":4.0,
-                     "location":{
-                        "address":"Topliska cesta",
-                        "latitude":45.89337,
-                        "longitude":15.6214561,
-                        "station":"PSpostofficeS3"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233350194HR",
-                        "PSparcelEB058213256HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":7.0,
-                     "rank":7.0,
-                     "location":{
-                        "address":"Ul. Dure Basariceka 9",
-                        "latitude":45.8313724,
-                        "longitude":15.6896815,
-                        "station":"HPpostofficeH2"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE232810549HR",
-                        "PSparcelCE233399590HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":8.0,
-                     "rank":8.0,
-                     "location":{
-                        "address":"Ul. Ljudevita Gaja 4",
-                        "latitude":45.8031663,
-                        "longitude":15.7101405,
-                        "station":"HPpostofficeH3"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233248325HR",
-                        "PSparcelCE233411123HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":10.0,
-                     "rank":10.0,
-                     "location":{
-                        "address":"Ul. Dr. Franje Tudmana 38a",
-                        "latitude":45.8084401,
-                        "longitude":15.816546,
-                        "station":"HPpostofficeH5"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233286434HR",
-                        "PSparcelCE233446079HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  }
-               ]
-            },
-            "load_size":0.0,
-            "parcels":[
-               "PSparcelRC942733315HR",
-               "PSparcelRC942733179HR",
-               "PSparcelRC942644187HR",
-               "PSparcelEB058213256HR",
-               "PSparcelCE233503125HR",
-               "PSparcelCE233446079HR",
-               "PSparcelCE233445011HR",
-               "PSparcelCE233411123HR",
-               "PSparcelCE233399590HR",
-               "PSparcelCE233389836HR",
-               "PSparcelCE233350282HR",
-               "PSparcelCE233350217HR",
-               "PSparcelCE233350194HR",
-               "PSparcelCE233350163HR",
-               "PSparcelCE233286434HR",
-               "PSparcelCE233248348HR",
-               "PSparcelCE233248325HR",
-               "PSparcelCE232810549HR"
-            ],
-            "delay_minutes":0.0
-         }
-      },
-      {
-         "id":"PSvehicle11",
-         "info":{
-            "organization":"PS",
-            "use_case":[
-               "cross-border"
-            ],
-            "physical_id":"11",
-            "type":"transportation means",
-            "subtype":"vehicle",
-            "description":"truck",
-            "capacity":1000.0,
-            "capacity_unit":"kg"
-         },
-         "state":{
-            "location":{
-               "latitude":45.93105,
-               "longitude":15.678094
-            },
-            "status":0.0,
-            "load_volume":0.0,
-            "available_space":0.0,
-            "plan":"PSplan29383866754853450",
-            "completed_plan":{
-
-            },
-            "remaining_plan":{
-               "id":"PSplan29383866754853450",
-               "recommendation":"DAILY-9e823de5-5568-4c75-87ce-645ae57d9f59",
-               "organization":"PS",
-               "execution_date":"2021-01-22 13:57:07",
-               "steps":[
-                  {
-                     "id":1.0,
-                     "rank":1.0,
-                     "location":{
-                        "address":"Kapele",
-                        "latitude":45.9310499,
-                        "longitude":15.6780936,
-                        "station":"PSpostofficeS1"
-                     },
-                     "load":[
-                        "PSparcelCE232746718HR",
-                        "PSparcelCE233389853HR",
-                        "PSparcelCE233335515HR",
-                        "PSparcelCE233493754HR",
-                        "PSparcelCE233286522HR",
-                        "PSparcelCE233454628HR",
-                        "PSparcelCE233350203HR",
-                        "PSparcelRC736399924HR",
-                        "PSparcelCE233286540HR",
-                        "PSparcelCE233454693HR",
-                        "PSparcelCE233389840HR",
-                        "PSparcelRC942733908HR"
-                     ],
-                     "unload":[
-
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":2.0,
-                     "rank":2.0,
-                     "location":{
-                        "address":"Ulica bratov Gerjovicev",
-                        "latitude":45.8949345,
-                        "longitude":15.6602321,
-                        "station":"PSpostofficeS8"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233389840HR",
-                        "PSparcelRC942733908HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":3.0,
-                     "rank":3.0,
-                     "location":{
-                        "address":"Zagrebacka ul. 45",
-                        "latitude":45.8872686,
-                        "longitude":15.6968985,
-                        "station":"HPpostofficeH6"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233286522HR",
-                        "PSparcelCE233454628HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":4.0,
-                     "rank":4.0,
-                     "location":{
-                        "address":"Zagrebacka ul. 29",
-                        "latitude":45.8778694,
-                        "longitude":15.7391413,
-                        "station":"HPpostofficeH8"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233335515HR",
-                        "PSparcelCE233493754HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":6.0,
-                     "rank":6.0,
-                     "location":{
-                        "address":"Ul. Drage Svajcara 5",
-                        "latitude":45.8588883,
-                        "longitude":15.8033733,
-                        "station":"HPpostofficeH7"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233286540HR",
-                        "PSparcelCE233454693HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":5.0,
-                     "rank":5.0,
-                     "location":{
-                        "address":"Jesenice",
-                        "latitude":45.8402267,
-                        "longitude":15.6863883,
-                        "station":"HPpostofficeH1"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE232746718HR",
-                        "PSparcelCE233389853HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  },
-                  {
-                     "id":7.0,
-                     "rank":7.0,
-                     "location":{
-                        "address":"Cerklje ob Krki",
-                        "latitude":45.8844935,
-                        "longitude":15.5231733,
-                        "station":"PSpostofficeS4"
-                     },
-                     "load":[
-
-                     ],
-                     "unload":[
-                        "PSparcelCE233350203HR",
-                        "PSparcelRC736399924HR"
-                     ],
-                     "complete":0.0,
-                     "dependency":{
-                        "plan_step":0.0
-                     }
-                  }
-               ]
-            },
-            "load_size":0.0,
-            "parcels":[
-
-            ],
-            "delay_minutes":0.0
-         }
-      }
-   ],
-   "parcels":[
-      {
-         "id":"PSparcelCE233286434HR",
-         "state":"unserved",
-         "issued":"2020-12-21T15:27:26Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T20:27:26Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH5",
-            "latitude":45.808406,
-            "longitude":15.816847,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233446079HR",
-         "state":"unserved",
-         "issued":"2020-12-21T09:17:49Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T14:17:49Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH5",
-            "latitude":45.808406,
-            "longitude":15.816847,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE232810549HR",
-         "state":"unserved",
-         "issued":"2020-12-21T10:55:38Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T15:55:38Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH2",
-            "latitude":45.831867,
-            "longitude":15.690455,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233399590HR",
-         "state":"unserved",
-         "issued":"2020-12-21T17:57:30Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T22:57:30Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH2",
-            "latitude":45.831867,
-            "longitude":15.690455,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233248325HR",
-         "state":"unserved",
-         "issued":"2020-12-21T13:07:43Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T18:07:43Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH3",
-            "latitude":45.803142,
-            "longitude":15.710135,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233411123HR",
-         "state":"unserved",
-         "issued":"2020-12-21T11:44:26Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T16:44:26Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH3",
-            "latitude":45.803142,
-            "longitude":15.710135,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233350194HR",
-         "state":"unserved",
-         "issued":"2020-12-21T18:10:20Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T23:10:20Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS3",
-            "latitude":45.89320611,
-            "longitude":15.6212996,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelEB058213256HR",
-         "state":"unserved",
-         "issued":"2020-12-21T12:24:30Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T17:24:30Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS3",
-            "latitude":45.89320611,
-            "longitude":15.6212996,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233248348HR",
-         "state":"unserved",
-         "issued":"2020-12-21T15:39:34Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T20:39:34Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH4",
-            "latitude":45.917165,
-            "longitude":15.730056,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233445011HR",
-         "state":"unserved",
-         "issued":"2020-12-21T13:18:56Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T18:18:56Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH4",
-            "latitude":45.917165,
-            "longitude":15.730056,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233350163HR",
-         "state":"unserved",
-         "issued":"2020-12-21T10:51:53Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T15:51:53Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS2",
-            "latitude":45.95503619,
-            "longitude":15.63656969,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233503125HR",
-         "state":"unserved",
-         "issued":"2020-12-21T17:11:51Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T22:11:51Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS2",
-            "latitude":45.95503619,
-            "longitude":15.63656969,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233350217HR",
-         "state":"unserved",
-         "issued":"2020-12-21T17:47:04Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T22:47:04Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS5",
-            "latitude":45.942039,
-            "longitude":15.478103,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelRC942644187HR",
-         "state":"unserved",
-         "issued":"2020-12-21T12:05:33Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T17:05:33Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS5",
-            "latitude":45.942039,
-            "longitude":15.478103,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233389836HR",
-         "state":"unserved",
-         "issued":"2020-12-21T10:41:34Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T15:41:34Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS7",
-            "latitude":45.90488128,
-            "longitude":15.59338439,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelRC942733315HR",
-         "state":"unserved",
-         "issued":"2020-12-21T11:20:58Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T16:20:58Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS7",
-            "latitude":45.90488128,
-            "longitude":15.59338439,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233350282HR",
-         "state":"unserved",
-         "issued":"2020-12-21T17:42:13Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T22:42:13Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS6",
-            "latitude":45.89123853,
-            "longitude":15.57086927,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelRC942733179HR",
-         "state":"unserved",
-         "issued":"2020-12-21T18:38:37Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T23:38:37Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS6",
-            "latitude":45.89123853,
-            "longitude":15.57086927,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE232746718HR",
-         "state":"unserved",
-         "issued":"2020-12-21T09:17:51Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T14:17:51Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH1",
-            "latitude":45.840296,
-            "longitude":15.686514,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233389853HR",
-         "state":"unserved",
-         "issued":"2020-12-21T13:10:51Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T18:10:51Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH1",
-            "latitude":45.840296,
-            "longitude":15.686514,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233335515HR",
-         "state":"unserved",
-         "issued":"2020-12-21T17:44:43Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T22:44:43Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH8",
-            "latitude":45.878072,
-            "longitude":15.739208,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233493754HR",
-         "state":"unserved",
-         "issued":"2020-12-21T12:10:07Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T17:10:07Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH8",
-            "latitude":45.878072,
-            "longitude":15.739208,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233286522HR",
-         "state":"unserved",
-         "issued":"2020-12-21T15:34:24Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T20:34:24Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH6",
-            "latitude":45.887335,
-            "longitude":15.697116,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233454628HR",
-         "state":"unserved",
-         "issued":"2020-12-21T10:36:39Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T15:36:39Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH6",
-            "latitude":45.887335,
-            "longitude":15.697116,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233350203HR",
-         "state":"unserved",
-         "issued":"2020-12-21T14:50:02Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T19:50:02Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS4",
-            "latitude":45.88461153,
-            "longitude":15.5231045,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelRC736399924HR",
-         "state":"unserved",
-         "issued":"2020-12-21T10:55:55Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T15:55:55Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS4",
-            "latitude":45.88461153,
-            "longitude":15.5231045,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233286540HR",
-         "state":"unserved",
-         "issued":"2020-12-21T12:41:46Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T17:41:46Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH7",
-            "latitude":45.859075,
-            "longitude":15.80341,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233454693HR",
-         "state":"unserved",
-         "issued":"2020-12-21T19:02:53Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-23T00:02:53Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"CRO",
-            "station":"HPpostofficeH7",
-            "latitude":45.859075,
-            "longitude":15.80341,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelCE233389840HR",
-         "state":"unserved",
-         "issued":"2020-12-21T16:21:23Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T21:21:23Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS8",
-            "latitude":45.89504865,
-            "longitude":15.66006978,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      },
-      {
-         "id":"PSparcelRC942733908HR",
-         "state":"unserved",
-         "issued":"2020-12-21T15:19:13Z",
-         "source":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS1",
-            "latitude":45.93107932,
-            "longitude":15.67793203,
-            "postal_code":null
-         },
-         "deadline":"2020-12-22T20:19:13Z",
-         "payweight":1.0,
-         "destination":{
-            "city":null,
-            "country":"SLO",
-            "station":"PSpostofficeS8",
-            "latitude":45.89504865,
-            "longitude":15.66006978,
-            "postal_code":null
-         },
-         "organization":"PS",
-         "service_type":null,
-         "customs_checkpoint":null
-      }
-   ],
-   "request":"67c906a8-75da-46f6-aa67-9ee898e8baf5",
-   "organization":"PS"
+        }
+    ],
+    "id": "0f5f38f4-8282-4c6e-b8ad-a9c4cb6c3ef5",
+    "organization": "ELTA"
 }
