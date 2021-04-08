@@ -707,7 +707,7 @@ class InputOutputTransformer:
         return recommendations
 
     @staticmethod
-    def PickupNodeReorder(recommendations_raw, deliveries):
+    def PickupNodeReorder(recommendations_raw, deliveries, data_request):
         # 1. Itterate on vehicles.
         # 2. for each route -> find pickup nodes
         # 3. Reorder pickup nodes based on depencencies
@@ -795,16 +795,59 @@ class InputOutputTransformer:
                             route_first_part = route_tsp[0]["route"]
                     final_route = route_first_part + route_second_part
             final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries)
-            final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries) ## double check for ELTA pilot
+            #final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries) ## double check for ELTA pilot
             final_route = InputOutputTransformer.orderStepId(final_route)
             recommendations_raw[i]["route"] = copy.deepcopy(final_route)
 
-        recommendations = InputOutputTransformer.RemoveOldRoutes(recommendations_raw, deliveries)
+        recommendations = InputOutputTransformer.RemoveOldRoutes(recommendations_raw, deliveries, data_request)
         return recommendations
 
 
     @staticmethod
-    def RemoveOldRoutes(recommendations, deliveries):
+    def RemoveOldRoutes(recommendations, deliveries, data_request):
+        
+        #list all parcelIDs originaly on vehicle
+        vehicle_parcels_dict = {}
+        for clo in data_request["clos"]:
+            parcels = []
+            if clo["state"]["remaining_plan"] == None:
+                vehicle_parcels_dict[clo["id"]] = []
+            else:
+                for parcel in clo["state"]["remaining_plan"]["steps"]:
+                    parcels.extend(parcel["load"])
+                    parcels.extend(parcel["unload"])
+                vehicle_parcels_dict[clo["id"]] = parcels
+
+        for recommendation in recommendations:
+            route_updated = False
+            vehicle_parcels = vehicle_parcels_dict[recommendation["UUID"]]
+            parcels_route = []
+
+            for step in recommendation["route"]:
+                step_parcels = []
+                step_parcels.extend(step["load"])
+                step_parcels.extend(step["unload"])
+                for parcel in step_parcels:
+                    if parcel not in vehicle_parcels:
+                        route_updated = True
+                        #print("route updated:", parcel)
+
+                parcels_route.extend(step_parcels)
+
+            for parcel in vehicle_parcels:
+                if parcel not in parcels_route:
+                    route_updated = True
+                    print("route updated based on removed parcel:", parcel)
+
+            if not route_updated:
+                recommendations.remove(recommendation)
+
+        return recommendations
+
+    """
+
+    @staticmethod
+    def RemoveOldRoutes(recommendations, deliveries, data_request):
         if len(deliveries.origin) == 0:
             return recommendations
         new_orders_list = []
@@ -824,6 +867,7 @@ class InputOutputTransformer:
             if not new_route:
                 recommendations.remove(recommendation)
         return recommendations
+    """
 
 
     @staticmethod
@@ -859,8 +903,10 @@ class InputOutputTransformer:
         # Print route sequence for each CLO in recommendations plan.
         print("*******Route plan for delivery********")
         for plan in recommendations:
-            print("Plan for VEHICLE:", plan["UUID"])
+            print("------Plan for VEHICLE:", plan["UUID"], "-------")
             string = ""
+            parcelson = []
+            parcelsoff = []
             for step in plan["route"]:
                 location_name = (step["location"]["station"])
                 loadparcels = ""
@@ -874,11 +920,14 @@ class InputOutputTransformer:
                 print("STEP:", location_name)
                 if loadparcels:
                     print("parcels loading:", loadparcels)
+                    parcelson.append(loadparcels)
                 if unloadparcels:
                     print("parcels unloading:", unloadparcels)
+                    parcelsoff.append(unloadparcels)
+            print("unloaded parcels:", parcelsoff)
+            print("loaded parcels:", parcelson)
         print("****end of plan****")
         return(True)
-
 
 class ParcelLocation:
     """
