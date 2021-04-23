@@ -91,7 +91,7 @@ class RecReq(Resource):
         vehicles = vrp_processor_ref.parse_vehicles(clos)
         deliveries = vrp_processor_ref.parse_deliveries(evt_type, clos, requests, use_case)
 
-        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case_graph), deliveries
+        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case, use_case_graph), deliveries
 
     @staticmethod
     def process_broken_clo(evt_type, clos, broken_clo, vrp_processor_ref, use_case, use_case_graph):
@@ -99,7 +99,7 @@ class RecReq(Resource):
         vehicles = vrp_processor_ref.parse_vehicles(clos)
         deliveries = vrp_processor_ref.parse_deliveries(evt_type, clos, broken_clo, use_case)
 
-        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case_graph), deliveries
+        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case, use_case_graph), deliveries
 
     @staticmethod
     def process_cross_border_request(evt_type, clos, requests, vrp_processor_ref, use_case, use_case_graph):
@@ -107,7 +107,7 @@ class RecReq(Resource):
         vehicles = vrp_processor_ref.parse_vehicles(clos)
         deliveries = vrp_processor_ref.parse_deliveries(evt_type, clos, requests, use_case)
 
-        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case_graph), deliveries
+        return vrp_processor_ref.process(vehicles, deliveries, evt_type, use_case, use_case_graph), deliveries
 
     @staticmethod
     def post_response_msb(UUID, recommendations):
@@ -341,7 +341,7 @@ def handle_recommendation_request():
         # restructures steps plan and and lists all the parcels from clusters as a list of locations
         response = methods.order_parcels_on_route(recommendations, use_case_graph)
         # Posting response to MSB endpoint
-        #RecReq.post_response_msb(request_id, response)
+        RecReq.post_response_msb(request_id, response)
 
         #return generic_message_received_response
         return generic_message_received_response
