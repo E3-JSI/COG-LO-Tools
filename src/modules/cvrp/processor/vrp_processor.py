@@ -88,13 +88,13 @@ class VrpProcessor:
             indexes.append(index)
         return indexes
 
-    def process(self, vehicles, deliveries_object, event_type, use_case_graph):
+    def process(self, vehicles, deliveries_object, event_type, use_case, use_case_graph):
         """Process routing request with N vehicles and M deliveries, to produce a list of routing plans"""
         deliveries_all = deliveries_object.origin + deliveries_object.req
         deliveries_req = deliveries_object.req
 
         # Handle SLO-CRO use case for mapping vehicles and deliveries
-        if self.use_case == SLO_CRO_USE_CASE:
+        if use_case == SLO_CRO_USE_CASE:
             delivery_map = self.map_slo_cro_deliveries(deliveries_all, event_type)
             delivery_map_req = self.map_slo_cro_deliveries(deliveries_req, event_type)
             vehicle_map = self.map_slo_cro_vehicles(vehicles, event_type)
