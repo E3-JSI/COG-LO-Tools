@@ -241,7 +241,6 @@ class VrpProcessor:
                                     vehicle.parcels.append(new_parcel)
                                     vehicle_load_diff -= new_parcel.volume
                                     deliveries_req.remove(new_parcel)
-                                    break
 
             loads_new.append(self.map_dropoff(graph, vehicle.parcels))
 

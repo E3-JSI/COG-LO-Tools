@@ -625,9 +625,6 @@ class InputOutputTransformer:
         for clo_plan in recommendations:
             counter += 1
 
-            #if evt_type != "dailyRequest":  #skip first step in route plan except in dailyPlan
-            #    clo_plan["route"].pop(0)
-
             plan_organization = "ELTA"
             if use_case == SLO_CRO_USE_CASE:
                 plan_organization = "PS" if clo_plan["UUID"].startswith("PS") else "HP"
