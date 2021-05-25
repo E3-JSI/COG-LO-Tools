@@ -140,7 +140,6 @@ class RecReq(Resource):
         #    print("Error occurred while validating response in validation service", ex)
 
         print("posting to MSB post URL: " + msb_post_url)
-        print(content)
 
         try:
             response = requests.post(msb_post_url, json = content, headers=headers, verify=False)
