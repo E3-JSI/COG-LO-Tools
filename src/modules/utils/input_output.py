@@ -185,7 +185,7 @@ class InputOutputTransformer:
         else:
             for step in clo["state"]["remaining_plan"]["steps"]:
                 parcels.extend(step["unload"])
-            for step in clo["state"]["remaining_plan"]["steps"][1:]:
+            for step in clo["state"]["remaining_plan"]["steps"]: #[1:]:
                 parcels_loading.extend(step["load"])
             return parcels, parcels_loading
 
@@ -792,7 +792,6 @@ class InputOutputTransformer:
                             route_first_part = route_tsp[0]["route"]
                     final_route = route_first_part + route_second_part
             final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries)
-            #final_route = InputOutputTransformer.FirstStepProcessing(final_route, deliveries) ## double check for ELTA pilot
             final_route = InputOutputTransformer.orderStepId(final_route)
             recommendations_raw[i]["route"] = copy.deepcopy(final_route)
 
